@@ -6,7 +6,8 @@ export const colors = {
   darkGray: "#999999",
   green: "#65DC6A",
   white: "#FFFFFF",
-  gradientG3: "linear-gradient(90deg, #65DC6A 0%, #7293A9 52.09%, #8047EB 106.81%)"
+  gradientG3: "linear-gradient(90deg, #65DC6A 0%, #7293A9 52.09%, #8047EB 106.81%)",
+  violetHover: "#A075F0",
 };
 
 export const backgroundColors = { // девочки-дизайнеры просили разделить цвета текста и фона
@@ -55,5 +56,8 @@ color: ${props => props.$black ? colors.black : colors.white};
 
 & a { // ссылка в тексте
   color: ${colors.violet};
+  &:hover {
+    color: ${colors.violetHover};
+  }
 }
 `
