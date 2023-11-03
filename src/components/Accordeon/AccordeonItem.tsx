@@ -13,13 +13,14 @@ export interface IAccordeonItem {
   };
   onClick: () => void;
   isOpen: boolean;
+  isBlack: boolean;
 }
-const AccordeonItem = ({ panel, onClick, isOpen }: IAccordeonItem) => {
+const AccordeonItem = ({ panel, onClick, isOpen, isBlack }: IAccordeonItem) => {
   const itemRef = useRef<HTMLLIElement | null>(null);
 
   return (
-    <li onClick={onClick}>
-      <StyledAccordeonPanel $isOpen={isOpen}>
+    <div>
+      <StyledAccordeonPanel $isOpen={isOpen} onClick={onClick} $blackAcc={isBlack}>
         <div>
           <h3>{panel.title}</h3>
           <button>
@@ -27,17 +28,17 @@ const AccordeonItem = ({ panel, onClick, isOpen }: IAccordeonItem) => {
           </button>
         </div>
       </StyledAccordeonPanel>
-      <StyledAccordeonCollapse
+      <StyledAccordeonCollapse $blackAcc={isBlack}
         $isOpen={isOpen}
         style={
           isOpen ? { height: itemRef.current?.scrollHeight } : { height: "0px" }
         }
       >
-        <StyledAccordeonContent ref={itemRef}>
+        <StyledAccordeonContent ref={itemRef} $blackAcc={isBlack}>
           {panel.content}
         </StyledAccordeonContent>
       </StyledAccordeonCollapse>
-    </li>
+    </div>
   );
 };
 

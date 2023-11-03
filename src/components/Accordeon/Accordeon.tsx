@@ -2,9 +2,6 @@ import React, { useState } from "react";
 
 import {
   StyledAccordeon,
-  StyledAccordeonCollapse,
-  StyledAccordeonContent,
-  StyledAccordeonPanel,
 } from "./StyledAccordeon";
 import AccordeonItem from "./AccordeonItem";
 
@@ -14,13 +11,13 @@ export const accordeonData = [
   { title: "Строка 3", content: "Содержимое строки 3" },
 ];
 
-const Accordeon = () => {
+const Accordeon = ({isBlack}: {isBlack: boolean}) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   return (
     <StyledAccordeon>
       {accordeonData.map((panel, index) => (
-        <AccordeonItem
+        <AccordeonItem isBlack={isBlack}
           key={index}
           isOpen={activeIndex === index}
           onClick={() =>
