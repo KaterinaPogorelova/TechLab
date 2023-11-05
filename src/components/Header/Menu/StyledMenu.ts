@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { linkSize, neutralColors, hoverColors, activeColors } from "../../../styledConstants";
+import { neutralColors, hoverColors, activeColors, desktopSizes, weights } from "../../../styledConstants";
 
 import { Link } from "react-router-dom";
 
@@ -37,13 +37,13 @@ cursor:pointer;
 `
 
 export const StyledLinkContainer = styled.div<{ $clickedTab: string, $title: string }>`
-font-size: ${linkSize.size};
-font-weight: ${linkSize.weight};
+font-size: ${desktopSizes.btnSizes.link.button2};
+font-weight: ${weights.medium};
 color:${props => props.$clickedTab === props.$title ? activeColors.green : neutralColors.white};
 `
 
 export const StyledLinkMain = styled(Link)`
 color:${neutralColors.white};
-font-size: ${linkSize.size};
-font-weight: ${linkSize.weight};
+font-size: ${desktopSizes.btnSizes.link.button2};
+font-weight: ${weights.medium};
 `

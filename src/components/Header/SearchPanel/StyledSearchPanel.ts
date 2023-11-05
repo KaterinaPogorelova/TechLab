@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { backgroundColors, containerParams, neutralColors, titleSizes } from "../../../styledConstants";
+import { backgroundColors, containerParams, neutralColors, desktopSizes } from "../../../styledConstants";
 
 export const StyledSearchPanelWrap = styled.div<{ $activeTab: string }>`
 position:absolute;
@@ -31,7 +31,7 @@ gap:32px;
 
 export const StyledSearchInput = styled.input`
 border:none;
-font-size:${titleSizes.h2};
+font-size:${desktopSizes.titleSizes.T4};
 color:${neutralColors.white};
 flex-grow:1;
 `

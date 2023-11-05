@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { brandColors, backgroundColors, titleSizes, weights, containerParams } from "../../styledConstants";
+import { brandColors, backgroundColors, desktopSizes, weights, containerParams } from "../../styledConstants";
 import { Link } from "react-router-dom";
 
 export const StyledContainer = styled.div`
@@ -42,7 +42,7 @@ gap:8px;
 
 export const StyledName = styled.h3`
 margin:0;
-font-size:${titleSizes.h3};
+font-size:${desktopSizes.titleSizes.T3};
 font-weight:${weights.semibold};
 color:${brandColors.green}
 `

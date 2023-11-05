@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { backgroundColors, titleSizes, weights, containerParams, neutralColors } from "../../../styledConstants";
+import { backgroundColors, desktopSizes, weights, containerParams, neutralColors } from "../../../styledConstants";
 
 import { Link } from "react-router-dom";
 
@@ -27,12 +27,12 @@ gap:117px;
 
 export const LinkSection = styled.h4`
 color:${neutralColors.white};
-font-size:${titleSizes.h4};
+font-size:${desktopSizes.btnSizes.link.button1};
 font-weight:${weights.medium};
 `
 
 export const SectionTitle = styled(Link)`
 padding-left:36px;
 color:${neutralColors.white};
-font-size:${titleSizes.h5};
+font-size:${desktopSizes.btnSizes.link.button3};
 `

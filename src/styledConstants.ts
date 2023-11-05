@@ -25,17 +25,18 @@ export const backgroundColors = {
     lightblack: '#191919'
 }
 
-export const titleSizes = {
-    h1: "40px",
-    h2: "32px",
-    h3: "20px",
-    h4: '24px',
-    h5: "18px"
-}
-
-export const linkSize = {
-    size: "20px",
-    weight: "500"
+export const desktopSizes = {
+    btnSizes: {
+        link: {
+            button1: "24px",
+            button2: "20px",
+            button3: "16px"
+        }
+    },
+    titleSizes: {
+        T3: "20px",
+        T4: "32px"
+    }
 }
 
 export const weights = {
