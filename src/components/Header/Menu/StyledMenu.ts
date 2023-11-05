@@ -1,13 +1,14 @@
 import styled from "styled-components";
-import { linkSize, neutralColors, hoverColors } from "../../../styledConstants";
+import { linkSize, neutralColors, hoverColors, activeColors } from "../../../styledConstants";
+
 import { Link } from "react-router-dom";
 
-export const Nav = styled.ul`
+export const StyledNav = styled.ul`
 display:flex;
 margin:0;
 gap:32px;
 `
-export const LinkWrap = styled.li`
+export const StyledLinkWrap = styled.li`
 display:flex;
 gap:8px;
 cursor:pointer;
@@ -35,13 +36,13 @@ cursor:pointer;
 }
 `
 
-export const LinkContainer = styled.div`
+export const StyledLinkContainer = styled.div<{ $clickedTab: string, $title: string }>`
 font-size: ${linkSize.size};
 font-weight: ${linkSize.weight};
-color:${neutralColors.white};
+color:${props => props.$clickedTab === props.$title ? activeColors.green : neutralColors.white};
 `
 
-export const LinkMain = styled(Link)`
+export const StyledLinkMain = styled(Link)`
 color:${neutralColors.white};
 font-size: ${linkSize.size};
 font-weight: ${linkSize.weight};

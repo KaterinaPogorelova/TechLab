@@ -1,8 +1,10 @@
-import { useAppDispatch, useAppSelector } from "../../../store/store";
-import { LinkContainer, LinkMain, LinkWrap } from "./StyledMenu"
+import { useAppDispatch, useAppSelector } from "../../../store/store"
+import { setClickedTab } from "../../../store/navigation"
+
+import { StyledLinkContainer, StyledLinkMain, StyledLinkWrap } from "./StyledMenu"
 import { DownArrow } from "../../../assets/img/Arrows"
-import { activeColors } from "../../../styledConstants";
-import { setClickedTab } from "../../../store/navigation";
+
+
 
 
 type NavLinkProps = {
@@ -14,15 +16,15 @@ export const NavLink = ({ path, title }: NavLinkProps) => {
     const clickedTab = useAppSelector((state) => state.nav.clickedTab)
     const dispatch = useAppDispatch()
 
-    return (<LinkWrap onClick={() => {
+    return (<StyledLinkWrap onClick={() => {
         if (clickedTab === title) {
             dispatch(setClickedTab(''))
         } else {
             dispatch(setClickedTab(title))
         }
     }}>
-        {path && <LinkMain to={path}>{title}</LinkMain>}
-        {!path && <LinkContainer style={clickedTab === title ? { color: activeColors.green } : {}}>{title}</LinkContainer>}
+        {path && <StyledLinkMain to={path}>{title}</StyledLinkMain>}
+        {!path && <StyledLinkContainer $clickedTab={clickedTab} $title={title}>{title}</StyledLinkContainer>}
         {!path && <DownArrow isClicked={clickedTab === title}></DownArrow>}
-    </LinkWrap>)
+    </StyledLinkWrap>)
 }
