@@ -6,13 +6,13 @@ import { Desktop1920, Desktop1440 } from "../../../styledConstantsFont";
 
 import { Link } from "react-router-dom";
 
-export const Wrapper = styled.div<{ $linkSections?: string[] }>`
+export const Wrapper = styled.div<{ $isClicked?: boolean }>`
 position:absolute;
 left:0;
 top:0;
-visibility:${props => props.$linkSections ? 'visible' : 'hidden'};
-transform:${props => props.$linkSections ? 'translateY(92px)' : 'translateY(0px)'};
-opacity:${props => props.$linkSections ? '1' : '0'};
+visibility:${props => props.$isClicked ? 'visible' : 'hidden'};
+transform:${props => props.$isClicked ? 'translateY(92px)' : 'translateY(0px)'};
+opacity:${props => props.$isClicked ? '1' : '0'};
 width:100%;
 height:280px;
 background:${backgroundColor.lightBlack};

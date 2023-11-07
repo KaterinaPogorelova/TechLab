@@ -3,6 +3,7 @@ import { setClickedTab } from "../../../store/navigation"
 
 import { StyledLinkContainer, StyledLinkMain, StyledLinkWrap } from "./StyledMenu"
 import { DownArrow } from "../../../assets/icons/Arrows"
+import { LinksWrap } from "../LinksWrap/LinksWrap"
 
 
 
@@ -16,7 +17,7 @@ export const NavLink = ({ path, title }: NavLinkProps) => {
     const clickedTab = useAppSelector((state) => state.nav.clickedTab)
     const dispatch = useAppDispatch()
 
-    return (<StyledLinkWrap onClick={() => {
+    return (<><StyledLinkWrap onClick={() => {
         if (clickedTab === title) {
             dispatch(setClickedTab(''))
         } else {
@@ -26,5 +27,7 @@ export const NavLink = ({ path, title }: NavLinkProps) => {
         {path && <StyledLinkMain to={path}>{title}</StyledLinkMain>}
         {!path && <StyledLinkContainer $clickedTab={clickedTab} $title={title}>{title}</StyledLinkContainer>}
         {!path && <DownArrow isClicked={clickedTab === title}></DownArrow>}
-    </StyledLinkWrap>)
+    </StyledLinkWrap>
+        {!path && <LinksWrap isClicked={clickedTab === title}></LinksWrap>}
+    </>)
 }

@@ -19,7 +19,7 @@ export const Header = () => {
                 <IconsWrap></IconsWrap>
             </StyledContainerHeader>
         </StyledHeaderWrap>
-        <LinksWrap></LinksWrap>
+        {/* <LinksWrap></LinksWrap> */}
         <SearchPanel></SearchPanel>
     </>)
 }
