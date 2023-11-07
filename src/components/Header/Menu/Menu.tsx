@@ -8,6 +8,6 @@ export const Menu = () => {
     const tabs = useAppSelector((state) => state.nav.tabs)
 
     return (<StyledNav>
-        {tabs.map((tab) => tab.path ? <NavLink path={tab.path} title={tab.title} /> : <NavLink title={tab.title} />)}
+        {tabs.map((tab) => tab.path ? <NavLink path={tab.path} title={tab.title} key={tab.title} /> : <NavLink title={tab.title} key={tab.title} />)}
     </StyledNav>)
 }

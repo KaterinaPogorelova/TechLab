@@ -9,7 +9,7 @@ export const LinksWrap = () => {
     return (<Wrapper $linkSections={tab?.linkSections}>
         <Container>
             {tab && tab.linkSections && tab.linkSections.map((link) =>
-                <div><LinkSection>{link}</LinkSection><SectionTitle to={'/'}>Заглушка</SectionTitle></div>)}
+                <div key={link}><LinkSection>{link}</LinkSection><SectionTitle to={'/'}>Заглушка</SectionTitle></div>)}
         </Container>
     </Wrapper>)
 }

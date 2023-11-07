@@ -6,7 +6,7 @@ import { Desktop1920, Desktop1440 } from "../../../styledConstantsFont";
 
 import { Link } from "react-router-dom";
 
-export const Wrapper = styled.div<{ $linkSections: string[] | undefined }>`
+export const Wrapper = styled.div<{ $linkSections?: string[] }>`
 position:absolute;
 left:0;
 top:0;
