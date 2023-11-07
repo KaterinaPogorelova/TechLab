@@ -1,12 +1,12 @@
 import React from "react";
 import Accordeon from "../Accordeon/Accordeon";
 import {  StyledExpectation, StyledExpectationText, StyledH2 } from "./styledExpectationLayout";
-import { StyledContent, StyledFlex } from "../../styledConstants";
+import {  StyledContainer, StyledFlex } from "../../styledConstants";
 
 const ExpectationLayout = () => {
   return (
     <StyledExpectation>
-      <StyledContent>
+      <StyledContainer>
         <StyledH2>What to expect from courses</StyledH2>
         <StyledFlex>
           <StyledExpectationText>
@@ -16,7 +16,7 @@ const ExpectationLayout = () => {
           </StyledExpectationText>
           <Accordeon isBlack={false}/>
         </StyledFlex>
-      </StyledContent>
+      </StyledContainer>
     </StyledExpectation>
   );
 };
