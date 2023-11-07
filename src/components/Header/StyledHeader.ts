@@ -1,11 +1,13 @@
 import styled from "styled-components";
-import { brandColors, backgroundColors, desktopSizes, weights, containerParams } from "../../styledConstants";
-import { Link } from "react-router-dom";
 
-export const StyledContainer = styled.div`
-max-width: ${containerParams.width};
+import { StyledContainer } from "../../styledConstants";
+
+import { Link } from "react-router-dom";
+import { backgroundColor, defaultBtnColor, hoverBtnColor } from "../../styledConstantsColors";
+import { Desktop1440, Desktop1920 } from "../../styledConstantsFont";
+
+export const StyledContainerHeader = styled(StyledContainer)`
 margin: 0 auto;
-padding: 0 ${containerParams.padding};
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -16,7 +18,7 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-background: ${backgroundColors.black};
+background: ${backgroundColor.black};
 padding:26px 0px;
 z-index:4;
 `
@@ -27,22 +29,26 @@ align-items:center;
 gap:8px;
 
 & svg{
-    fill:${brandColors.green};
+    fill:${defaultBtnColor.green};
 }
 &:hover svg{
-    fill:${brandColors.yellow};
+    fill:${hoverBtnColor.yellow};
     transition:all 0.5s;
 }
 
 &:hover h3{
-    color:${brandColors.yellow};
+    color:${hoverBtnColor.yellow};
     transition:all 0.5s;
 }
 `
 
 export const StyledName = styled.h3`
 margin:0;
-font-size:${desktopSizes.titleSizes.T3};
-font-weight:${weights.semibold};
-color:${brandColors.green}
+font-size:${Desktop1920.headings.h6.size};
+font-weight:${Desktop1920.headings.h6.weight};
+color:${defaultBtnColor.green};
+@media(max-width:1440px){
+    font-size:${Desktop1440.headings.h6.size};
+font-weight:${Desktop1440.headings.h6.weight};
+}
 `

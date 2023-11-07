@@ -1,5 +1,5 @@
 import { Wrapper } from "./StyledIconsWrap"
-import { Search, User, Cart } from "../../../assets/img/Icons"
+import { Search, User, Cart } from "../../../assets/icons/HeaderIcons"
 
 
 export const IconsWrap = () => {

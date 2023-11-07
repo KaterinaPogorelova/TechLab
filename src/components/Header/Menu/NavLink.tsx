@@ -2,7 +2,7 @@ import { useAppDispatch, useAppSelector } from "../../../store/store"
 import { setClickedTab } from "../../../store/navigation"
 
 import { StyledLinkContainer, StyledLinkMain, StyledLinkWrap } from "./StyledMenu"
-import { DownArrow } from "../../../assets/img/Arrows"
+import { DownArrow } from "../../../assets/icons/Arrows"
 
 
 

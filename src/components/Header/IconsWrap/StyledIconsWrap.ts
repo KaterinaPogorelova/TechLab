@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { brandColors, hoverColors } from "../../../styledConstants";
+
+import { defaultBtnColor, hoverBtnColor } from "../../../styledConstantsColors";
 
 export const Wrapper = styled.div`
 display:flex;
@@ -11,10 +12,10 @@ export const IconWrap = styled.button`
 width:40px;
 height:40px;
 & svg{
-    fill:${brandColors.green};
+    fill:${defaultBtnColor.green};
 }
 &:hover svg{
-fill:${hoverColors.green};
+fill:${hoverBtnColor.green};
 transition:all 0.5s;
 }
 `

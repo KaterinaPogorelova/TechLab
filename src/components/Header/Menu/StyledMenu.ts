@@ -1,49 +1,62 @@
 import styled from "styled-components";
-import { neutralColors, hoverColors, activeColors, desktopSizes, weights } from "../../../styledConstants";
+import { } from "../../../styledConstants";
 
 import { Link } from "react-router-dom";
+import { activeBtnColor, colors, defaultBtnColor, hoverBtnColor } from "../../../styledConstantsColors";
+import { Desktop1440, Desktop1920 } from "../../../styledConstantsFont";
 
 export const StyledNav = styled.ul`
 display:flex;
 margin:0;
 gap:32px;
 `
+
 export const StyledLinkWrap = styled.li`
 display:flex;
 gap:8px;
 cursor:pointer;
 
-& svg{
-    fill:${neutralColors.white};
-}
-.svgWrap{
-    width:24px;
-    height:24px;
-}
 &:hover a{
-    color:${hoverColors.green};
-    transition:all 0.5s;
-}
-
-&:hover div{
-    color:${hoverColors.green};
+    color:${hoverBtnColor.green};
     transition:all 0.5s;
 }
 
 &:hover svg{
-    fill:${hoverColors.green};
+    fill:${hoverBtnColor.green};
+    transition:all 0.5s;
+}
+
+&:hover div{
+    color:${hoverBtnColor.green};
     transition:all 0.5s;
 }
 `
 
+export const StyledSvgWrap = styled.div<{ $isClicked?: boolean }>`
+transform:${props => props.$isClicked ? 'rotate(180deg)' : 'rotate(0deg)'};
+    width:24px;
+    height:24px;
+& svg{
+    fill: ${props => props.$isClicked ? activeBtnColor.green : colors.neutral.white}
+}
+`
+
 export const StyledLinkContainer = styled.div<{ $clickedTab: string, $title: string }>`
-font-size: ${desktopSizes.btnSizes.link.button2};
-font-weight: ${weights.medium};
-color:${props => props.$clickedTab === props.$title ? activeColors.green : neutralColors.white};
+font-size: ${Desktop1920.buttons.buttonSm.size};
+font-weight: ${Desktop1920.buttons.buttonSm.weight};
+color:${props => props.$clickedTab === props.$title ? activeBtnColor.green : defaultBtnColor.white};
+@media(max-width:1440px){
+    font-size: ${Desktop1440.buttons.buttonSm.size};
+    font-weight: ${Desktop1440.buttons.buttonSm.weight};
+}
 `
 
 export const StyledLinkMain = styled(Link)`
-color:${neutralColors.white};
-font-size: ${desktopSizes.btnSizes.link.button2};
-font-weight: ${weights.medium};
+color:${defaultBtnColor.white};
+font-size: ${Desktop1920.buttons.buttonSm.size};
+font-weight: ${Desktop1920.buttons.buttonSm.weight};
+@media(max-width:1440px){
+    font-size: ${Desktop1440.buttons.buttonSm.size};
+    font-weight: ${Desktop1440.buttons.buttonSm.weight};
+}
 `

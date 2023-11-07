@@ -1,6 +1,6 @@
-import { StyledContainer, StyledHeaderWrap, StyledLogoWrap, StyledName } from "./StyledHeader"
+import { StyledContainerHeader, StyledHeaderWrap, StyledLogoWrap, StyledName } from "./StyledHeader"
 
-import { ReactComponent as Logo } from '../../assets/img/logo.svg'
+import { ReactComponent as Logo } from '../../assets/icons/logo.svg'
 
 import { Menu } from "./Menu/Menu"
 import { IconsWrap } from './IconsWrap/IconsWrap'
@@ -10,14 +10,14 @@ import { SearchPanel } from './SearchPanel/SearchPanel'
 export const Header = () => {
     return (<>
         <StyledHeaderWrap>
-            <StyledContainer>
+            <StyledContainerHeader>
                 <StyledLogoWrap to={'/'}>
                     <Logo></Logo>
                     <StyledName>TechLab</StyledName>
                 </StyledLogoWrap>
                 <Menu></Menu>
                 <IconsWrap></IconsWrap>
-            </StyledContainer>
+            </StyledContainerHeader>
         </StyledHeaderWrap>
         <LinksWrap></LinksWrap>
         <SearchPanel></SearchPanel>
