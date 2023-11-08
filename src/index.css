@@ -17,6 +17,7 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+  display: block;
 }
 
 input,
@@ -34,4 +35,14 @@ input::-webkit-search-cancel-button,
 input::-webkit-search-results-button,
 input::-webkit-search-results-decoration {
   display: none;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - 20px));
+  }
 }

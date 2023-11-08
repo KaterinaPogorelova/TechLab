@@ -6,21 +6,21 @@ import { Link } from "react-router-dom";
 import { backgroundColor, defaultBtnColor, hoverBtnColor } from "../../styledConstantsColors";
 import { Desktop1440, Desktop1920 } from "../../styledConstantsFont";
 
-export const StyledContainerHeader = styled(StyledContainer)`
-margin: 0 auto;
-display:flex;
-justify-content:space-between;
-align-items:center;
-`
-
-export const StyledHeaderWrap = styled.header`
+export const StyledHeaderWrap = styled.header<{ $isRunlineClosed: boolean }>`
 position:fixed;
-top:0;
+top:${props => props.$isRunlineClosed ? '0' : '50px'};;
 left:0;
 width:100%;
 background: ${backgroundColor.black};
 padding:26px 0px;
 z-index:4;
+`
+
+export const StyledContainerHeader = styled(StyledContainer)`
+margin: 0 auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
 `
 
 export const StyledLogoWrap = styled(Link)`
