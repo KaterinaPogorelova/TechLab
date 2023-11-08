@@ -30,7 +30,7 @@ export const StyledFlex = styled.div` // это можно дополнять у
 export const StyledFrameHeader = styled.h3` // Заголовок почти на каждом блоке 
 color: ${typographyColor.lightBG.black};
 font-family: Raleway;
-font-size: 54px;
+font-size: 56px;
 font-style: normal;
 font-weight: 700;
 line-height: 60px;
