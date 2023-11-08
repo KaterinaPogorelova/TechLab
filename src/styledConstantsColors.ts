@@ -40,7 +40,9 @@ export const typographyColor = {//цвета текста
         green: '#2FB329',
         orange: '#E55700',
         turquoise: '#17A9A9',
-        yellow: '#FFB300'
+        yellow: '#FFB300',
+        black: "#111111",
+        darkGray: "#999999"
     },
     darkBG: {
         violet: '#B391F3',
