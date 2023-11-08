@@ -1,12 +1,12 @@
 import React from "react";
-import { StyledContent, StyledFrameHeader } from "../../styledConstants";
+import { StyledContainer, StyledFrameHeader } from "../../styledConstants";
 import Accordeon from "../Accordeon/Accordeon";
 import { StyledQuestions, StyledQuestionsText } from "./styledQuestions";
 
 const QuestionsLayout = () => {
   return (
     <StyledQuestions>
-      <StyledContent>
+      <StyledContainer>
         <div>
           <StyledFrameHeader>
             Have a <span>question?</span> We have an answer.
@@ -17,7 +17,7 @@ const QuestionsLayout = () => {
           </StyledQuestionsText>
         </div>
         <Accordeon isBlack={true} />
-      </StyledContent>
+      </StyledContainer>
     </StyledQuestions>
   );
 };

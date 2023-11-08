@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { backgroundColors, colors } from "../../styledConstants";
+import { backgroundColor, typographyColor } from "../../styledConstantsColors";
+
 
 export const StyledAccordeon = styled.ul`
   width: 793px; 
@@ -15,11 +16,11 @@ export const StyledAccordeonPanel = styled.div<{ $isOpen: boolean, $blackAcc?: b
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
-  color: ${props => props.$blackAcc ? colors.black : colors.white};
-  border-bottom: ${props => (props.$isOpen ? "none" : `1px solid ${props.$blackAcc ? colors.darkGray : colors.white}`)};
+  color: ${props => props.$blackAcc ? typographyColor.lightBG.black : typographyColor.darkBG.white};
+  border-bottom: ${props => (props.$isOpen ? "none" : `1px solid ${props.$blackAcc ? typographyColor.lightBG.darkGray : typographyColor.darkBG.white}`)};
   transition: color .5s;
   &:hover {
-    color: ${colors.darkGray};
+    color: ${typographyColor.lightBG.darkGray};
   }
 
   & div {
@@ -49,13 +50,13 @@ export const StyledAccordeonContent = styled.li<{ $isOpen?: boolean, $blackAcc?:
   font-size: 22px;
   font-style: normal;
   font-weight: 500;
-  color: ${props => props.$blackAcc ? colors.black : colors.white};
+  color: ${props => props.$blackAcc ? typographyColor.lightBG.black : typographyColor.darkBG.white};
 `;
 
 export const StyledAccordeonCollapse = styled.div<{ $isOpen?: boolean, $blackAcc?: boolean }>`
   height: ${(props) => (props.$isOpen ? "auto" : "0")};
   overflow: hidden;
   transition: height 0.5s;
-  background-color: ${props => props.$blackAcc ? backgroundColors.violet5 : backgroundColors.violet20};
+  background-color: ${props => props.$blackAcc ? backgroundColor.violet5 : backgroundColor.violet20};
   border-radius: 16px;
 `;
