@@ -39,6 +39,7 @@ color: ${typographyColor.lightBG.violet};
   }
 }
 `
+
 export const StyledContainer = styled.div`
   max-width: 1224px;
   margin: 0 auto;
