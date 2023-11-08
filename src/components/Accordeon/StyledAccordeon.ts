@@ -18,6 +18,10 @@ export const StyledAccordeonPanel = styled.div<{ $isOpen: boolean, $blackAcc?: b
   font-weight: 600;
   color: ${props => props.$blackAcc ? typographyColor.lightBG.black : typographyColor.darkBG.white};
   border-bottom: ${props => (props.$isOpen ? "none" : `1px solid ${props.$blackAcc ? typographyColor.lightBG.darkGray : typographyColor.darkBG.white}`)};
+  transition: color .5s;
+  &:hover {
+    color: ${typographyColor.lightBG.darkGray};
+  }
 
   & div {
     height: 100px;
