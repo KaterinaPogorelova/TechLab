@@ -5,6 +5,11 @@
   font-family: 'Raleway', sans-serif;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
 ul {
   list-style: none;
 }
@@ -22,4 +27,11 @@ select {
   cursor: pointer;
   border: none;
   background: inherit;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+  display: none;
 }
