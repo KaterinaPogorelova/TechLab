@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { typographyColor } from "./styledConstantsColors";
+import { hoverBtnColor, typographyColor } from "./styledConstantsColors";
 
 export const StyledFlex = styled.div` // это можно дополнять условиями
   position: relative;
@@ -35,7 +35,10 @@ margin-bottom: 50px;
 color: ${props => props.$black ? typographyColor.lightBG.black : typographyColor.darkBG.white};
 
 & a { // ссылка в тексте
-  color: ${typographyColor.lightBG.violet};
+color: ${typographyColor.lightBG.violet};
+  &:hover {
+    color: ${hoverBtnColor.violet};
+  }
 }
 `
 
