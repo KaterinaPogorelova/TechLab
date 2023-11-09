@@ -1,6 +1,8 @@
 import React from 'react'
 import { StyledPopular } from './styledPopularLayout'
 import { StyledContainer, StyledFrameHeader, StyledFrameText } from '../../styledConstants'
+import Slider from '../Slider/Slider'
+import PopularCourses from './PopularCoursesContainer/PopularCourses'
 
 const PopularLayout = () => {
   return (
@@ -12,6 +14,7 @@ const PopularLayout = () => {
           <StyledFrameText $black>
           See the courses most commonly chosen by students
           </StyledFrameText>
+          <Slider content={<PopularCourses/>} nameLink='All popular courses'/>
       </StyledContainer>
     </StyledPopular>
   )

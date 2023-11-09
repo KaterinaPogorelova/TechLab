@@ -1,4 +1,4 @@
-import React, { useEffect,  useState } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper/modules";
 import "swiper/css";
@@ -9,18 +9,14 @@ import "./slider.css";
 import {
   Slide,
   SliderContainer,
+  StyledSliderLink,
 } from "./styledSlider";
+import { NavLink } from "react-router-dom";
+import LongArrowRight from "../../assets/icons/LongArrowRight";
 
-export const slidesData = [{title: "Slide 1"}, {title: "Slide 2"}, {title: "Slide 3"}, {title: "Slide 4"}];
+export const slidesData = [{title: "Slide 1"}, {title: "Slide 2"}, {title: "Slide 3"}, {title: "Slide 4"}, {title: "Slide 5"}];
 
-const Slider = () => {
-  useEffect(() => {
-    const element = document.querySelector(".swiper-pagination-horizontal");
-    if (element && element.textContent) {
-      element.textContent = element.textContent.replace(/\s/g, '');
-    }
-  }, []);
-  
+const Slider = ({content, nameLink}: {content?: React.ReactNode, nameLink?: string}) => {  
   return (
     <SliderContainer>
       <Swiper
@@ -28,18 +24,20 @@ const Slider = () => {
         spaceBetween={50}
         slidesPerView={1}
         navigation
+        loop={true}
         pagination={{
           type: 'fraction',
         }}
         onSlideChange={() => {}}
         onSwiper={(swiper: any) => console.log(swiper)}
       >
-        {slidesData.map((slide, index) => (
-          <SwiperSlide key={index}>
-          <Slide>{slide.title}</Slide>
-        </SwiperSlide>
-        ))}
+          <SwiperSlide><Slide>{content}</Slide></SwiperSlide>
+          <SwiperSlide><Slide>{content}</Slide></SwiperSlide>
+          <SwiperSlide><Slide>{content}</Slide></SwiperSlide>
+          <SwiperSlide><Slide>{content}</Slide></SwiperSlide>
+          <SwiperSlide><Slide>{content}</Slide></SwiperSlide>
       </Swiper>
+      { nameLink && <StyledSliderLink to="#">{nameLink}<LongArrowRight/></StyledSliderLink>}
     </SliderContainer>
   );
 };
