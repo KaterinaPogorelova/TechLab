@@ -13,10 +13,10 @@ export const RunLine = () => {
     return (<>
         {!isClosed && <RunLineBlockWrap><RunLineWrap>
             <RunLineList>
-                {runlineList.map((item) => <RunLineItem>{item}</RunLineItem>)}
+                {runlineList.map((item, index) => <RunLineItem key={index}>{item}</RunLineItem>)}
             </RunLineList>
             <RunLineList aria-hidden='true'>
-                {runlineList.map((item) => <RunLineItem>{item}</RunLineItem>)}
+                {runlineList.map((item, index) => <RunLineItem key={index + '-1'}>{item}</RunLineItem>)}
             </RunLineList>
         </RunLineWrap>
             <SvgWrap onClick={() => dispatch(setRunlineClosed(true))}><Cross></Cross></SvgWrap>

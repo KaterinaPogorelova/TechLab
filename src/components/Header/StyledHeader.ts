@@ -12,7 +12,6 @@ top:${props => props.$isRunlineClosed ? '0' : '50px'};;
 left:0;
 width:100%;
 background: ${backgroundColor.black};
-padding:26px 0px;
 z-index:4;
 `
 
@@ -44,11 +43,11 @@ gap:8px;
 
 export const StyledName = styled.h3`
 margin:0;
-font-size:${Desktop1920.headings.h6.size};
+font-size:20px;
 font-weight:${Desktop1920.headings.h6.weight};
 color:${defaultBtnColor.green};
 @media(max-width:1440px){
-    font-size:${Desktop1440.headings.h6.size};
+font-size:18px;
 font-weight:${Desktop1440.headings.h6.weight};
 }
 `

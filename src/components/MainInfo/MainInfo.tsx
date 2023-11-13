@@ -1,6 +1,11 @@
 import { useAppSelector } from "../../store/store"
 
-import { StyledInfoWrap, StyledMainContainer, StyledMainInfoWrap, StyledText, StyledTitle, StyledSvgWrap, StyledTextWrap, StyledCoursesList, StyledCoursesItem, StyledCoursesItemWrap, StyledExpertsWrap, StyledExpertsText, StyledExpertsList, StyledExpertsItem, StyledImgWrap } from "./StyledMainInfo"
+import {
+    StyledInfoWrap, StyledMainContainer, StyledMainInfoWrap,
+    StyledText, StyledTitle, StyledSvgWrap, StyledTextWrap, StyledCoursesList, StyledCoursesItem,
+    StyledCoursesItemWrap, StyledExpertsWrap, StyledExpertsText, StyledExpertsList,
+    StyledExpertsItem, StyledImgWrap
+} from "./StyledMainInfo"
 
 import { ReactComponent as Arrow } from "../../assets/MainArrow.svg"
 
@@ -43,7 +48,7 @@ export const MainInfo = () => {
                 </StyledTextWrap>
                 <StyledCoursesList>
                     {coursesList.map((item) =>
-                        <StyledCoursesItemWrap $color={item.color}>
+                        <StyledCoursesItemWrap $color={item.color} key={item.title}>
                             <StyledCoursesItem to='/' $color={item.color}>{item.title}</StyledCoursesItem>
                         </StyledCoursesItemWrap>
                     )}
