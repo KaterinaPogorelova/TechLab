@@ -23,7 +23,7 @@ color: ${typographyColor.darkBG.white};
 }
 `
 
-export const StyledFrameText = styled.p<{$black: boolean}>` // текст под заголовком почти в каждом блоке
+export const StyledFrameText = styled.p<{ $black: boolean }>` // текст под заголовком почти в каждом блоке
   font-family: Raleway;
 font-size: 32px;
 font-style: normal;

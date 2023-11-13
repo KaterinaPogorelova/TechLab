@@ -2,11 +2,11 @@ import { useAppSelector } from "../../../store/store"
 
 import { Container, Wrapper, LinkSection, SectionTitle } from "./StyledLinkesWrap"
 
-type LinksWrap = {
+type LinksWrapType = {
     isClicked?: boolean,
 }
 
-export const LinksWrap = ({ isClicked }: LinksWrap) => {
+export const LinksWrap = ({ isClicked }: LinksWrapType) => {
     const clickedTab = useAppSelector((state) => state.nav.clickedTab)
     const tab = useAppSelector((state) => state.nav.tabs.find((tab) => tab.title === clickedTab))
 

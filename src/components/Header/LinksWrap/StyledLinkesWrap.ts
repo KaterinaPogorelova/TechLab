@@ -11,7 +11,7 @@ position:absolute;
 left:0;
 top:0;
 visibility:${props => props.$isClicked ? 'visible' : 'hidden'};
-transform:${props => props.$isClicked ? 'translateY(92px)' : 'translateY(0px)'};
+transform:${props => props.$isClicked ? 'translateY(77px)' : 'translateY(0px)'};
 opacity:${props => props.$isClicked ? '1' : '0'};
 width:100%;
 height:280px;
