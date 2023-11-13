@@ -23,7 +23,7 @@ color: ${typographyColor.darkBG.white};
 }
 `
 
-export const StyledFrameText = styled.p<{$black: boolean}>` // текст под заголовком почти в каждом блоке
+export const StyledFrameText = styled.p<{ $black: boolean }>` // текст под заголовком почти в каждом блоке
   font-family: Raleway;
 font-size: 32px;
 font-style: normal;
@@ -50,3 +50,11 @@ export const StyledContainer = styled.div`
   }
 `;
 
+export const StyledSectionSeparator = styled.div<{ $background: string }>`
+position:absolute;
+transform:translateY(-80px);
+height:80px;
+width:100%;
+z-index:-1;
+background:${props => props.$background};
+`

@@ -4,7 +4,6 @@ import { ReactComponent as Logo } from '../../assets/icons/logo.svg'
 
 import { Menu } from "./Menu/Menu"
 import { IconsWrap } from './IconsWrap/IconsWrap'
-import { LinksWrap } from './LinksWrap/LinksWrap'
 import { SearchPanel } from './SearchPanel/SearchPanel'
 
 export const Header = () => {
@@ -18,8 +17,7 @@ export const Header = () => {
                 <Menu></Menu>
                 <IconsWrap></IconsWrap>
             </StyledContainerHeader>
+            <SearchPanel></SearchPanel>
         </StyledHeaderWrap>
-        {/* <LinksWrap></LinksWrap> */}
-        <SearchPanel></SearchPanel>
     </>)
 }
