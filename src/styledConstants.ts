@@ -21,6 +21,13 @@ margin-bottom: 16px;
 background: ${typographyColor.lightBG.violet};
 color: ${typographyColor.darkBG.white};
 }
+
+@media(max-width:1440px){
+font-size: 36px;
+font-weight: 700;
+line-height: 45px;
+letter-spacing: 1.08px;
+}
 `
 
 export const StyledFrameText = styled.p<{ $black: boolean }>` // текст под заголовком почти в каждом блоке
@@ -38,6 +45,14 @@ color: ${typographyColor.lightBG.violet};
     color: ${hoverBtnColor.violet};
   }
 }
+& span{
+  font-weight: 700;
+}
+@media(max-width:1440px){
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  }
 `
 
 export const StyledContainer = styled.div`
