@@ -129,6 +129,7 @@ border:${props => {
         if (props.$color === 'orange') return ('1px solid' + colors.brand.orange)
         if (props.$color === 'gradient') return 'none'
     }};
+display:block;
 width:100%;
 height:100%;
 padding:6px 20px;
