@@ -2,12 +2,14 @@ import { configureStore } from '@reduxjs/toolkit'
 import { useDispatch, TypedUseSelectorHook, useSelector } from 'react-redux'
 import { navReducer } from './navigation'
 import { searchReducer } from './search'
+import { runlineReducer } from './runline'
 
 
 export const store = configureStore({
     reducer: {
         nav: navReducer,
-        search: searchReducer
+        search: searchReducer,
+        runline: runlineReducer
     },
 })
 

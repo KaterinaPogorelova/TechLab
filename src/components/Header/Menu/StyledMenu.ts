@@ -8,13 +8,13 @@ import { Desktop1440, Desktop1920 } from "../../../styledConstantsFont";
 export const StyledNav = styled.ul`
 display:flex;
 margin:0;
-gap:32px;
 `
 
 export const StyledLinkWrap = styled.li`
 display:flex;
 gap:8px;
 cursor:pointer;
+padding:27px 32px;
 
 &:hover a{
     color:${hoverBtnColor.green};
