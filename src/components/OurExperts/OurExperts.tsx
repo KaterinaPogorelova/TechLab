@@ -50,10 +50,10 @@ export const OurExperts = () => {
             className="expertsSwiper">
             {experts.map((expert, index) =>
                 <SwiperSlide key={index}>
-                    <ExpertCard name={expert.name} src={expert.src} desc={expert.desc} color={expert.color}></ExpertCard>
+                    <ExpertCard name={expert.name} src={expert.src} desc={expert.desc} color={expert.color} />
                 </SwiperSlide>
             )}
         </Swiper>
-        <RightSideLink text={'All TechLab teachers'} path={'/'} isBlack isRightSided></RightSideLink>
+        <RightSideLink text={'All TechLab teachers'} path={'/'} isBlack isRightSided />
     </StyledExpertSectionWrap>)
 }

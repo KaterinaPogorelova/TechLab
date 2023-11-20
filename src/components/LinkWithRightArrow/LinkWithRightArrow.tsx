@@ -11,6 +11,6 @@ type ArrowProps = {
 export const RightSideLink = ({ isBlack, isRightSided, text, path }: ArrowProps) => {
     return (<StyledArrowWrap to={path} $isBlack={isBlack} $isRightSided={isRightSided}>
         <StyledArrowText>{text}</StyledArrowText>
-        <Arrow></Arrow>
+        <Arrow />
     </StyledArrowWrap>)
 }

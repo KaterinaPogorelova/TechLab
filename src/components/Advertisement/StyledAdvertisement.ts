@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { backgroundColor, colors, typographyColor } from "../../styledConstantsColors";
+import { backgroundColor, colors, hoverBtnColor, typographyColor } from "../../styledConstantsColors";
 import { StyledContainer } from "../../styledConstants";
 import { Link } from "react-router-dom";
 import { Desktop1440, Desktop1920 } from "../../styledConstantsFonts";
@@ -46,12 +46,40 @@ border: 1px solid ${colors.neutral.darkBlack};
 color:${typographyColor.lightBG.black};
 font-size:${Desktop1920.buttons.buttonLg.size};
 font-weight:${Desktop1920.buttons.buttonLg.weight};
-background:${backgroundColor.yellow};
 transition: 0.5s background-color;
+position: relative;
+overflow: hidden;
+z-index: 1;
+
+&:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:${backgroundColor.yellow};
+    z-index: -2;
+}
+
+&:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: ${backgroundColor.black};
+    transition: all .3s;
+    border-radius: 10rem;
+    z-index: -1;
+}
 
 &:hover{
-background:${backgroundColor.black};
 color:${typographyColor.darkBG.white};
+&:before {
+    width: 100%;
+}
 }
 
 @media(max-width:1440px){
