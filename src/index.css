@@ -13,6 +13,7 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+  display: block;
 }
 
 input,
@@ -20,9 +21,16 @@ button,
 textarea,
 select {
   font: inherit;
-  cursor: pointer;
   border: none;
   background: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
 }
 
 input::-webkit-search-decoration,
@@ -30,4 +38,14 @@ input::-webkit-search-cancel-button,
 input::-webkit-search-results-button,
 input::-webkit-search-results-decoration {
   display: none;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - 20px));
+  }
 }
