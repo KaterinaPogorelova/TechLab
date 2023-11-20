@@ -1,11 +1,12 @@
-import { AboutUs } from "../components/AboutUs/AboutUs"
-import { Directions } from "../components/Directions/Directions"
+import { RunLine } from "../components/RunLine/RunLine"
 import { Header } from "../components/Header/Header"
+import { MainInfo } from "../components/MainInfo/MainInfo"
+
 
 export const Main = () => {
     return (<>
-        {/* <Header></Header> */}
-        <Directions></Directions>
-        <AboutUs></AboutUs>
+        <RunLine></RunLine>
+        <Header></Header>
+        <MainInfo></MainInfo>
     </>)
 }

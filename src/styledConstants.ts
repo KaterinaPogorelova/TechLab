@@ -50,7 +50,9 @@ export const StyledContainer = styled.div`
   }
 `;
 
-export const StyledSectionSeparator = styled.div<{ $background: string }>`
+export const StyledSectionSeparator = styled.div<{ $background: string }>` 
+//Некоторые фреймы имеют закруглённые концы, этот блок существует, чтобы исключить белые пробелы между фреймами
+
 position:absolute;
 transform:translateY(-80px);
 height:80px;

@@ -11,13 +11,13 @@ export const Header = () => {
         <StyledHeaderWrap>
             <StyledContainerHeader>
                 <StyledLogoWrap to={'/'}>
-                    <Logo></Logo>
+                    <Logo />
                     <StyledName>TechLab</StyledName>
                 </StyledLogoWrap>
-                <Menu></Menu>
-                <IconsWrap></IconsWrap>
+                <Menu />
+                <IconsWrap />
             </StyledContainerHeader>
-            <SearchPanel></SearchPanel>
+            <SearchPanel />
         </StyledHeaderWrap>
     </>)
 }
