@@ -21,7 +21,6 @@ export const Header = () => {
                 <Menu />
                 <IconsWrap />
             </StyledContainerHeader>
-            <SearchPanel></SearchPanel>
             <SearchPanel />
         </StyledHeaderWrap>
     </>)
