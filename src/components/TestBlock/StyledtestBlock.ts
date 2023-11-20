@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { defaultBtnColor, gradient, hoverBtnColor, typographyColor, typographyGradient } from "../../styledConstantsColors";
+import { colors, defaultBtnColor, gradient, hoverBtnColor, typographyColor, typographyGradient } from "../../styledConstantsColors";
 import { StyledContainer } from "../../styledConstants";
 import { Link } from "react-router-dom";
 import { Desktop1440, Desktop1920 } from "../../styledConstantsFonts";
@@ -115,45 +115,19 @@ margin-bottom:20px;
 `
 
 export const StyledYellowBtn = styled(Link)`
-position: relative;
-overflow: hidden;
-z-index:1;
-width:280px;
+width:282px;
 padding:16px 44px;
 border-radius: 100px;
 font-size:${Desktop1920.buttons.buttonLg.size};
 font-weight:${Desktop1920.buttons.buttonLg.weight};
 line-height:${Desktop1920.buttons.buttonLg.lineHeight};
+background-color: ${defaultBtnColor.yellow};
+transition: all .3s;
 
-&:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: ${defaultBtnColor.yellow};
-    border-radius: 100px;
-    z-index: -2;
-}
-
-&:before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background-color: ${hoverBtnColor.black};
-    transition: all .3s;
-    border-radius: 100px;
-    z-index: -1;
-}
 &:hover {
-    color: ${typographyColor.darkBG.white};
-    &:before {
-        width: 100%;
-    }
+    color: ${typographyColor.darkBG.yellow};
+    background:none;
+    border:1px solid ${colors.brand.yellow};
 }
 
 @media(max-width:1440px){
