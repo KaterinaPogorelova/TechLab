@@ -12,6 +12,7 @@ width: fit-content;
 margin-left:${props => props.$isRightSided ? 'auto' : '0'};
 position:relative;
 z-index:1;
+
 & p{
     color:${props => props.$isBlack ? colors.neutral.darkBlack : colors.neutral.white};
     transition:all 0.5s;
@@ -40,6 +41,7 @@ export const StyledArrowText = styled.p`
 font-size:${Desktop1920.links.bodyLink.size};
 font-weight:${Desktop1920.links.bodyLink.weight};
 letter-spacing:${Desktop1920.links.bodyLink.letterSpacing};
+
 @media(max-width:1440px){
 font-size:${Desktop1440.links.bodyLink.size};
 font-weight:${Desktop1440.links.bodyLink.weight};
