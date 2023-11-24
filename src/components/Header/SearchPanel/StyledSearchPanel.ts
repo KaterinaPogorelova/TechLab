@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { StyledContainer } from "../../../styledConstants";
 import { backgroundColor, colors } from "../../../styledConstantsColors";
-import { Desktop1440, Desktop1920 } from "../../../styledConstantsFont";
+import { Desktop1440, Desktop1920 } from "../../../styledConstantsFonts";
 
 export const StyledSearchPanelWrap = styled.div<{ $activeTab: string }>`
 position:absolute;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { StyledContainer } from "../../../styledConstants";
 import { backgroundColor, colors } from "../../../styledConstantsColors";
-import { Desktop1920, Desktop1440 } from "../../../styledConstantsFont";
+import { Desktop1920, Desktop1440 } from "../../../styledConstantsFonts";
 
 import { Link } from "react-router-dom";
 
