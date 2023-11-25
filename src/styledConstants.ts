@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { typographyColor } from "./styledConstantsColors";
+import { hoverBtnColor, typographyColor } from "./styledConstantsColors";
 
 export const StyledFlex = styled.div` // это можно дополнять условиями
   position: relative;
@@ -23,9 +23,16 @@ margin-bottom: 16px;
 background: ${typographyColor.lightBG.violet};
 color: ${typographyColor.darkBG.white};
 }
+
+@media(max-width:1440px){
+font-size: 36px;
+font-weight: 700;
+line-height: 45px;
+letter-spacing: 1.08px;
+}
 `
 
-export const StyledFrameText = styled.p<{$black: boolean}>` // текст под заголовком почти в каждом блоке
+export const StyledFrameText = styled.p<{ $black: boolean }>` // текст под заголовком почти в каждом блоке
   font-family: Raleway;
 font-size: 32px;
 font-style: normal;
@@ -35,8 +42,19 @@ margin-bottom: 50px;
 color: ${props => props.$black ? typographyColor.lightBG.black : typographyColor.darkBG.white};
 
 & a { // ссылка в тексте
-  color: ${typographyColor.lightBG.violet};
+color: ${typographyColor.lightBG.violet};
+  &:hover {
+    color: ${hoverBtnColor.violet};
+  }
 }
+& span{
+  font-weight: 700;
+}
+@media(max-width:1440px){
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  }
 `
 
 export const StyledContainer = styled.div`
@@ -49,3 +67,13 @@ export const StyledContainer = styled.div`
   }
 `;
 
+export const StyledSectionSeparator = styled.div<{ $background: string }>` 
+//Некоторые фреймы имеют закруглённые концы, этот блок существует, чтобы исключить белые пробелы между фреймами
+
+position:absolute;
+transform:translateY(-80px);
+height:80px;
+width:100%;
+z-index:-1;
+background:${props => props.$background};
+`
