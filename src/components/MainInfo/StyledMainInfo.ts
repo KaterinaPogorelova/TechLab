@@ -119,7 +119,7 @@ margin-bottom:43px;
 
 export const StyledCoursesItemWrap = styled.li <{ $color: string }>`
 border-radius:40px;
-background:${props => props.$color === 'gradient' ? typographyGradient.G3 : 'none'};
+margin-bottom:12px;
 `
 
 export const StyledCoursesItem = styled(Link) <{ $color: string }>`
@@ -127,8 +127,10 @@ border:${props => {
         if (props.$color === 'violet') return ('1px solid' + colors.brand.violet)
         if (props.$color === 'green') return ('1px solid' + colors.brand.green)
         if (props.$color === 'orange') return ('1px solid' + colors.brand.orange)
-        if (props.$color === 'gradient') return 'none'
+        if (props.$color === 'gradient') return ('1px solid' + colors.brand.green)
     }};
+background:${props => props.$color === 'gradient' ? gradient.gradient20 : 'none'};
+border-radius:40px;
 width:100%;
 height:100%;
 padding:6px 20px;
@@ -143,7 +145,7 @@ transition:all 0.5s;
         if (props.$color === 'violet') return hoverBtnColor.violet20
         if (props.$color === 'green') return hoverBtnColor.green20
         if (props.$color === 'orange') return hoverBtnColor.orange20
-        if (props.$color === 'gradient') return gradient.gradient20
+        if (props.$color === 'gradient') return gradient.gradient50
     }}
 }
 @media(max-width:1440px){
