@@ -6,9 +6,10 @@ import { StyledExpertSectionWrap } from "./StyledOurExperts"
 import { ExpertCard } from "./ExpertCard";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { A11y, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import '../Slider/slider.css';
 import "./expertsSlider.css";
 
 import yuri from '../../assets/img/expert1.png'
@@ -45,8 +46,8 @@ export const OurExperts = () => {
             pagination={{
                 type: 'fraction',
             }}
-            navigation={true}
-            modules={[Pagination, Navigation]}
+            navigation
+            modules={[Pagination, Navigation, A11y]}
             className="expertsSwiper">
             {experts.map((expert, index) =>
                 <SwiperSlide key={index}>
