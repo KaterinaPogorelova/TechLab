@@ -42,6 +42,7 @@ export const StyledPopularCousreContainer = styled.div<{
   @media(max-width:1270px){
     max-width: 300px;
     min-height: 360px;
+    padding: 20px 24px;
   }
 
 `;

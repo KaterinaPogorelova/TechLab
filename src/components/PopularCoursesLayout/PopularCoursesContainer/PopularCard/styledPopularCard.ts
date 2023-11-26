@@ -8,6 +8,10 @@ export const StyledPopularCardHeader = styled.p`
   font-style: normal;
   font-weight: 700;
   line-height: 50px;
+  @media(max-width: 1270px){
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
 `;
 export const StyledPopularTags = styled.div<{
   $vertical?: boolean;
@@ -41,10 +45,17 @@ export const StyledPopularTags = styled.div<{
       if (props.$type === "Programming") return typographyColor.lightBG.green;
     }};
   }
+  @media(max-width: 1270px){
+    font-size: 12px;
+    width: 130px;
+    & span {
+      padding: 5px 7px;
+    }
+  }
 `;
 export const StyledPopularCardDescription = styled.p<{ $vertical?: boolean }>`
   width: 100%;
-  min-height: ${(props) => (props.$vertical ? "200px" : "auto")};
+  height: ${(props) => (props.$vertical ? "200px" : "auto")};
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -52,6 +63,15 @@ export const StyledPopularCardDescription = styled.p<{ $vertical?: boolean }>`
   letter-spacing: 0.32px;
   margin-top: ${(props) => (props.$vertical ? "136px" : "0px")};
   margin-bottom: 0px;
+  @media(max-width: 1270px){
+    margin-top: ${(props) => (props.$vertical ? "18px" : "0px")};
+    font-size: 14px;
+    line-height: 18px;
+    height: ${(props) => (props.$vertical ? "92px" : "90px")};
+    margin-bottom: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 `;
 
 export const StyledPopularCardImage = styled.img<{ $vertical?: boolean }>`
@@ -60,7 +80,10 @@ export const StyledPopularCardImage = styled.img<{ $vertical?: boolean }>`
   top: ${(props) => (props.$vertical ? "76px" : "0")};
   right: 0;
   @media(max-width: 1270px){
+    position: absolute;
+    top: 76px;
     max-width: 115px;
+    height: 110px;
   }
 `;
 
@@ -102,6 +125,12 @@ export const StyledYellowButton = styled.button`
       width: 100%;
     }
   }
+  @media(max-width: 1270px){
+    padding: 6px 16px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.28px;
+  }
 `;
 
 export const StyledLinkMore = styled(NavLink)`
@@ -124,5 +153,9 @@ export const StyledLinkMore = styled(NavLink)`
         fill: ${hoverBtnColor.yellow};
       }
     }
+  }
+  @media(max-width: 1270px){
+    padding: 6px 8px;
+    font-size: 14px;
   }
 `
