@@ -10,6 +10,18 @@ export const StyledPopularContainer = styled(StyledFlex)`
 export const StyledPopularHorizontalContainer = styled(StyledFlex)`
   flex-direction: column;
   gap: 20px;
+  @media(max-width: 1270px) {
+    flex-direction: row;
+  }
+`
+
+export const StyledCardHorizontalContainer = styled.div`
+display: flex;
+justify-content: flex-start;
+   flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  flex-grow: 1;
 `
 
 export const StyledPopularCousreContainer = styled.div<{
@@ -17,7 +29,7 @@ export const StyledPopularCousreContainer = styled.div<{
   $design?: boolean;
   $machine?: boolean;
 }>`
-  width: ${props => props.$horisontal ? "698px" : "498px"};
+  max-width: ${props => props.$horisontal ? "698px" : "498px"};
   border: 2px solid ${ props => props.$design ? colors.brand.violet : props.$machine ? colors.brand.orange : colors.brand.green};
   border-radius: 50px;
   padding: 26px 32px 30px;
@@ -27,4 +39,9 @@ export const StyledPopularCousreContainer = styled.div<{
     box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
     transform: translate(4px,-4px);
   }
+  @media(max-width:1270px){
+    max-width: 300px;
+    min-height: 360px;
+  }
+
 `;

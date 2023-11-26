@@ -8,6 +8,7 @@ import ExpectationLayout from "../components/ExpectationLayout/ExpectationLayout
 import { OurExperts } from "../components/OurExperts/OurExperts"
 import { Reviews } from "../components/Reviews/Reviews"
 import QuestionsLayout from "../components/QuestionsLayout/QuestionsLayout"
+import PopularLayout from "../components/PopularCoursesLayout/PopularLayout"
 
 
 export const Main = () => {
@@ -22,5 +23,6 @@ export const Main = () => {
         <Advertisement></Advertisement>
         <Reviews></Reviews>
         <QuestionsLayout></QuestionsLayout>
+        <PopularLayout/>
     </>)
 }
