@@ -12,9 +12,9 @@
     position: absolute;
     top: auto;
     bottom: 0px;
-    width: 48px;
+    /*width: 48px;
     height: 48px;
-    /* margin-top: calc(0px - (var(--swiper-navigation-size) / 2)); */
+     margin-top: calc(0px - (var(--swiper-navigation-size) / 2)); 
     background-color: #8657DD;
     transition: 0.3s background-color;
     border-radius: 50%;
@@ -23,32 +23,44 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);*/
 }
 
 .reviewSwiper .swiper-button-prev:after,
 .reviewSwiper .swiper-rtl .swiper-button-next:after {
-    content: '';
+    background-color: #8657DD;
+    /* content: '';
     width: 20px;
     height: 20px;
     border-left: 2px solid #111111;
     border-bottom: 2px solid #111111;
     transform: rotate(45deg);
-    margin-left: 10px;
+    margin-left: 10px; */
 }
 
 .reviewSwiper .swiper-button-next:after,
 .reviewSwiper .swiper-rtl .swiper-button-prev:after {
-    content: '';
+    background-color: #8657DD;
+    /*     content: '';
     width: 20px;
     height: 20px;
     border-left: 2px solid #111111;
     border-bottom: 2px solid #111111;
     transform: rotate(-135deg);
-    margin-right: 10px;
+    margin-right: 10px; */
 }
 
-.reviewSwiper .swiper-button-next:hover,
+.reviewSwiper .swiper-button-next:hover:after,
+.reviewSwiper .swiper-rtl .swiper-button-prev:hover:after {
+    background-color: #A075F0;
+}
+
+.reviewSwiper .swiper-button-prev:hover:after,
+.reviewSwiper .swiper-rtl .swiper-button-next:hover:after {
+    background-color: #A075F0;
+}
+
+/*.reviewSwiper .swiper-button-next:hover,
 .reviewSwiper .swiper-rtl .swiper-button-prev:hover {
     background-color: #A075F0;
 }
@@ -68,12 +80,12 @@
 .swiper-rtl .swiper-button-prev {
     right: calc(50% - 90px);
     left: auto;
-}
+}*/
 
-.swiper-pagination-fraction,
-.swiper-pagination-custom,
-.swiper-horizontal>.swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal {
+.reviewSwiper .swiper-pagination-fraction,
+.reviewSwiper .swiper-pagination-custom,
+.reviewSwiper .swiper-horizontal>.swiper-pagination-bullets,
+.reviewSwiper .swiper-pagination-bullets.swiper-pagination-horizontal {
     bottom: 10px;
     width: 80px;
     left: 50%;
@@ -110,7 +122,7 @@
         width: 380px;
     }
 
-    .reviewSwiper .swiper-button-prev,
+    /* .reviewSwiper .swiper-button-prev,
     .reviewSwiper .swiper-button-next {
         width: 32px;
         height: 32px;
@@ -132,7 +144,7 @@
     .reviewSwiper .swiper-button-next,
     .reviewSwiper .swiper-rtl .swiper-button-prev {
         right: calc(50% - 60px);
-    }
+    } */
 
     .reviewSwiper .swiper-pagination-fraction {
         font-size: 20px;
