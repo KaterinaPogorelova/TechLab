@@ -8,33 +8,30 @@ export const StyledFlex = styled.div`
   justify-content: space-between;
 `;
 
-export const StyledFrameHeader = styled.h3`
-  // Заголовок почти на каждом блоке
-  color: ${typographyColor.lightBG.black};
-  font-family: Raleway;
-  font-size: 56px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 60px;
-  letter-spacing: 1.62px;
-  margin-bottom: 16px;
+export const StyledFrameHeader = styled.h3` // Заголовок почти на каждом блоке 
+color: ${typographyColor.lightBG.black};
+font-family: Raleway;
+font-size: 56px;
+font-style: normal;
+font-weight: 700;
+line-height: 60px;
+letter-spacing: 1.62px; 
+margin-bottom: 16px;
 
-  & span {
-    // фиолетовое выделенное слово в заголовке
-    padding: 8px 20px;
-    border-radius: 100px;
-    background: ${typographyColor.lightBG.violet};
-    color: ${typographyColor.darkBG.white};
-  }
-  @media (max-width: 1270px) {
-    font-size: 36px;
-    line-height: 45px;
-    letter-spacing: 1.08px;
-    & span {
-      padding: 4px 14px;
-    }
-  }
-`;
+& span{ // фиолетовое выделенное слово в заголовке
+  padding: 8px 20px;
+  border-radius: 100px;
+background: ${typographyColor.lightBG.violet};
+color: ${typographyColor.darkBG.white};
+}
+
+@media(max-width:1440px){
+font-size: 36px;
+font-weight: 700;
+line-height: 45px;
+letter-spacing: 1.08px;
+}
+`
 
 export const StyledFrameText = styled.p<{ $black: boolean }>`
   // текст под заголовком почти в каждом блоке
@@ -56,9 +53,13 @@ export const StyledFrameText = styled.p<{ $black: boolean }>`
       color: ${hoverBtnColor.violet};
     }
   }
-  @media (max-width: 1270px) {
-    font-size: 20px;
-    line-height: 26px;
+  & span{
+    font-weight: 700;
+  }
+@media(max-width:1440px){
+  font-size: 20px;
+  // font-weight: 400;
+  line-height: 26px;
   }
 `;
 
@@ -71,3 +72,14 @@ export const StyledContainer = styled.div`
     padding: 0 20px;
   }
 `;
+
+export const StyledSectionSeparator = styled.div<{ $background: string }>` 
+//Некоторые фреймы имеют закруглённые концы, этот блок существует, чтобы исключить белые пробелы между фреймами
+
+position:absolute;
+transform:translateY(-80px);
+height:80px;
+width:100%;
+z-index:-1;
+background:${props => props.$background};
+`

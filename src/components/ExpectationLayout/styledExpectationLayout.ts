@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { backgroundColor, typographyColor, typographyGradient } from "../../styledConstantsColors";
 
 export const StyledExpectation = styled.div`
+position:relative;
   width: 100%;
   padding: 180px 0 120px;
   /* padding: 180px 251px 120px 251px; - паддинги из макета */ 
