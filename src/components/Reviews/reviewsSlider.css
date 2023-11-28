@@ -1,0 +1,66 @@
+.reviewSwiper {
+    height: 356px;
+    background: none;
+}
+
+.reviewSwiper .swiper-slide {
+    width: 518px;
+}
+
+.reviewSwiper .swiper-button-prev,
+.reviewSwiper .swiper-button-next {
+    bottom: 0px;
+}
+
+.reviewSwiper .swiper-button-prev:after,
+.reviewSwiper .swiper-rtl .swiper-button-next:after {
+    background-color: #8657DD;
+}
+
+.reviewSwiper .swiper-button-next:after,
+.reviewSwiper .swiper-rtl .swiper-button-prev:after {
+    background-color: #8657DD;
+}
+
+.reviewSwiper .swiper-button-next:hover:after,
+.reviewSwiper .swiper-rtl .swiper-button-prev:hover:after {
+    background-color: #A075F0;
+}
+
+.reviewSwiper .swiper-button-prev:hover:after,
+.reviewSwiper .swiper-rtl .swiper-button-next:hover:after {
+    background-color: #A075F0;
+}
+
+.reviewSwiper .swiper-pagination-fraction,
+.reviewSwiper .swiper-pagination-custom,
+.reviewSwiper .swiper-horizontal>.swiper-pagination-bullets,
+.reviewSwiper .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 10px;
+}
+
+.reviewSwiper .swiper-pagination-fraction {
+    color: #8657DD;
+    width: fit-content;
+}
+
+.swiper-button-lock {
+    display: none;
+}
+
+@media (max-width:1440px) {
+    .reviewSwiper {
+        height: 280px;
+    }
+
+    .reviewSwiper .swiper-slide {
+        width: 380px;
+    }
+
+    .reviewSwiper .swiper-pagination-fraction,
+    .reviewSwiper .swiper-pagination-custom,
+    .reviewSwiper .swiper-horizontal>.swiper-pagination-bullets,
+    .reviewSwiper .swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom: 5px;
+    }
+}
