@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom"
 import { StyledLogLink, StyledSignText, StyledUserModalWrap } from "./StyledLoginModal"
+import { useAppSelector } from "../../../store/store"
 
-type LogInProps = {
-    isOpened: boolean;
-}
+export const LoginModal = () => {
+    const activeTab = useAppSelector((state) => state.nav.clickedTab)
 
-export const LoginModal = ({ isOpened }: LogInProps) => {
-    return (<StyledUserModalWrap $isOpened={isOpened}>
+    return (<StyledUserModalWrap $isOpened={activeTab === 'UserPanel'}>
         <StyledLogLink to={'/'}>Log In</StyledLogLink>
         <StyledSignText>Don’t have an account?<Link to='/'>Sign Up</Link></StyledSignText>
     </StyledUserModalWrap>)

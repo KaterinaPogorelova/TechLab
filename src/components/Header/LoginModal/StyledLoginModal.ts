@@ -10,7 +10,7 @@ top:0;
 visibility:${props => props.$isOpened ? 'visible' : 'hidden'};
 right:0;
 background:${backgroundColor.lightBlack};
-transform:${props => props.$isOpened ? 'translateY(60px)' : 'translateY(0px)'};
+transform:${props => props.$isOpened ? 'translateY(59px)' : 'translateY(0px)'};
 opacity:${props => props.$isOpened ? '1' : '0'};
 transition: all 0.5s;
 padding:40px;
@@ -19,7 +19,7 @@ border-radius:0 0 20px 20px;
 @media(max-width:1440px){
     width:300px;
     padding:30px;
-    transform:${props => props.$isOpened ? 'translateY(50px)' : 'translateY(0px)'};
+    transform:${props => props.$isOpened ? 'translateY(49px)' : 'translateY(0px)'};
 }
 `
 
