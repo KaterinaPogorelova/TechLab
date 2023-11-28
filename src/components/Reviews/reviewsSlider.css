@@ -9,9 +9,8 @@
 
 .reviewSwiper .swiper-button-prev,
 .reviewSwiper .swiper-button-next {
-    position: absolute;
-    top: auto;
     bottom: 0px;
+
     /*width: 48px;
     height: 48px;
      margin-top: calc(0px - (var(--swiper-navigation-size) / 2)); 
@@ -29,6 +28,7 @@
 .reviewSwiper .swiper-button-prev:after,
 .reviewSwiper .swiper-rtl .swiper-button-next:after {
     background-color: #8657DD;
+
     /* content: '';
     width: 20px;
     height: 20px;
@@ -62,13 +62,15 @@
 
 /*.reviewSwiper .swiper-button-next:hover,
 .reviewSwiper .swiper-rtl .swiper-button-prev:hover {
+
     background-color: #A075F0;
 }
 
-.reviewSwiper .swiper-button-prev:hover,
-.reviewSwiper .swiper-rtl .swiper-button-next:hover {
+.reviewSwiper .swiper-button-prev:hover:after,
+.reviewSwiper .swiper-rtl .swiper-button-next:hover:after {
     background-color: #A075F0;
 }
+
 
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
@@ -87,26 +89,11 @@
 .reviewSwiper .swiper-horizontal>.swiper-pagination-bullets,
 .reviewSwiper .swiper-pagination-bullets.swiper-pagination-horizontal {
     bottom: 10px;
-    width: 80px;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .reviewSwiper .swiper-pagination-fraction {
     color: #8657DD;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 30px;
     width: fit-content;
-}
-
-.swiper-pagination-current {
-    margin-right: -8px;
-}
-
-.swiper-pagination-total {
-    margin-left: -10px;
 }
 
 .swiper-button-lock {
@@ -121,6 +108,7 @@
     .reviewSwiper .swiper-slide {
         width: 380px;
     }
+
 
     /* .reviewSwiper .swiper-button-prev,
     .reviewSwiper .swiper-button-next {

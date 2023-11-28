@@ -18,9 +18,8 @@
 
 .expertsSwiper .swiper-button-prev,
 .expertsSwiper .swiper-button-next {
-    position: absolute;
-    top: auto;
     bottom: 0px;
+
     /* width: 48px;
     height: 48px;
  
@@ -79,31 +78,16 @@
     left: auto;
 } */
 
+
 .expertsSwiper .swiper-pagination-fraction,
 .expertsSwiper .swiper-pagination-custom,
 .expertsSwiper .swiper-horizontal>.swiper-pagination-bullets,
 .expertsSwiper .swiper-pagination-bullets.swiper-pagination-horizontal {
     bottom: 10px;
-    width: 80px;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .expertsSwiper .swiper-pagination-fraction {
-    color: black;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 30px;
     width: fit-content;
-}
-
-.swiper-pagination-current {
-    margin-right: -8px;
-}
-
-.swiper-pagination-total {
-    margin-left: -10px;
 }
 
 .expertsSwiper .swiper-button-lock {
@@ -147,6 +131,7 @@
         font-size: 20px;
         line-height: 26px;
     }
+
 
     .expertsSwiper .swiper-pagination-fraction,
     .expertsSwiper .swiper-pagination-custom,
