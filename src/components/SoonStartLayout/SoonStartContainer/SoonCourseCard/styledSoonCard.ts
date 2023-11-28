@@ -21,6 +21,11 @@ export const StyledSoonCard = styled.div<{
     transform: translateY(-5px);
     box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
   }
+  @media (max-width: 1270px) {
+    width: 280px;
+    height: 200px;
+    padding: 18px 24px 20px 24px;
+  }
 `;
 
 export const StyledSoonHeader = styled(StyledPopularCardHeader)<{
@@ -32,6 +37,12 @@ export const StyledSoonHeader = styled(StyledPopularCardHeader)<{
     if (props.$type === "Programming") return typographyColor.lightBG.green;
   }};
   height: 75px;
+  @media (max-width: 1270px) {
+    height: 52px;
+    font-size: 26px;
+    line-height: 26px;
+    letter-spacing: 0.78px;
+  }
 `;
 
 export const StyledDurationCourse = styled.p<{
@@ -44,10 +55,16 @@ export const StyledDurationCourse = styled.p<{
   line-height: 24px;
   padding: 5px 0;
   color: ${typographyColor.lightBG.darkGray};
+  @media (max-width: 1270px) {
+    font-size: 16px;
+  }
 `;
 
 export const StyledStartDate = styled(StyledDurationCourse)`
 color: black;
+@media (max-width: 1270px) {
+    font-size: 16px;
+  }
 `
 export const StyledPrice = styled(StyledDurationCourse)<{
   $type?: "Design" | "Data Science" | "Programming";
@@ -60,4 +77,7 @@ export const StyledPrice = styled(StyledDurationCourse)<{
   font-size: 24px;
   font-weight: 600;
   line-height: 36px;
+  @media (max-width: 1270px) {
+    font-size: 22px;
+  }
 `

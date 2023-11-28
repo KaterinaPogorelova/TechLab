@@ -10,6 +10,9 @@ export const StyledSoonContainer = styled(StyledPopularContainer)`
 export const StyledSoonUpperLine = styled(StyledFlex)`
   justify-content: flex-start;
   gap: 24px;
+  @media (max-width: 1270px){
+    gap: 20px;
+  }
 `;
 export const StyledSoonLowerLine = styled(StyledFlex)`
   justify-content: flex-end;
