@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { StyledContainer } from "../../../styledConstants";
 import { backgroundColor, colors } from "../../../styledConstantsColors";
-import { Desktop1920, Desktop1440 } from "../../../styledConstantsFont";
+import { Desktop1920, Desktop1440 } from "../../../styledConstantsFonts";
 
 import { Link } from "react-router-dom";
 
@@ -11,7 +11,7 @@ position:absolute;
 left:0;
 top:0;
 visibility:${props => props.$isClicked ? 'visible' : 'hidden'};
-transform:${props => props.$isClicked ? 'translateY(92px)' : 'translateY(0px)'};
+transform:${props => props.$isClicked ? 'translateY(77px)' : 'translateY(0px)'};
 opacity:${props => props.$isClicked ? '1' : '0'};
 width:100%;
 height:280px;

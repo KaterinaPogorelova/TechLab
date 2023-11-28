@@ -13,7 +13,7 @@ type NavState = {
 
 const initialState: NavState = {
     clickedTab: '',
-    tabs: [{ title: 'Contacts', linkSections: ['Content1.1', 'Content2.1'] }, { title: 'Free Courses', linkSections: ['Content2.1', 'Content2.2'] }, { path: '/', title: 'About school' }]
+    tabs: [{ title: 'Catalogue', linkSections: ['Content1.1', 'Content2.1'] }, { title: 'Free Courses', linkSections: ['Content2.1', 'Content2.2'] }, { path: '/', title: 'About school' }]
 }
 
 export const navSlice = createSlice({

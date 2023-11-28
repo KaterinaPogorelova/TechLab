@@ -20,8 +20,9 @@ export const colors = { //Помечены как цвета переменны�
 
 export const gradient = {
     violetLight: 'linear-gradient(180deg, #8047EB 0%, #2B184F 100%)',
-    violetDark: 'linear-gradient(180deg, #090909 0%, #25015F 100%)',
+    violetDark: 'linear-gradient(180deg, #121213 0%, #1A102D 100%)',
     gradient20: 'linear-gradient(270deg, #65DC6A33 3.17%, #67D1D133 40.07%, #8047EB33 99.9%)',
+    gradient50: 'linear-gradient(270deg, rgba(101, 220, 106, 0.50) 0.2%, rgba(128, 71, 235, 0.50) 99.66%)',
     violet: 'linear-gradient(180deg, #8047EB40 0%, #8047EB 64.06%)',
     orange: 'linear-gradient(180deg, #EC762E40 0%, #EC762E 72.65%)',
     green: 'linear-gradient(180deg, #65DC6A40 0%, #65DC6A 71.87%)'
@@ -63,7 +64,8 @@ export const backgroundColor = {
     white: '#FFF',
     violet20: '#8657DD33',
     violet40: '#8657DD66',
-    violet5: '#8657DD0D'
+    violet5: '#8657DD0D',
+    green10: '#65dc6a1a'
 }
 
 export const defaultBtnColor = {// в библиотеке он просто именуется как дефолт, но ts не принимает такое название

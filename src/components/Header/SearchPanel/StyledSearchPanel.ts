@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { StyledContainer } from "../../../styledConstants";
 import { backgroundColor, colors } from "../../../styledConstantsColors";
-import { Desktop1440, Desktop1920 } from "../../../styledConstantsFont";
+import { Desktop1440, Desktop1920 } from "../../../styledConstantsFonts";
 
 export const StyledSearchPanelWrap = styled.div<{ $activeTab: string }>`
 position:absolute;
@@ -11,7 +11,7 @@ top:0;
 visibility:${props => props.$activeTab === 'SearchPanel' ? 'visible' : 'hidden'};
 width:100%;
 background:${backgroundColor.lightBlack};
-transform:${props => props.$activeTab === 'SearchPanel' ? 'translateY(92px)' : 'translateY(0px)'};
+transform:${props => props.$activeTab === 'SearchPanel' ? 'translateY(77px)' : 'translateY(0px)'};
 opacity:${props => props.$activeTab === 'SearchPanel' ? '1' : '0'};
 transition: all 0.5s;
 z-index:3;
