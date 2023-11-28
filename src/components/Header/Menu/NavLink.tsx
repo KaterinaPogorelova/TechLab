@@ -11,9 +11,10 @@ import { LinksWrap } from "../LinksWrap/LinksWrap"
 type NavLinkProps = {
     path?: string;
     title: string;
+    hasLinks: boolean;
 }
 
-export const NavLink = ({ path, title }: NavLinkProps) => {
+export const NavLink = ({ path, title, hasLinks }: NavLinkProps) => {
     const clickedTab = useAppSelector((state) => state.nav.clickedTab)
     const dispatch = useAppDispatch()
 
@@ -24,10 +25,10 @@ export const NavLink = ({ path, title }: NavLinkProps) => {
             dispatch(setClickedTab(title))
         }
     }}>
-        {path && <StyledLinkMain to={path}>{title}</StyledLinkMain>}
-        {!path && <StyledLinkContainer $clickedTab={clickedTab} $title={title}>{title}</StyledLinkContainer>}
-        {!path && <DownArrow isClicked={clickedTab === title}></DownArrow>}
+        {!hasLinks && path && <StyledLinkMain to={path}>{title}</StyledLinkMain>}
+        {hasLinks && <StyledLinkContainer $clickedTab={clickedTab} $title={title}>{title}</StyledLinkContainer>}
+        {hasLinks && <DownArrow isClicked={clickedTab === title}></DownArrow>}
     </StyledLinkWrap>
-        {!path && <LinksWrap isClicked={clickedTab === title}></LinksWrap>}
+        {hasLinks && <LinksWrap isClicked={clickedTab === title}></LinksWrap>}
     </>)
 }

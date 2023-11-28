@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { defaultBtnColor, hoverBtnColor } from "../../../styledConstantsColors";
 
 export const Wrapper = styled.div`
+position:relative;
 display:flex;
 gap:32px;
 align-items:center;

@@ -2,7 +2,7 @@ import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
 type Tab = {
     title: string,
-    linkSections?: string[],
+    linkSections?: Tab[],
     path?: string
 }
 
@@ -13,7 +13,36 @@ type NavState = {
 
 const initialState: NavState = {
     clickedTab: '',
-    tabs: [{ title: 'Catalogue', linkSections: ['Content1.1', 'Content2.1'] }, { title: 'Free Courses', linkSections: ['Content2.1', 'Content2.2'] }, { path: '/', title: 'About school' }]
+    tabs: [{
+        title: 'Catalogue', linkSections: [{
+            title: 'All courses', path: '/',
+            linkSections: [{
+                title: 'Design', path: '/', linkSections: [{ title: 'Web Design', path: '/' },
+                { title: 'User Interface Design', path: '/' },
+                { title: 'Mobile App Design', path: '/' },
+                { title: 'Graphic Design', path: '/' },
+                { title: 'UX/UI Design', path: '/' }]
+            }, { title: 'Programming', path: '/' }, { title: 'Data Science', path: '/' }]
+        },
+        {
+            title: 'All mentors', path: '/',
+            linkSections: [{ title: 'Design', path: '/' }, { title: 'Programming', path: '/' }, { title: 'Data Science', path: '/' }]
+        }],
+        path: '/'
+    },
+    {
+        title: 'Free Courses', linkSections: [{
+            title: 'All lessons', path: '/',
+            linkSections: [{ title: 'Design', path: '/' }, { title: 'Programming', path: '/' }, { title: 'Data Science', path: '/' }]
+        },
+        {
+            title: 'All mentors', path: '/',
+            linkSections: [{ title: 'Design', path: '/' }, { title: 'Programming', path: '/' }, { title: 'Data Science', path: '/' }]
+        }],
+        path: '/'
+    },
+
+    { title: 'About school', path: '/' }]
 }
 
 export const navSlice = createSlice({
