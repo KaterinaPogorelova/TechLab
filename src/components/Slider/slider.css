@@ -1,3 +1,12 @@
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-family: swiper-icons;
+  font-size: var(--swiper-navigation-size);
+  text-transform: none !important;
+  letter-spacing: 0;
+  font-variant: initial;
+  line-height: 1;
+}
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
@@ -46,6 +55,7 @@
 .swiper-rtl .swiper-button-prev:hover:after {
   background-color: #999999;
 }
+
 .swiper-button-prev:hover:after,
 .swiper-rtl .swiper-button-next:hover:after {
   background-color: #999999;
@@ -65,6 +75,7 @@
   left: calc(50% - 90px);
   right: auto;
 }
+
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
   right: calc(50% - 90px);
@@ -73,7 +84,8 @@
 
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
-.swiper-horizontal > .swiper-pagination-bullets,
+
+.swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: 25px;
   width: 80px;
@@ -84,9 +96,9 @@
 .swiper-pagination-fraction {
   color: black;
   font-size: 32px;
-font-style: normal;
-font-weight: 400;
-line-height: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
 }
 
 .swiper-pagination-current {
@@ -95,4 +107,61 @@ line-height: 30px;
 
 .swiper-pagination-total {
   margin-left: -10px;
+}
+
+@media (max-width: 1270px) {
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    top: auto;
+    bottom: 25px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .swiper-button-prev:after,
+  .swiper-rtl .swiper-button-next:after {
+    content: 'prev';
+    text-align: center;
+    padding-right: 5px;
+    line-height: 28px;
+    font-size: 18px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .swiper-button-next:after,
+  .swiper-rtl .swiper-button-prev:after {
+    content: 'next';
+    text-align: center;
+    padding-left: 5px;
+    line-height: 28px;
+    font-size: 18px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    left: calc(50% - 55px);
+    right: auto;
+  }
+
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev {
+    right: calc(50% - 55px);
+    left: auto;
+  }
+
+  .swiper-pagination-fraction,
+  .swiper-pagination-custom,
+  .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 25px;
+  }
+
+  .swiper-pagination-fraction {
+    font-size: 20px;
+  }
 }

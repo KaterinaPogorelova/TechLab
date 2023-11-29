@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation, Pagination } from "swiper/modules"
+import { A11y, Navigation, Pagination } from "swiper/modules"
 import { StyledContainer, StyledFrameHeader, StyledFrameText } from "../../styledConstants"
 import { StyledReviewsWrap } from "./StyledReviews"
 import { Review } from "./Review"
@@ -8,6 +8,7 @@ import studentGreen from '../../assets/img/StudentGreen.png'
 import studentViolet from '../../assets/img/StudentViolet.png'
 
 import { backgroundColor, colors } from "../../styledConstantsColors"
+import '../Slider/slider.css';
 import './reviewsSlider.css'
 
 export const reviews = [
@@ -65,7 +66,7 @@ export const Reviews = () => {
                 type: 'fraction',
             }}
             navigation={true}
-            modules={[Pagination, Navigation]}
+            modules={[Pagination, Navigation, A11y]}
             className="reviewSwiper">
             {reviews.map((review, index) => <SwiperSlide key={index}>
                 <Review color={review.color} desc={review.desc} imgSrc={review.imgSrc} videoSrc={review.videoSrc}></Review>
