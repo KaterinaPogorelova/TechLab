@@ -15,20 +15,44 @@ transform:${props => props.$activeTab === 'SearchPanel' ? 'translateY(77px)' : '
 opacity:${props => props.$activeTab === 'SearchPanel' ? '1' : '0'};
 transition: all 0.5s;
 z-index:3;
+
+@media(max-width:1440px){
+    transform:${props => props.$activeTab === 'SearchPanel' ? 'translateY(73px)' : 'translateY(0px)'};
+}
+
+@media(max-width:1023px){
+    transform:${props => props.$activeTab === 'SearchPanel' ? 'translateY(72px)' : 'translateY(0px)'};
+}
+@media(max-width:767px){
+    transform:${props => props.$activeTab === 'SearchPanel' ? 'translateY(56px)' : 'translateY(0px)'};
+}
+@media(max-width:479px){
+    transform:${props => props.$activeTab === 'SearchPanel' ? 'translateY(53px)' : 'translateY(0px)'};
+}
 `
 
 export const StyledContainerSearch = styled(StyledContainer)`
 margin: 0 auto;
 padding: 30px 0 40px;
+
+@media(max-width:1440px){
+    padding: 20px 0px 30px;
+}
+@media(max-width:1023px){
+    padding: 20px 32px 30px;
+}
 `
 
 export const StyledSearchInputWrap = styled.div`
 position:relative;
-width:100%
+width:100%;
 height:60px;
 display:flex;
 align-items:center;
 gap:32px;
+@media(max-width:1440px){
+    height:40px;
+}
 `
 
 export const StyledSearchInput = styled.input`
@@ -47,4 +71,27 @@ export const StyledCleanBtn = styled.button`
 position:absolute;
 top:0;
 right:0;
+width:40px;
+height:40px;
+
+& svg{
+    width:100%;
+    height:100%;
+}
+@media(max-width:1440px){
+    top:7px;
+    width:24px;
+    height:24px;
+}
+@media(max-width:1023px){
+    top:5px;
+    width:32px;
+    height:32px;
+}
+
+@media(max-width:767px){
+    top:8px;
+    width:24px;
+    height:24px;
+}
 `

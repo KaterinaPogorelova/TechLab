@@ -21,6 +21,13 @@ border-radius:0 0 20px 20px;
     padding:30px;
     transform:${props => props.$isOpened ? 'translateY(49px)' : 'translateY(0px)'};
 }
+
+@media(max-width:1023px){
+    transform:${props => props.$isOpened ? 'translateY(52px)' : 'translateY(0px)'};
+}
+@media(max-width:767px){
+    transform:${props => props.$isOpened ? 'translateY(39px)' : 'translateY(0px)'};
+}
 `
 
 export const StyledLogLink = styled(Link)`

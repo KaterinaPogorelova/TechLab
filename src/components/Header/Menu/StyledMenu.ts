@@ -9,6 +9,10 @@ export const StyledNav = styled.ul`
 display:flex;
 align-items:center;
 margin:0;
+
+@media(max-width:1024px){
+display:none;
+}
 `
 
 export const StyledLinkWrap = styled.li`

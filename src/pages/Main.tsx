@@ -15,12 +15,12 @@ export const Main = () => {
         <RunLine></RunLine>
         <Header></Header>
         <MainInfo></MainInfo>
-        <Directions></Directions>
+        {/*         <Directions></Directions>
         <AboutUs></AboutUs>
         <ExpectationLayout></ExpectationLayout>
         <OurExperts></OurExperts>
         <Advertisement></Advertisement>
         <Reviews></Reviews>
-        <QuestionsLayout></QuestionsLayout>
+        <QuestionsLayout></QuestionsLayout> */}
     </>)
 }
