@@ -67,7 +67,7 @@ export const Reviews = () => {
             }}
             navigation={true}
             modules={[Pagination, Navigation, A11y]}
-            className="reviewSwiper">
+            className="techlab_slider reviewSwiper">
             {reviews.map((review, index) => <SwiperSlide key={index}>
                 <Review color={review.color} desc={review.desc} imgSrc={review.imgSrc} videoSrc={review.videoSrc}></Review>
             </SwiperSlide>)}

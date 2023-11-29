@@ -61,6 +61,6 @@
     .reviewSwiper .swiper-pagination-custom,
     .reviewSwiper .swiper-horizontal>.swiper-pagination-bullets,
     .reviewSwiper .swiper-pagination-bullets.swiper-pagination-horizontal {
-        bottom: 5px;
+        bottom: 0px;
     }
 }

@@ -41,4 +41,7 @@ letter-spacing: 0.6px;
       }
     }
   }
+  @media (max-width: 1270px) {
+    font-size: 16px;
+  }
 `

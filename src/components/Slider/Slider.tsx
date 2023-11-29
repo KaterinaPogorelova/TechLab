@@ -28,6 +28,7 @@ const Slider = ({content, nameLink}: {content?: React.ReactNode, nameLink?: stri
         pagination={{
           type: 'fraction',
         }}
+        className="techlab_slider"
         onSlideChange={() => {}}
         onSwiper={(swiper: any) => console.log(swiper)}
       >

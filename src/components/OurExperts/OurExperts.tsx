@@ -48,7 +48,7 @@ export const OurExperts = () => {
             }}
             navigation
             modules={[Pagination, Navigation, A11y]}
-            className="expertsSwiper">
+            className="techlab_slider expertsSwiper">
             {experts.map((expert, index) =>
                 <SwiperSlide key={index}>
                     <ExpertCard name={expert.name} src={expert.src} desc={expert.desc} color={expert.color} />

@@ -37,13 +37,13 @@
 }
 
 @media (max-width:1440px) {
-    /* .expertsSwiper {
+    .expertsSwiper {
         height: 350px;
     }
 
     .expertsSwiper:before {
         height: 285px;
-    }*/
+    }
 
 
     .expertsSwiper .swiper-pagination-fraction {
@@ -55,6 +55,6 @@
     .expertsSwiper .swiper-pagination-custom,
     .expertsSwiper .swiper-horizontal>.swiper-pagination-bullets,
     .expertsSwiper .swiper-pagination-bullets.swiper-pagination-horizontal {
-        bottom: 5px;
+        bottom: 2px;
     }
 }
