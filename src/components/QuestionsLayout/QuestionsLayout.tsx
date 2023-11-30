@@ -13,7 +13,7 @@ const QuestionsLayout = () => {
           </StyledFrameHeader>
           <StyledQuestionsText $black>
             If you didn't find the answer to your question, you can contact us
-            through the <a href="якорь">feedback form</a>, and we will respond within 24 hours.
+            through the <a href="#feedback">feedback form</a>, and we will respond within 24 hours.
           </StyledQuestionsText>
         </div>
         <Accordeon isBlack={true} />

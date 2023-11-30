@@ -26,7 +26,7 @@ export const Main = () => {
         <OurExperts></OurExperts>
         <Advertisement></Advertisement>
         <Reviews></Reviews>
-        <SoonStartLayout/>
+        <SoonStartLayout />
         <TestBlock></TestBlock>
         <QuestionsLayout></QuestionsLayout>
         <FeedbackSection></FeedbackSection>

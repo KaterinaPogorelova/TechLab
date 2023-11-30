@@ -14,7 +14,7 @@ export const FeedbackSection = () => {
         const userName = useAppSelector((state) => state.feedback.userName)
         const userMessage = useAppSelector((state) => state.feedback.userMessage) */
 
-    return (<StyledFeedbackSection>
+    return (<StyledFeedbackSection id='feedback'>
         <StyledBgLineswrap>
             <StyledLeftTopLine src={topleftline} alt="topleftline" />
             <StyledLeftBottomLine src={bottomleftline} alt="bottomleftline" />
