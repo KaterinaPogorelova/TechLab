@@ -15,7 +15,7 @@ export const SearchPanel = () => {
         <StyledContainerSearch>
             <StyledSearchInputWrap>
                 <Search />
-                <StyledSearchInput placeholder="Search..." type="search" value={searchValue}
+                <StyledSearchInput name="search" placeholder="Search..." type="search" value={searchValue}
                     onChange={(e) => dispatch(setSearchValue(e.target.value))}></StyledSearchInput>
                 <Cross />
             </StyledSearchInputWrap>

@@ -15,6 +15,7 @@ export const FeedbackInput = ({ id, type, name, placeholder, errorMessage }: Inp
     return (<StyledFeedbackInputWrap>
         <StyledLabel htmlFor={id}>{name}</StyledLabel>
         {name !== 'Your question*' && <StyledInput required name={name} id={id} type={type} placeholder={placeholder}
+            autoComplete={id === 'name' ? 'given-name' : 'email'}
             onChange={(e) => {
                 id === 'name' && dispatch(setUserName(e.target.value))
                 id === 'email' && dispatch(setUserEmail(e.target.value))
