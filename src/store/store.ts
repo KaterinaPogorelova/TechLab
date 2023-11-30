@@ -3,13 +3,15 @@ import { useDispatch, TypedUseSelectorHook, useSelector } from 'react-redux'
 import { navReducer } from './navigation'
 import { searchReducer } from './search'
 import { runlineReducer } from './runline'
+import { feedbackReducer } from './feedbackform'
 
 
 export const store = configureStore({
     reducer: {
         nav: navReducer,
         search: searchReducer,
-        runline: runlineReducer
+        runline: runlineReducer,
+        feedback: feedbackReducer
     },
 })
 
