@@ -130,6 +130,8 @@ border:${props => {
         if (props.$color === 'orange') return ('1px solid' + colors.brand.orange)
         if (props.$color === 'gradient') return ('1px solid' + colors.brand.green)
     }};
+display:block;
+
 background:${props => props.$color === 'gradient' ? gradient.gradient20 : 'none'};
 border-radius:40px;
 width:100%;

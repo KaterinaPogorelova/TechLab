@@ -11,6 +11,7 @@ import QuestionsLayout from "../components/QuestionsLayout/QuestionsLayout"
 import PopularLayout from "../components/PopularCoursesLayout/PopularLayout"
 import { TestBlock } from "../components/TestBlock/TestBlock"
 import { FeedbackSection } from "../components/FeedbackFormSection/FeedbackSection"
+import SoonStartLayout from "../components/SoonStartLayout/SoonStartLayout"
 
 
 export const Main = () => {
@@ -25,6 +26,7 @@ export const Main = () => {
         <OurExperts></OurExperts>
         <Advertisement></Advertisement>
         <Reviews></Reviews>
+        <SoonStartLayout/>
         <TestBlock></TestBlock>
         <QuestionsLayout></QuestionsLayout>
         <FeedbackSection></FeedbackSection>
