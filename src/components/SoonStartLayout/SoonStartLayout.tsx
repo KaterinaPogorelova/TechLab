@@ -6,7 +6,7 @@ import Slider from '../Slider/Slider'
 
 const SoonStartLayout = () => {
   return (
-    <StyledPopular>
+    <StyledPopular $isSoon>
       <StyledContainer>
         <StyledFrameHeader>
           Starting <span>soon</span>

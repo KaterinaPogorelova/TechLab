@@ -17,6 +17,7 @@ export const StyledSoonCard = styled.div<{
   padding: 18px 30px;
   cursor: pointer;
   transition: all 0.2s ease-out;
+  background-color: white;
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
@@ -37,6 +38,7 @@ export const StyledSoonHeader = styled(StyledPopularCardHeader)<{
     if (props.$type === "Programming") return typographyColor.lightBG.green;
   }};
   height: 75px;
+  line-height: 35px;
   @media (max-width: 1270px) {
     height: 52px;
     font-size: 26px;
