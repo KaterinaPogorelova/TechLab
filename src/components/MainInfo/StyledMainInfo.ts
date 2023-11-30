@@ -7,6 +7,7 @@ import lineLeft from '../../assets/img/lineLeft.png'
 import lineRight from '../../assets/img/lineRight.png'
 
 export const StyledMainInfoWrap = styled.main<{ $isClosedRunline: boolean }>`
+position:relative;
 padding:${props => props.$isClosedRunline ? '188px 0 100px' : '238px 0 100px'};
 background:${gradient.violetDark};
 border-radius:0px 0px 80px 80px;
