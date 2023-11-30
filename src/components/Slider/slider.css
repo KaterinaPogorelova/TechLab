@@ -10,6 +10,7 @@
 
 .swiper-button-prev,
 .swiper-button-next {
+  font-family: swiper-icons;
   position: absolute;
   top: auto;
   bottom: 15px;

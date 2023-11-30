@@ -2,13 +2,15 @@ import styled from "styled-components";
 import { hoverBtnColor, typographyColor } from "./styledConstantsColors";
 
 export const StyledFlex = styled.div` // это можно дополнять условиями
+  position: relative;
   display: flex;
+  justify-content: space-between;
 `
 
 export const StyledFrameHeader = styled.h3` // Заголовок почти на каждом блоке 
 color: ${typographyColor.lightBG.black};
 font-family: Raleway;
-font-size: 54px;
+font-size: 56px;
 font-style: normal;
 font-weight: 700;
 line-height: 60px;
@@ -59,7 +61,7 @@ export const StyledContainer = styled.div`
   max-width: 1224px;
   margin: 0 auto;
 
-  @media(max-width:1440px){
+  @media(max-width:1270px){
     max-width:1000px;
     padding:0 20px;
   }
