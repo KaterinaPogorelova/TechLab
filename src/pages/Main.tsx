@@ -16,6 +16,7 @@ export const Main = () => {
         <RunLine></RunLine>
         <Header></Header>
         <MainInfo></MainInfo>
+        <PopularLayout />
         <Directions></Directions>
         <AboutUs></AboutUs>
         <ExpectationLayout></ExpectationLayout>
@@ -23,6 +24,5 @@ export const Main = () => {
         <Advertisement></Advertisement>
         <Reviews></Reviews>
         <QuestionsLayout></QuestionsLayout>
-        <PopularLayout/>
     </>)
 }
