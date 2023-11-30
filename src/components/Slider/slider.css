@@ -7,10 +7,7 @@
   font-variant: initial;
   line-height: 1;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 69e1d3418c32aef3a54924fe19004d89cfae7490
 .swiper-button-prev,
 .swiper-button-next {
   font-family: swiper-icons;
@@ -89,10 +86,6 @@
 
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
-<<<<<<< HEAD
-
-=======
->>>>>>> 69e1d3418c32aef3a54924fe19004d89cfae7490
 .swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: 25px;
