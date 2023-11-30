@@ -3,19 +3,21 @@ import { colors, hoverBtnColor, typographyColor } from "../../../../styledConsta
 import { NavLink } from "react-router-dom";
 
 export const StyledPopularCardHeader = styled.p`
-  max-width: 428px;
-  height: 50px;
+  max-width: 100%;
   font-size: 35px;
   font-style: normal;
   font-weight: 700;
-  line-height: 40px;
+  line-height: 50px;
+  @media(max-width: 1270px){
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
 `;
 export const StyledPopularTags = styled.div<{
   $vertical?: boolean;
   $type?: "Design" | "Data Science" | "Programming";
 }>`
-  height: ${(props) => (props.$vertical ? "110px" : "auto")};
-  width: ${(props) => (props.$vertical ? "167px" : "auto")};
+  width: ${(props) => (props.$vertical ? "73%" : "100%")};
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -43,25 +45,46 @@ export const StyledPopularTags = styled.div<{
       if (props.$type === "Programming") return typographyColor.lightBG.green;
     }};
   }
+  @media(max-width: 1270px){
+    font-size: 12px;
+    width: 130px;
+    & span {
+      padding: 5px 7px;
+    }
+  }
 `;
 export const StyledPopularCardDescription = styled.p<{ $vertical?: boolean }>`
-  width: 428px;
-  height: ${(props) => (props.$vertical ? "160px" : "auto")};
+  width: 100%;
+  height: ${(props) => (props.$vertical ? "200px" : "auto")};
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 22px;
   letter-spacing: 0.32px;
-  margin-top: ${(props) => (props.$vertical ? "134px" : "0px")};
+  margin-top: ${(props) => (props.$vertical ? "136px" : "0px")};
   margin-bottom: 0px;
+  @media(max-width: 1270px){
+    margin-top: ${(props) => (props.$vertical ? "18px" : "0px")};
+    font-size: 14px;
+    line-height: 18px;
+    height: ${(props) => (props.$vertical ? "92px" : "90px")};
+    margin-bottom: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 `;
 
 export const StyledPopularCardImage = styled.img<{ $vertical?: boolean }>`
-  max-width: 200px;
-  position: absolute;
+  max-width: 192px;
+  position: relative;
   top: ${(props) => (props.$vertical ? "76px" : "0")};
   right: 0;
-  margin-bottom: 33px;
+  @media(max-width: 1270px){
+    position: absolute;
+    top: 76px;
+    max-width: 115px;
+    height: 110px;
+  }
 `;
 
 export const StyledYellowButton = styled.button`
@@ -102,6 +125,12 @@ export const StyledYellowButton = styled.button`
       width: 100%;
     }
   }
+  @media(max-width: 1270px){
+    padding: 6px 16px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.28px;
+  }
 `;
 
 export const StyledLinkMore = styled(NavLink)`
@@ -124,5 +153,9 @@ export const StyledLinkMore = styled(NavLink)`
         fill: ${hoverBtnColor.yellow};
       }
     }
+  }
+  @media(max-width: 1270px){
+    padding: 6px 8px;
+    font-size: 14px;
   }
 `
