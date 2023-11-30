@@ -1,6 +1,6 @@
 import { useAppSelector } from "../../store/store"
 
-import { StyledBurgerWrap, StyledContainerHeader, StyledHeadIconsWrap, StyledHeaderWrap, StyledLogoWrap, StyledName } from "./StyledHeader"
+import { StyledContainerHeader, StyledHeadIconsWrap, StyledHeaderWrap, StyledLogoWrap, StyledName } from "./StyledHeader"
 
 import { ReactComponent as Logo } from '../../assets/icons/logo.svg'
 

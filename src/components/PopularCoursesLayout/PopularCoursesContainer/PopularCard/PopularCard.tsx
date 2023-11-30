@@ -1,8 +1,8 @@
 import React from 'react'
 import { StyledLinkMore, StyledPopularCardDescription, StyledPopularCardHeader, StyledPopularCardImage, StyledPopularTags, StyledYellowButton } from './styledPopularCard'
 import { StyledFlex } from '../../../../styledConstants'
-import { StyledCardHorizontalContainer, StyledPopularHorizontalContainer } from '../StyledPopularCourses'
-import { NavLink } from 'react-router-dom'
+import { StyledCardHorizontalContainer } from '../StyledPopularCourses'
+
 import ArrowRight from '../../../../assets/icons/ArrowRight'
 
 interface IPopular {
@@ -20,11 +20,11 @@ const PopularCard = ({ header, type, countLessons, description, imageSrc, isVert
         <StyledCardHorizontalContainer>
           <StyledPopularCardHeader>{header}</StyledPopularCardHeader>
           <StyledPopularTags $type={type} $vertical={isVertical}><span>{type}</span><span>Beginner friendly</span><span>{countLessons} lessons</span></StyledPopularTags>
-          { !isVertical &&  <StyledPopularCardDescription $vertical={isVertical}>{description}</StyledPopularCardDescription>}
+          {!isVertical && <StyledPopularCardDescription $vertical={isVertical}>{description}</StyledPopularCardDescription>}
         </StyledCardHorizontalContainer>
         <StyledPopularCardImage $vertical={isVertical} src={imageSrc} alt="img" />
       </StyledFlex>
-         { isVertical &&  <StyledPopularCardDescription $vertical={isVertical}>{description}</StyledPopularCardDescription>}
+      {isVertical && <StyledPopularCardDescription $vertical={isVertical}>{description}</StyledPopularCardDescription>}
       <div>
         <StyledYellowButton>Let's start</StyledYellowButton>
         <StyledLinkMore to="#">Learn more <ArrowRight /></StyledLinkMore>

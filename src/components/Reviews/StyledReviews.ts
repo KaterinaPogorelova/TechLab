@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { backgroundColor, colors, typographyColor } from "../../styledConstantsColors";
+import { colors, typographyColor } from "../../styledConstantsColors";
 import { Desktop1440, Desktop1920 } from "../../styledConstantsFonts";
 
 export const StyledReviewsWrap = styled.div`

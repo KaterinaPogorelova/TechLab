@@ -1,6 +1,6 @@
 import { useAppSelector } from "../../../store/store"
 
-import { Container, Wrapper, LinkSection, SectionTitle, StyledLink, StyledDirLinksWrap, StyledSectionWrap, StyledDirWrapper, StyledSecLink } from "./StyledLinkesWrap"
+import { Container, Wrapper, LinkSection, SectionTitle, StyledLink, StyledDirLinksWrap, StyledDirWrapper, StyledSecLink } from "./StyledLinkesWrap"
 import { ReactComponent as Arrow } from '../../../assets/icons/RightLinkArrow.svg'
 type LinksWrapType = {
     isClicked?: boolean,

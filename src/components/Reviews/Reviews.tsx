@@ -7,7 +7,7 @@ import studentOrange from '../../assets/img/StudentOrange.png'
 import studentGreen from '../../assets/img/StudentGreen.png'
 import studentViolet from '../../assets/img/StudentViolet.png'
 
-import { backgroundColor, colors } from "../../styledConstantsColors"
+import { colors } from "../../styledConstantsColors"
 import '../Slider/slider.css';
 import './reviewsSlider.css'
 

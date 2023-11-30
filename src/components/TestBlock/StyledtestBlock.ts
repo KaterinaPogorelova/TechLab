@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, defaultBtnColor, gradient, hoverBtnColor, typographyColor, typographyGradient } from "../../styledConstantsColors";
+import { colors, defaultBtnColor, gradient, typographyColor, typographyGradient } from "../../styledConstantsColors";
 import { StyledContainer } from "../../styledConstants";
 import { Link } from "react-router-dom";
 import { Desktop1440, Desktop1920 } from "../../styledConstantsFonts";
