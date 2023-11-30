@@ -12,9 +12,18 @@ align-items:center;
 gap:50px;
 background:${colors.brand.violet};
 z-index:3;
+width:100%;
 
 @media(max-width:1440px){
     padding:5px 32px 5px 0px;
+}
+@media(max-width:767px){
+    gap:30px;
+    padding:5px 32px 5px 0px;
+}
+@media(max-width:479px){
+    gap:15px;
+    padding:5px 15px 5px 0px;
 }
 `
 export const RunLineWrap = styled.div`
@@ -47,10 +56,29 @@ color:${colors.neutral.champagne};
 `
 
 export const SvgWrap = styled.button`
-width:40px;
-height:40px;
 
 & svg{
+    width:40px;
+    height:40px;
     fill:${colors.neutral.champagne};
 }
+
+@media(max-width:1440px){
+    width:32px;
+    height:32px;
+    & svg{
+        width:32px;
+        height:32px;
+    }
+}
+
+@media(max-width:767px){
+    width:24px;
+    height:24px;
+    & svg{
+        width:24px;
+        height:24px;
+    }
+}
+
 `

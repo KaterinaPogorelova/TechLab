@@ -9,6 +9,10 @@ export const StyledNav = styled.ul`
 display:flex;
 align-items:center;
 margin:0;
+
+@media(max-width:1024px){
+display:none;
+}
 `
 
 export const StyledLinkWrap = styled.li`
@@ -78,6 +82,11 @@ font-size:${Desktop1920.buttons.buttonSm.size};
 font-weight:${Desktop1920.buttons.buttonSm.weight};
 letter-spacing:${Desktop1920.buttons.buttonSm.letterSpacing};
 line-height:${Desktop1920.buttons.buttonSm.lineHeight};
+transition:all 0.5s;
+
+&:hover{
+    background:${backgroundColor.green50};
+}
 
 @media(max-width:1440px){
 padding:6px 16px;
