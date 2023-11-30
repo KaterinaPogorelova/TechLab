@@ -1,10 +1,12 @@
 import React from "react";
 import Accordeon from "../Accordeon/Accordeon";
-import {  StyledExpectation, StyledExpectationText, StyledH2 } from "./styledExpectationLayout";
-import {  StyledContainer, StyledFlex } from "../../styledConstants";
+import { StyledExpectation, StyledExpectationText, StyledH2 } from "./styledExpectationLayout";
+import { StyledContainer, StyledFlex, StyledSectionSeparator } from "../../styledConstants";
+import { backgroundColor } from "../../styledConstantsColors";
 
 const ExpectationLayout = () => {
-  return (
+  return (<>
+    <StyledSectionSeparator $background={backgroundColor.black}></StyledSectionSeparator>
     <StyledExpectation>
       <StyledContainer>
         <StyledH2>What to expect from courses</StyledH2>
@@ -14,10 +16,11 @@ const ExpectationLayout = () => {
             groups, individually, purchase lessons, or seek assistance from a
             mentor.
           </StyledExpectationText>
-          <Accordeon isBlack={false}/>
+          <Accordeon isBlack={false} />
         </StyledFlex>
       </StyledContainer>
     </StyledExpectation>
+  </>
   );
 };
 

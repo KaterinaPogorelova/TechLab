@@ -4,7 +4,7 @@ import { StyledContainer } from "../../styledConstants";
 
 import { Link } from "react-router-dom";
 import { backgroundColor, defaultBtnColor, hoverBtnColor } from "../../styledConstantsColors";
-import { Desktop1440, Desktop1920 } from "../../styledConstantsFont";
+import { Desktop1440, Desktop1920 } from "../../styledConstantsFonts";
 
 export const StyledHeaderWrap = styled.header<{ $isRunlineClosed: boolean }>`
 position:fixed;
@@ -29,6 +29,8 @@ gap:8px;
 
 & svg{
     fill:${defaultBtnColor.green};
+    width: 32px;
+    height: 32px;
 }
 &:hover svg{
     fill:${hoverBtnColor.yellow};
@@ -39,6 +41,13 @@ gap:8px;
     color:${hoverBtnColor.yellow};
     transition:all 0.5s;
 }
+
+@media(max-width:1440px){
+    & svg{
+        width: 23px;
+        height: 23px;
+    }
+}
 `
 
 export const StyledName = styled.h3`
@@ -47,7 +56,7 @@ font-size:20px;
 font-weight:${Desktop1920.headings.h6.weight};
 color:${defaultBtnColor.green};
 @media(max-width:1440px){
-font-size:18px;
+font-size:16px;
 font-weight:${Desktop1440.headings.h6.weight};
 }
 `

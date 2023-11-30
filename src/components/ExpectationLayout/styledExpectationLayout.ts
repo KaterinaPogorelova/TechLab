@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { backgroundColor, typographyColor, typographyGradient } from "../../styledConstantsColors";
 
 export const StyledExpectation = styled.div`
+position:relative;
   width: 100%;
   padding: 180px 0 120px;
   /* padding: 180px 251px 120px 251px; - паддинги из макета */ 
@@ -14,7 +15,6 @@ export const StyledExpectationText = styled.p`
     margin: 30px 20px auto auto;
     padding-right: 30px;
     color: ${typographyColor.darkBG.white};
-    font-family: Raleway;
     font-size: 28px;
     font-style: normal;
     font-weight: 500;
@@ -22,7 +22,6 @@ export const StyledExpectationText = styled.p`
 `
 
 export const StyledH2 = styled.h2`
-  font-family: Raleway;
   font-size: 72px;
   font-style: normal;
   font-weight: 700;

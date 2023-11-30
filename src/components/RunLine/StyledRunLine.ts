@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { colors } from "../../styledConstantsColors";
 
-import { Desktop1920, Desktop1440 } from "../../styledConstantsFont";
+import { Desktop1920, Desktop1440 } from "../../styledConstantsFonts";
 export const RunLineBlockWrap = styled.div`
 position:fixed;
 top:0;
@@ -12,6 +12,10 @@ align-items:center;
 gap:50px;
 background:${colors.brand.violet};
 z-index:3;
+
+@media(max-width:1440px){
+    padding:5px 32px 5px 0px;
+}
 `
 export const RunLineWrap = styled.div`
 position:relative;

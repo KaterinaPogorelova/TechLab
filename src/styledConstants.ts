@@ -2,13 +2,15 @@ import styled from "styled-components";
 import { hoverBtnColor, typographyColor } from "./styledConstantsColors";
 
 export const StyledFlex = styled.div` // это можно дополнять условиями
+  position: relative;
   display: flex;
+  justify-content: space-between;
 `
 
 export const StyledFrameHeader = styled.h3` // Заголовок почти на каждом блоке 
 color: ${typographyColor.lightBG.black};
 font-family: Raleway;
-font-size: 54px;
+font-size: 56px;
 font-style: normal;
 font-weight: 700;
 line-height: 60px;
@@ -20,6 +22,13 @@ margin-bottom: 16px;
   border-radius: 100px;
 background: ${typographyColor.lightBG.violet};
 color: ${typographyColor.darkBG.white};
+}
+
+@media(max-width:1440px){
+font-size: 36px;
+font-weight: 700;
+line-height: 45px;
+letter-spacing: 1.08px;
 }
 `
 
@@ -38,13 +47,21 @@ color: ${typographyColor.lightBG.violet};
     color: ${hoverBtnColor.violet};
   }
 }
+& span{
+  font-weight: 700;
+}
+@media(max-width:1440px){
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  }
 `
 
 export const StyledContainer = styled.div`
   max-width: 1224px;
   margin: 0 auto;
 
-  @media(max-width:1440px){
+  @media(max-width:1270px){
     max-width:1000px;
     padding:0 20px;
   }

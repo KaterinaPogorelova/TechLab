@@ -251,7 +251,7 @@ width:288px;
 &:last-of-type{
     display:flex;
     flex-direction:column;
-align-items:end;
+    align-items:end;
 }
 `
 
@@ -269,6 +269,7 @@ margin-bottom:12px;
 `
 
 export const StyledFooterLink = styled(Link) <{ $isTest?: boolean }>`
+display:block;
 color:${props => props.$isTest ? typographyColor.darkBG.green : typographyColor.darkBG.white};
 font-size: 16px;
 font-weight: 500;

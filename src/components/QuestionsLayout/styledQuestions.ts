@@ -11,4 +11,8 @@ background: ${backgroundColor.champagne};
 
 export const StyledQuestionsText = styled(StyledFrameText)` // расширение стиля
   width: 1043px;
+
+  @media(max-width:1440px){
+    width:934px;
+  }
 `
