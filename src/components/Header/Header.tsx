@@ -1,3 +1,5 @@
+import { useWindowSize } from "../../hooks/useWindowSize"
+
 import { useAppSelector } from "../../store/store"
 
 import { StyledContainerHeader, StyledHeadIconsWrap, StyledHeaderWrap, StyledLogoWrap, StyledName } from "./StyledHeader"
@@ -8,8 +10,11 @@ import { Menu } from "./Menu/Menu"
 import { IconsWrap } from './IconsWrap/IconsWrap'
 import { SearchPanel } from './SearchPanel/SearchPanel'
 import { Burger } from "../../assets/icons/HeaderIcons"
+import { MenuTablet } from "./Menu/MenuTablet"
+import { MenuMobile } from "./Menu/MenuMobile"
 
 export const Header = () => {
+    const { width = 0 } = useWindowSize()
     const isRunlineClosed = useAppSelector((state) => state.runline.isClosed)
 
     return (<>
@@ -22,7 +27,9 @@ export const Header = () => {
                         <StyledName>TechLab</StyledName>
                     </StyledLogoWrap>
                 </StyledHeadIconsWrap>
-                <Menu />
+                {width > 1023 && <Menu />}
+                {/* {width < 1024 && width > 767 && <MenuTablet></MenuTablet>} */}
+                {width < 1024 && <MenuMobile></MenuMobile>}
                 <IconsWrap />
             </StyledContainerHeader>
             <SearchPanel />

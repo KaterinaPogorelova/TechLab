@@ -12,7 +12,7 @@ export const LinksWrap = ({ isClicked }: LinksWrapType) => {
     const tab = useAppSelector((state) => state.nav.tabs.find((tab) => tab.title === clickedTab))
     return (<Wrapper $isClicked={isClicked}>
         <Container>
-            {tab && tab.path && tab.linkSections && tab.linkSections.map((section) => section.path &&
+            {tab && tab.linkSections && tab.linkSections.map((section) => section.path &&
                 <div key={section.title}>
                     <LinkSection to={section.path}>{section.title}</LinkSection>
                     <div style={{ position: 'relative', paddingLeft: '36px' }}>{section.linkSections && section.linkSections.map((link) => link.path &&

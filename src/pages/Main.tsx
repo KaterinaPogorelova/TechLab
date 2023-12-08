@@ -19,7 +19,7 @@ export const Main = () => {
         <RunLine></RunLine>
         <Header></Header>
         <MainInfo></MainInfo>
-        <PopularLayout />
+        {/*         <PopularLayout />
         <Directions></Directions>
         <AboutUs></AboutUs>
         <ExpectationLayout></ExpectationLayout>
@@ -29,6 +29,6 @@ export const Main = () => {
         <SoonStartLayout />
         <TestBlock></TestBlock>
         <QuestionsLayout></QuestionsLayout>
-        <FeedbackSection></FeedbackSection>
+        <FeedbackSection></FeedbackSection> */}
     </>)
 }

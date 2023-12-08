@@ -16,17 +16,17 @@ transition: all 0.5s;
 padding:40px;
 border-radius:0 0 20px 20px;
 
-@media(max-width:1440px){
+@media(max-width:1439.5px){
     width:300px;
     padding:30px;
     transform:${props => props.$isOpened ? 'translateY(49px)' : 'translateY(0px)'};
 }
 
-@media(max-width:1023px){
+@media(max-width:1023.5px){
     transform:${props => props.$isOpened ? 'translateY(52px)' : 'translateY(0px)'};
 }
-@media(max-width:767px){
-    transform:${props => props.$isOpened ? 'translateY(39px)' : 'translateY(0px)'};
+@media(max-width:767.5px){
+    transform:${props => props.$isOpened ? 'translateY(36px)' : 'translateY(0px)'};
 }
 `
 
@@ -48,7 +48,7 @@ margin-bottom:30px;
     color:${typographyColor.darkBG.white};
     background:${hoverBtnColor.green};
 }
-@media(max-width:1440px){
+@media(max-width:1439.5px){
     font-size:${Desktop1440.buttons.buttonSm.size};
 font-weight:${Desktop1440.buttons.buttonSm.weight};
 lineHeight:${Desktop1440.buttons.buttonSm.lineHeight};
@@ -72,7 +72,7 @@ text-align:center;
 & a:hover{
     color:${hoverBtnColor.darkGray}
 }
-@media(max-width:1440px){
+@media(max-width:1439.5px){
     font-size: 14px;
     letter-spacing: 0.28px;
 }
