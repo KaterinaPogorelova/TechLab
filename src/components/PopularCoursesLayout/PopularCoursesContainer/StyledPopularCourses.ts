@@ -43,6 +43,22 @@ export const StyledPopularCousreContainer = styled.div<{
     max-width: 300px;
     min-height: 360px;
     padding: 20px 24px;
+    margin: auto;
+     border-radius: 20px;
+  }
+   @media(max-width:768px){
+    max-width: 350px;
+    min-height: 360px;
+    padding: 20px 24px;
+    margin: auto;
+     border-radius: 20px;
+  }
+     @media(max-width:480px){
+    max-width: 320px;
+    min-height: 360px;
+    padding: 20px 24px;
+    margin: auto;
+     border-radius: 20px;
   }
 
 `;

@@ -37,7 +37,7 @@ const Slider = ({ content, nameLink }: { content?: React.ReactNode, nameLink?: s
         <SwiperSlide><Slide>{content}</Slide></SwiperSlide>
         <SwiperSlide><Slide>{content}</Slide></SwiperSlide>
       </Swiper>
-      {nameLink && <StyledSliderLink to="#">{nameLink}<LongArrowRight /></StyledSliderLink>}
+      {/* {nameLink && <StyledSliderLink to="#">{nameLink}<LongArrowRight /></StyledSliderLink>} */}
     </SliderContainer>
   );
 };

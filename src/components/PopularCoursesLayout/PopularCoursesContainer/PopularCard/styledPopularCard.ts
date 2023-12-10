@@ -10,7 +10,7 @@ export const StyledPopularCardHeader = styled.p`
   line-height: 50px;
   @media(max-width: 1270px){
     font-size: 26px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
   }
 `;
 export const StyledPopularTags = styled.div<{
