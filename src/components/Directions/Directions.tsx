@@ -14,13 +14,13 @@ export const Directions = () => {
         <StyledDirectionsWrap>
             <StyledContainer>
                 <StyledFrameHeader>We know <span>everything</span> about IT</StyledFrameHeader>
-                <StyledDirectionsSubtitle>Change your life and start a new career with our help.</StyledDirectionsSubtitle>
+                <StyledDirectionsSubtitle>See the courses most commonly chosen by students</StyledDirectionsSubtitle>
                 <StyledDirectionsList>
                     {directionsList.map((item) =>
                         <DirectionsItem key={item.title} title={item.title} links={item.links} color={item.color} count={item.count}></DirectionsItem>)
                     }
                 </StyledDirectionsList>
-                <RightSideLink text={'All popular courses'} path={'/'} isRightSided></RightSideLink>
+                <RightSideLink text={'All popular courses'} path={'/'} isRightSided mobileNotChanged></RightSideLink>
             </StyledContainer>
         </StyledDirectionsWrap></>)
 }
