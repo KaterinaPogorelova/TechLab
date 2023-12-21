@@ -1,3 +1,4 @@
+import { useWindowSize } from "../../hooks/useWindowSize";
 import { StyledCopyright, StyledFooter, StyledFooterContainer, StyledFooterLink, StyledFooterLogosWrap, StyledFooterSection, StyledFooterSectionTitle, StyledLogoLink } from "./StyledFeedbackSection"
 import { ReactComponent as LinkedIn } from '../../assets/icons/linkedin.svg';
 import { ReactComponent as Facebook } from '../../assets/icons/facebook.svg';
@@ -9,22 +10,31 @@ const footerSections = [
     { name: 'Career building', links: [{ name: 'Career test', path: '/' }, { name: 'Mentoring', path: '/' }] }]
 
 export const Footer = () => {
-    return (<StyledFooter><StyledFooterContainer>
-        {footerSections.map((section) => <StyledFooterSection key={section.name}>
-            <StyledFooterSectionTitle>{section.name}</StyledFooterSectionTitle>
-            {section.links.map((section) =>
-                <StyledFooterLink to={section.path} $isTest={section.name === 'Career test' ? true : false} key={section.name}>{section.name}</StyledFooterLink>
-            )}
-        </StyledFooterSection>)}
-        <StyledFooterSection>
-            <StyledFooterLogosWrap>
-                <StyledLogoLink href={'/'}><LinkedIn /></StyledLogoLink>
-                <StyledLogoLink href={'/'}><Facebook /></StyledLogoLink>
-                <StyledLogoLink href={'/'}><Instagram /></StyledLogoLink>
+    const { width = 0 } = useWindowSize()
 
-            </StyledFooterLogosWrap>
-            <StyledCopyright>© TechLab — online school 2023</StyledCopyright>
-        </StyledFooterSection>
-    </StyledFooterContainer></StyledFooter>)
+    return (<StyledFooter>
+        {width < 768 && <StyledFooterLogosWrap>
+            <StyledLogoLink href={'/'}><LinkedIn /></StyledLogoLink>
+            <StyledLogoLink href={'/'}><Facebook /></StyledLogoLink>
+            <StyledLogoLink href={'/'}><Instagram /></StyledLogoLink>
+        </StyledFooterLogosWrap>}
+        <StyledFooterContainer>
+            {footerSections.map((section) => <StyledFooterSection key={section.name}>
+                <StyledFooterSectionTitle>{section.name}</StyledFooterSectionTitle>
+                {section.links.map((section) =>
+                    <StyledFooterLink to={section.path} $isTest={section.name === 'Career test' ? true : false} key={section.name}>{section.name}</StyledFooterLink>
+                )}
+            </StyledFooterSection>)}
+            {width > 767 && <StyledFooterSection>
+                <StyledFooterLogosWrap>
+                    <StyledLogoLink href={'/'}><LinkedIn /></StyledLogoLink>
+                    <StyledLogoLink href={'/'}><Facebook /></StyledLogoLink>
+                    <StyledLogoLink href={'/'}><Instagram /></StyledLogoLink>
+                </StyledFooterLogosWrap>
+                <StyledCopyright>© TechLab — online school 2023</StyledCopyright>
+            </StyledFooterSection>}
+        </StyledFooterContainer>
+        {width < 768 && <StyledCopyright>© TechLab — online school 2023</StyledCopyright>}
+    </StyledFooter>)
 }
 
