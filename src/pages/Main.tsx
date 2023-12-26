@@ -16,7 +16,7 @@ import SoonStartLayout from "../components/SoonStartLayout/SoonStartLayout"
 
 export const Main = () => {
     return (<>
-        {/*         <RunLine></RunLine>
+        <RunLine></RunLine>
         <Header></Header>
         <MainInfo></MainInfo>
         <PopularLayout />
@@ -28,7 +28,7 @@ export const Main = () => {
         <Reviews></Reviews>
         <SoonStartLayout />
         <TestBlock></TestBlock>
-        <QuestionsLayout></QuestionsLayout> */}
+        <QuestionsLayout></QuestionsLayout>
         <FeedbackSection></FeedbackSection>
     </>)
 }
