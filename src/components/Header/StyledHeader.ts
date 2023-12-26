@@ -13,11 +13,10 @@ left:0;
 width:100%;
 background: ${backgroundColor.black};
 z-index:4;
-
-@media(max-width:1023px){
+@media(max-width:1439.5px){
     top:${props => props.$isRunlineClosed ? '0' : '42px'};
 }
-@media(max-width:767px){
+@media(max-width:767.5px){
     top:${props => props.$isRunlineClosed ? '0' : '34px'};
 }
 `
@@ -28,10 +27,10 @@ display:flex;
 justify-content:space-between;
 align-items:center;
  
-@media(max-width:1023px){
+@media(max-width:1023.5px){
     padding:0 32px;
   }
-  @media(max-width:767px){
+  @media(max-width:767.5px){
     padding:0 20px;
   }
 `
@@ -59,20 +58,20 @@ gap:8px;
     transition:all 0.5s;
 }
 
-@media(max-width:1440px){
+@media(max-width:1439.5px){
     & svg{
         width: 23px;
         height: 23px;
     }
 }
-@media(max-width:1024px){
+@media(max-width:1023.5px){
     & svg{
         width: 32px;
         height: 32px;
     }
 }
 
-@media(max-width:767px){
+@media(max-width:767.5px){
     & svg{
         width: 24px;
         height: 24px;
@@ -90,15 +89,15 @@ margin:20px 16px 20px 0px;
     height:100%;
     fill:${defaultBtnColor.green};
 }
-@media(max-width:1024px){
+@media(max-width:1023.5px){
     display:block;
 }
-@media(max-width:767px){
+@media(max-width:767.5px){
     width:33px;
 height:24px;
     margin:12px 43px 12px 0px;
 }
-@media(max-width:479px){
+@media(max-width:479.5px){
     margin: 15px 50px 15px 0px;
 }
 `
@@ -109,18 +108,18 @@ font-size:20px;
 font-weight:${Desktop1920.headings.h6.weight};
 color:${defaultBtnColor.green};
 
-@media(max-width:1440px){
+@media(max-width:1439.5px){
 font-size:16px;
 font-weight:${Desktop1440.headings.h6.weight};
 }
 
-@media(max-width:1024px){
+@media(max-width:1023.5px){
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
 }
 
-@media(max-width:767px){
+@media(max-width:767.5px){
     font-size:16px;
     }
 `

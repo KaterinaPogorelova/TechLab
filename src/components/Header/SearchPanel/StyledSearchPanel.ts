@@ -16,17 +16,17 @@ opacity:${props => props.$activeTab === 'SearchPanel' ? '1' : '0'};
 transition: all 0.5s;
 z-index:3;
 
-@media(max-width:1440px){
+@media(max-width:1439.5px){
     transform:${props => props.$activeTab === 'SearchPanel' ? 'translateY(73px)' : 'translateY(0px)'};
 }
 
-@media(max-width:1023px){
+@media(max-width:1023.5px){
     transform:${props => props.$activeTab === 'SearchPanel' ? 'translateY(72px)' : 'translateY(0px)'};
 }
-@media(max-width:767px){
-    transform:${props => props.$activeTab === 'SearchPanel' ? 'translateY(56px)' : 'translateY(0px)'};
+@media(max-width:767.5px){
+    transform:${props => props.$activeTab === 'SearchPanel' ? 'translateY(48px)' : 'translateY(0px)'};
 }
-@media(max-width:479px){
+@media(max-width:479.5px){
     transform:${props => props.$activeTab === 'SearchPanel' ? 'translateY(53px)' : 'translateY(0px)'};
 }
 `
@@ -35,10 +35,10 @@ export const StyledContainerSearch = styled(StyledContainer)`
 margin: 0 auto;
 padding: 30px 0 40px;
 
-@media(max-width:1440px){
+@media(max-width:1439.5px){
     padding: 20px 0px 30px;
 }
-@media(max-width:1023px){
+@media(max-width:1023.5px){
     padding: 20px 32px 30px;
 }
 `
@@ -50,7 +50,7 @@ height:60px;
 display:flex;
 align-items:center;
 gap:32px;
-@media(max-width:1440px){
+@media(max-width:1439.5px){
     height:40px;
 }
 `
@@ -61,7 +61,7 @@ font-size:${Desktop1920.subtitles.subtitle2.size};
 font-weight:${Desktop1920.subtitles.subtitle2.weight};
 color:${colors.neutral.white};
 flex-grow:1;
-@media(max-width:1440px){
+@media(max-width:1439.5px){
     font-size:${Desktop1440.subtitles.subtitle2.size};
 font-weight:${Desktop1440.subtitles.subtitle2.weight};
 }
@@ -78,18 +78,18 @@ height:40px;
     width:100%;
     height:100%;
 }
-@media(max-width:1440px){
+@media(max-width:1439.5px){
     top:7px;
     width:24px;
     height:24px;
 }
-@media(max-width:1023px){
+@media(max-width:1023.5px){
     top:5px;
     width:32px;
     height:32px;
 }
 
-@media(max-width:767px){
+@media(max-width:767.5px){
     top:8px;
     width:24px;
     height:24px;

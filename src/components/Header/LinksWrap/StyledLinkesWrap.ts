@@ -18,7 +18,7 @@ height:280px;
 background:${backgroundColor.lightBlack};
 transition: all 0.5s;
 
-@media(max-width:1440px){
+@media(max-width:1439.5px){
     transform:${props => props.$isClicked ? 'translateY(73px)' : 'translateY(0px)'};
 }
 `
@@ -46,7 +46,7 @@ transition: all 0.5s;
     color:${hoverBtnColor.darkGray}
 }
 
-@media(max-width:1440px){
+@media(max-width:1439.5px){
     font-size:${Desktop1440.headings.h5.size};
     font-weight:${Desktop1440.headings.h5.weight};
 }
@@ -59,7 +59,7 @@ font-size: 16px;
 font-weight: 500;
 transition: all 0.5s;
 
-@media(max-width:1440px){
+@media(max-width:1439.5px){
     font-size:${Desktop1440.links.bodyLink.size};
     font-weight:${Desktop1440.links.bodyLink.weight};
 }
@@ -111,7 +111,7 @@ margin-bottom:18px;
     margin-bottom:0px;
 }
 
-@media(max-width:1440px){
+@media(max-width:1439.5px){
     font-size:${Desktop1440.links.bodyLink.size};
     font-weight:${Desktop1440.links.bodyLink.weight};
 }

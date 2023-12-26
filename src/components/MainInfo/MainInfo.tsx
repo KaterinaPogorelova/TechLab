@@ -1,10 +1,12 @@
+import { useWindowSize } from "../../hooks/useWindowSize"
+
 import { useAppSelector } from "../../store/store"
 
 import {
     StyledInfoWrap, StyledMainContainer, StyledMainInfoWrap,
     StyledText, StyledTitle, StyledSvgWrap, StyledTextWrap, StyledCoursesList, StyledCoursesItem,
     StyledCoursesItemWrap, StyledExpertsWrap, StyledExpertsText, StyledExpertsList,
-    StyledExpertsItem, StyledImgWrap
+    StyledExpertsItem, StyledImgWrap, StyledSmTestWrap, StyledLinkText
 } from "./StyledMainInfo"
 
 import { ReactComponent as Arrow } from "../../assets/MainArrow.svg"
@@ -15,8 +17,9 @@ import expert3 from '../../assets/img/expert3.png'
 import expert4 from '../../assets/img/expert4.png'
 import expert5 from '../../assets/img/expert5.png'
 import background from '../../assets/img/ManMainPic.png'
-
+import backgroundMob from '../../assets/img/ManMainPicMobile.png'
 import { colors } from "../../styledConstantsColors"
+import { DownArrow } from "../../assets/icons/Arrows"
 
 const coursesList = [
     { title: 'UI/UX', color: 'violet' },
@@ -37,15 +40,16 @@ const experts = [
 ]
 
 export const MainInfo = () => {
+    const { width = 0 } = useWindowSize()
     const isClosedRunLine = useAppSelector((state) => state.runline.isClosed)
-    return (<StyledMainInfoWrap $isClosedRunline={isClosedRunLine}>
+    return (<><StyledMainInfoWrap $isClosedRunline={isClosedRunLine}>
         <StyledMainContainer>
             <StyledInfoWrap>
                 <StyledTitle>Your path to a successful career in IT</StyledTitle>
-                <StyledTextWrap>
+                {width > 767 && <StyledTextWrap>
                     <StyledText>Choose your course</StyledText>
                     <StyledSvgWrap><Arrow></Arrow></StyledSvgWrap>
-                </StyledTextWrap>
+                </StyledTextWrap>}
                 <StyledCoursesList>
                     {coursesList.map((item) =>
                         <StyledCoursesItemWrap $color={item.color} key={item.title}>
@@ -63,8 +67,13 @@ export const MainInfo = () => {
                 </StyledExpertsWrap>
             </StyledInfoWrap>
             <StyledImgWrap>
-                <img src={background} alt="mainback"></img>
+                {width > 767 ? <img src={background} alt="mainback"></img> : <img src={backgroundMob} alt="mainback"></img>}
             </StyledImgWrap>
         </StyledMainContainer>
-    </StyledMainInfoWrap>)
+    </StyledMainInfoWrap>
+        {width < 768 && <StyledSmTestWrap to='/'>
+            <StyledLinkText>Take a career test </StyledLinkText>
+            <DownArrow></DownArrow>
+        </StyledSmTestWrap>}
+    </>)
 }
