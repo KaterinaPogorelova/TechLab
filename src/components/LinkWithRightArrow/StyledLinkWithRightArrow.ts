@@ -21,13 +21,13 @@ z-index:1;
     color:${hoverBtnColor.yellow};
 }
 & svg{
-    fill:${props => props.$isBlack ? colors.neutral.darkBlack : colors.neutral.white};
+    fill:${props => props.$isBlack ? colors.neutral.darkBlack + '!important' : colors.neutral.white};
     width:49px;
     height:48px;
     transition:all 0.5s;
 }
 &:hover svg{
-    fill:${hoverBtnColor.yellow};
+    fill:${hoverBtnColor.yellow + '!important'};
 }
 @media(max-width:1439.5px){
     & svg{
@@ -40,20 +40,20 @@ z-index:1;
     & svg{
         width:20px;
         height:20px;
-        transform:${props => props.$mobileNotChanged ? 'rotate(-90deg)' : 'rotate(0deg)'};
+        transform:${props => props.$mobileNotChanged ? 'rotate(0deg)' : 'rotate(-90deg)'};
     }
 }
 @media(max-width:767.5px){
-    margin: ${props => props.$mobileNotChanged ? '0 0 0 auto' : 'auto 0 0'};
+    margin: ${props => props.$mobileNotChanged ? 'auto 0 0' : '0 0 0 auto'};
     & svg{
-        width:${props => props.$mobileNotChanged ? '20px' : '40px'};
-        height:${props => props.$mobileNotChanged ? '20px' : '40px'};
+        width:${props => props.$mobileNotChanged ? '40px' : '20px'};
+        height:${props => props.$mobileNotChanged ? '40px' : '20px'};
     }
 }
 @media(max-width:479.5px){
     & svg{
-        width:${props => props.$mobileNotChanged ? '20px' : '48px'};
-        height:${props => props.$mobileNotChanged ? '20px' : '48px'};
+        width:${props => props.$mobileNotChanged ? '48px' : '20px'};
+        height:${props => props.$mobileNotChanged ? '48px' : '20px'};
     }
 }
 }

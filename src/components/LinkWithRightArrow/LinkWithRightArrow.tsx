@@ -16,7 +16,7 @@ export const RightSideLink = ({ isBlack, isRightSided, text, path, mobileNotChan
     return (<StyledArrowWrap to={path} $isBlack={isBlack} $isRightSided={isRightSided} $mobileNotChanged={mobileNotChanged}>
         <StyledArrowText>{text}</StyledArrowText>
         {width > 1024 && <Arrow></Arrow>}
-        {width < 1025 && mobileNotChanged && <DownArrow></DownArrow>}
-        {width < 1025 && !mobileNotChanged && <Arrow></Arrow>}
+        {width < 1025 && !mobileNotChanged && <DownArrow></DownArrow>}
+        {width < 1025 && mobileNotChanged && <Arrow></Arrow>}
     </StyledArrowWrap>)
 }

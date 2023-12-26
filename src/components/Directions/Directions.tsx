@@ -20,7 +20,7 @@ export const Directions = () => {
                         <DirectionsItem key={item.title} title={item.title} links={item.links} color={item.color} count={item.count}></DirectionsItem>)
                     }
                 </StyledDirectionsList>
-                <RightSideLink text={'All popular courses'} path={'/'} isRightSided mobileNotChanged></RightSideLink>
+                <RightSideLink text={'All popular courses'} path={'/'} isRightSided></RightSideLink>
             </StyledContainer>
         </StyledDirectionsWrap></>)
 }
