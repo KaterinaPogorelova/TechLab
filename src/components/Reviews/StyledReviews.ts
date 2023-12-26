@@ -10,6 +10,39 @@ border-radius: 0px 0px 80px 80px;
 & h3{
     color:${typographyColor.darkBG.white};
 }
+@media(max-width:1023.5px){
+    padding:60px 0 122px;
+    border-radius: 0px;
+
+    & h3{
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 48px;
+        letter-spacing: 1.2px;
+        margin-bottom: 24px;
+        & span{
+            padding:8px 16px;
+        }
+    }
+}
+@media(max-width:767.5px){
+    padding:50px 0 70px;
+    & h3{
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 40px;
+        width:305px;
+        margin-bottom: 10px;
+        & span{
+            padding:0px 14px;
+        }
+    }
+}
+@media (max-width:359.5px) {
+    & h3{
+        width:100%;
+    }
+}
 ;
 `
 
@@ -19,9 +52,20 @@ cursor:pointer;
 width:518px;
 height:288px;
 
-@media(max-width:1440px){
+@media(max-width:1439.5px){
 width:380px;
 height:211px;
+}
+@media(max-width:1023.5px){
+    width: 344px;
+    height:180px;
+}
+@media(max-width:767.5px){
+    width: 320px;
+    height:163px;
+}
+@media(max-width:359.5px){
+    width:calc(100% - 40px);
 }
 `
 
@@ -42,6 +86,9 @@ transition:all 0.5s;
 &:hover{
     border:2px solid ${colors.brand.orange};
 }
+@media(max-width:1023.5px){
+    border:none;
+}
 `
 
 export const StyledVideoText = styled.div`
@@ -50,6 +97,22 @@ padding:34px 27px;
 display:flex;
 justify-content:space-between;
 flex-direction:column;
+& svg{
+    width:44px;
+    height:33px;
+}
+@media(max-width:1023.5px){
+    padding:24px 16px;
+    width:53%;
+}
+@media(max-width:767.5px){
+    padding:24px 12px;
+    width:50%;
+    & svg{
+        width:36px;
+        height:27px;
+    }
+}
 `
 
 export const StyledVideoQuote = styled.p`
@@ -58,11 +121,21 @@ font-weight:${Desktop1920.bodyText.body2.weight};
 letter-spacing:${Desktop1920.bodyText.body2.letterSpacing};
 line-height:${Desktop1920.bodyText.body2.lineHeight};
 
-@media(max-width:1440px){
+@media(max-width:1439.5px){
 font-size:${Desktop1440.bodyText.body2.size};
 font-weight:${Desktop1440.bodyText.body2.weight};
 letter-spacing:${Desktop1440.bodyText.body2.letterSpacing};
 line-height:${Desktop1440.bodyText.body2.lineHeight};
+}
+@media(max-width:1023.5px){
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+@media(max-width:767.5px){
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
 }
 `
 
@@ -74,6 +147,12 @@ width:50%;
     display:block;
     height:100%;
     width:100%;
+}
+@media(max-width:1023.5px){
+    width:47%;
+}
+@media(max-width:767.5px){
+    width:50%;
 }
 `
 

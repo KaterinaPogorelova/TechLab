@@ -19,16 +19,16 @@ export const Main = () => {
         <RunLine></RunLine>
         <Header></Header>
         <MainInfo></MainInfo>
-        <PopularLayout />
+        {/* <PopularLayout /> */}
         <Directions></Directions>
         <AboutUs></AboutUs>
-        <ExpectationLayout></ExpectationLayout>
-        <OurExperts></OurExperts>
+        {/* <ExpectationLayout></ExpectationLayout>
+        <OurExperts></OurExperts> */}
         <Advertisement></Advertisement>
         <Reviews></Reviews>
-        <SoonStartLayout />
+        {/* <SoonStartLayout /> */}
         <TestBlock></TestBlock>
-        <QuestionsLayout></QuestionsLayout>
+        {/* <QuestionsLayout></QuestionsLayout> */}
         <FeedbackSection></FeedbackSection>
     </>)
 }
