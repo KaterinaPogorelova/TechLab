@@ -5,7 +5,7 @@ import { StyledCardHorizontalContainer } from '../StyledPopularCourses'
 
 import ArrowRight from '../../../../assets/icons/ArrowRight'
 
-interface IPopular {
+export interface IPopular {
   header: string,
   type: "Design" | "Data Science" | "Programming",
   countLessons: number,

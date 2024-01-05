@@ -31,6 +31,15 @@ font-weight: 700;
 line-height: 45px;
 letter-spacing: 1.08px;
 }
+@media(max-width:768px){
+font-size: 30px;
+font-weight: 700;
+line-height: 32px;
+letter-spacing: 1.08px;
+& span{ 
+  padding: 2px 7px;
+}
+}
 `
 
 export const StyledFrameText = styled.p<{ $black: boolean }>`
@@ -58,12 +67,15 @@ export const StyledFrameText = styled.p<{ $black: boolean }>`
   }
 @media(max-width:1440px){
   font-size: 20px;
-  // font-weight: 400;
   line-height: 26px;
+  }
+@media(max-width:480px){
+  margin-bottom: 20px;
   }
 `;
 
 export const StyledContainer = styled.div`
+  position: relative;
   max-width: 1224px;
   margin: 0 auto;
 
