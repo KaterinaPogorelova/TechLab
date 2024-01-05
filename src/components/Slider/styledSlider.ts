@@ -45,11 +45,11 @@ export const StyledSliderLink = styled(NavLink)`
       }
     }
   }
-  @media (max-width: 1270px) {
+  @media (max-width: 1024px) {
     font-size: 16px;
     bottom: -16px;
     & svg:last-child {
-      display: none;
+      display: inline;
       position: relative;
       top: -11px;
     }
@@ -62,5 +62,9 @@ export const StyledSliderLink = styled(NavLink)`
       position: relative;
       top: -11px;
     }
+  }
+  @media (max-width: 480px) {
+    font-size: 16px;
+    bottom: -30px;
   }
 `;

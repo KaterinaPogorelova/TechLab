@@ -131,6 +131,13 @@ export const StyledYellowButton = styled.button`
     line-height: 20px;
     letter-spacing: 0.28px;
   }
+  @media(max-width: 1023px){
+    padding: 10px 32px;
+  }
+  @media(max-width: 480px){
+    padding: 12px 16px;
+    margin-right: 14px;
+  }
 `;
 
 export const StyledLinkMore = styled(NavLink)`
@@ -157,5 +164,8 @@ export const StyledLinkMore = styled(NavLink)`
   @media(max-width: 1270px){
     padding: 6px 8px;
     font-size: 14px;
+    svg {
+      padding-top: 3px;
+    }
   }
 `

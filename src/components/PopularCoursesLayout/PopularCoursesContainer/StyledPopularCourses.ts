@@ -58,7 +58,7 @@ export const StyledPopularCousreContainer = styled.div<{
     min-height: 360px;
     padding: 20px 24px;
     margin: auto;
-     border-radius: 20px;
+     border-radius: 40px;
   }
 
 `;

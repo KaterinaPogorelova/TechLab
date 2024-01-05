@@ -10,6 +10,9 @@ background-image: url(${ props => props.$isSoon ? bg : ''});
 background-repeat: no-repeat;
 background-position-x: 130%;
 background-position-y: -100px;
+@media (max-width: 1024px){
+  border-radius: 0px;
+}
 @media (max-width: 768px){
   padding: 120px 0 70px;
 }

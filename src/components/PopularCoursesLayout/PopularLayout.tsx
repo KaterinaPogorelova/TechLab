@@ -10,6 +10,7 @@ import { StyledSliderLink } from '../Slider/styledSlider'
 import ArrowRight from '../../assets/icons/ArrowRight'
 
 const PopularLayout = () => {
+  const screenWidth = window.innerWidth;
   return (
     <StyledPopular>
       <StyledContainer>
@@ -22,7 +23,7 @@ const PopularLayout = () => {
           <Slider content={<PopularCourses/>} nameLink='All popular courses'/>
           <PopularMinSlider/>
           <PopularMobileSlider/>
-          <StyledSliderLink to="#">All popular courses<LongArrowRight /><ArrowRight/></StyledSliderLink>
+          <StyledSliderLink to="#">All popular courses{screenWidth > 1024 ? <LongArrowRight /> : <ArrowRight />}</StyledSliderLink>
       </StyledContainer>
     </StyledPopular>
   )
