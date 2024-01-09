@@ -21,8 +21,8 @@ margin-bottom: 16px;
 & span{ // фиолетовое выделенное слово в заголовке
   padding: 8px 20px;
   border-radius: 100px;
-background: ${typographyColor.lightBG.violet};
-color: ${typographyColor.darkBG.white};
+  background: ${typographyColor.lightBG.violet};
+  color: ${typographyColor.darkBG.white};
 }
 
 @media(max-width:1440px){
