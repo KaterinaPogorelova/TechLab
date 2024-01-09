@@ -10,7 +10,8 @@ import { ExpertCard } from "./ExpertCard";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { A11y, Navigation, Pagination } from 'swiper/modules';
 
-import './swiper/css';
+import 'swiper/css';
+import 'swiper/css/pagination';
 import '../Slider/slider.css';
 import "./expertsSlider.css";
 
