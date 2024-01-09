@@ -93,7 +93,7 @@
 }
 
 @media (max-width:1440px) {
-    /* .expertsSwiper {
+    .expertsSwiper {
         height: 350px;
     }
 
@@ -101,7 +101,7 @@
         height: 285px;
     }
 
-    .expertsSwiper .swiper-button-prev,
+    /*.expertsSwiper .swiper-button-prev,
     .expertsSwiper .swiper-button-next {
         width: 32px;
         height: 32px;
@@ -129,11 +129,73 @@
         font-size: 20px;
         line-height: 26px;
     }
-  
+
     .expertsSwiper .swiper-pagination-fraction,
     .expertsSwiper .swiper-pagination-custom,
     .expertsSwiper .swiper-horizontal>.swiper-pagination-bullets,
     .expertsSwiper .swiper-pagination-bullets.swiper-pagination-horizontal {
         bottom: 5px;
+    }
+}
+
+@media (max-width:1024px) {
+    .expertsSwiper {
+        height: 300px;
+    }
+
+    .expertsSwiper:before {
+        height: 248px;
+    }
+
+    .expertsSwiper .swiper-slide {
+        width: 176px;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
+    .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet .expertsSwiper {
+        background-color: black;
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media(max-width:767.5px) {
+    .expertsSwiper {
+        height: 305px;
+    }
+
+    .expertsSwiper:before {
+        height: 243px;
+    }
+
+    .expertsSwiper .swiper-slide {
+        width: 200px;
+    }
+
+    .swiper-pagination-bullet-active-prev-prev,
+    .swiper-pagination-bullet-active-next-next {
+        opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
+    }
+
+    .expertsSwiper .swiper-pagination {
+        width: 120px;
+    }
+
+    .expertsSwiper .swiper-pagination-bullet {
+        opacity: 1;
+        background-color: white;
+        border: 1px solid black;
+        width: 12px;
+        height: 12px;
+    }
+
+    .expertsSwiper .swiper-pagination-bullet-active {
+        background-color: black;
+    }
+}
+
+@media(max-width:479.5px) {
+    .expertsSwiper .swiper-slide {
+        width: 170px;
     }
 }
