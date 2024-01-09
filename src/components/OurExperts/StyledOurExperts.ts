@@ -25,7 +25,7 @@ padding:100px 0 120px;
     }
 }
 @media(max-width:767.5px){
-    padding:50px 0 130px;
+    padding:50px 0 125px;
     & p{
         margin-bottom:20px;
     }
@@ -39,6 +39,10 @@ padding:100px 0 120px;
         bottom:70px;
         & p{
             font-weight: 600;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 20px;
+            letter-spacing: 0.32px;
         }
     }
 }
@@ -79,7 +83,7 @@ margin-top: 40px;
 @media(max-width:1023.5px){
     margin-top: 24px;
 }
-@media(max-width:479.5px){
+@media(max-width:767.5px){
     margin-top: 30px;
 }
 `

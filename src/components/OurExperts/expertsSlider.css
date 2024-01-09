@@ -194,7 +194,7 @@
     }
 }
 
-@media(max-width:767.5px) {
+@media(max-width:479.5px) {
     .expertsSwiper .swiper-slide {
         width: 170px;
     }

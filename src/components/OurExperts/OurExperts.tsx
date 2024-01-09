@@ -80,7 +80,7 @@ export const OurExperts = () => {
         </Swiper>}
         {width < 768 && <Swiper
             slidesPerView={'auto'}
-            spaceBetween={0}
+            spaceBetween={width < 480 ? 0 : 16}
             loop={true}
             pagination={true}
             modules={[Pagination, Navigation, A11y]}
