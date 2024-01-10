@@ -118,8 +118,8 @@
     position: absolute;
     top: auto;
     bottom: 25px;
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
   }
 
   .swiper-button-prev:after,
@@ -127,10 +127,10 @@
     content: 'prev';
     text-align: center;
     padding-right: 5px;
-    line-height: 28px;
+    line-height: 32px;
     font-size: 18px;
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
   }
 
   .swiper-button-next:after,
@@ -138,10 +138,10 @@
     content: 'next';
     text-align: center;
     padding-left: 5px;
-    line-height: 28px;
+    line-height: 32px;
     font-size: 18px;
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
   }
 
   .swiper-button-prev,
@@ -165,5 +165,6 @@
 
   .swiper-pagination-fraction {
     font-size: 20px;
+    width: 50px;
   }
 }

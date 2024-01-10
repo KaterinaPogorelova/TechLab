@@ -7,6 +7,9 @@ const StyledSvgArrow = styled.svg`
       transition: all 0.3s ease-in-out;
     }
   }
+  @media (max-width: 1024px) {
+    width: 16px;
+  }
 `;
 
 const ArrowRight = () => (
