@@ -7,9 +7,11 @@ import topleftline from '../../assets/img/feedbackLeftTopLine.svg'
 import toprightline from '../../assets/img/feedbackRightTopLine.svg'
 import bottomleftline from '../../assets/img/feedbackLeftBottomLine.svg'
 import bottomrightline from '../../assets/img/feedbackRightBottomLine.svg'
+import { useWindowSize } from "../../hooks/useWindowSize"
 
 
 export const FeedbackSection = () => {
+    const { width = 0 } = useWindowSize()
     /*     const userEmail = useAppSelector((state) => state.feedback.userEmail)
         const userName = useAppSelector((state) => state.feedback.userName)
         const userMessage = useAppSelector((state) => state.feedback.userMessage) */
@@ -23,12 +25,15 @@ export const FeedbackSection = () => {
         </StyledBgLineswrap>
         <StyledFeedbackContainer>
             <StyledFeedbackFormWrap>
-                <StyledImgWrap>
+                {width > 767 && <StyledImgWrap>
                     <img src={zeus} alt="zeus-feedback"></img>
-                </StyledImgWrap>
+                </StyledImgWrap>}
                 <StyledFormInfo>
                     <StyledFrameHeader>More <span>questions?</span></StyledFrameHeader>
                     <StyledFormText $black={false}>Fill the form and we will answer you.</StyledFormText>
+                    {width < 768 && <StyledImgWrap>
+                        <img src={zeus} alt="zeus-feedback"></img>
+                    </StyledImgWrap>}
                     <StyledForm id="form" onSubmit={(e) => {
                         e.preventDefault()
                     }}>

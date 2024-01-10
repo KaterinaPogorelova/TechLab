@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
-type Tab = {
+export type Tab = {
     title: string,
     linkSections?: Tab[],
     path?: string
@@ -27,8 +27,7 @@ const initialState: NavState = {
         {
             title: 'All mentors', path: '/',
             linkSections: [{ title: 'Design', path: '/' }, { title: 'Programming', path: '/' }, { title: 'Data Science', path: '/' }]
-        }],
-        path: '/'
+        }]
     },
     {
         title: 'Free Courses', linkSections: [{
@@ -38,8 +37,7 @@ const initialState: NavState = {
         {
             title: 'All mentors', path: '/',
             linkSections: [{ title: 'Design', path: '/' }, { title: 'Programming', path: '/' }, { title: 'Data Science', path: '/' }]
-        }],
-        path: '/'
+        }]
     },
 
     { title: 'About school', path: '/' }]
