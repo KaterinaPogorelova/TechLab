@@ -25,17 +25,18 @@ background: ${typographyColor.lightBG.violet};
 color: ${typographyColor.darkBG.white};
 }
 
-@media(max-width:1440px){
+@media(max-width:1439.5px){
 font-size: 36px;
 font-weight: 700;
 line-height: 45px;
 letter-spacing: 1.08px;
 }
-@media(max-width:768px){
+@media(max-width:767.5px){
 font-size: 30px;
 font-weight: 700;
 line-height: 32px;
 letter-spacing: 1.08px;
+margin-bottom: 11px;
 & span{ 
   padding: 2px 7px;
 }
@@ -65,11 +66,18 @@ export const StyledFrameText = styled.p<{ $black: boolean }>`
   & span{
     font-weight: 700;
   }
-@media(max-width:1440px){
+@media(max-width:1439.5px){
   font-size: 20px;
   line-height: 26px;
-  }
-@media(max-width:480px){
+  margin-bottom: 40px;
+}
+@media(max-width:1023.5px){
+  margin-bottom: 14px;
+}
+@media(max-width:767.5px){
+  margin-bottom: 10px;
+}
+@media(max-width:479.5px){
   margin-bottom: 20px;
   }
 `;

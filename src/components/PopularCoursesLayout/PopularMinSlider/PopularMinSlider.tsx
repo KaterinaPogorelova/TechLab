@@ -17,35 +17,35 @@ import LongArrowRight from '../../../assets/icons/LongArrowRight';
 const PopularMinSlider = () => {
   return (
     <>
-    <Swiper
-      slidesPerView={2}
-      slidesPerGroup={2}
-      spaceBetween={6}
-      loop={true}
-      pagination={{
-        dynamicBullets: true,
-        dynamicMainBullets: 1,
-      }}
-      modules={[Pagination, Navigation, A11y]}
-      className='popularMin'
-      style={{}}
-    >
-      {coursesArrayMocks.map((course, index) => (
-        <StyledPopularHorizontalContainer key={index}>
-          <SwiperSlide key={index}>
-            <StyledPopularCousreContainer key={index} $design={course.type === 'Design' ? true : false} $machine={course.type === 'Data Science' ? true: false}>
-              <PopularCard
-                header={course.header}
-                countLessons={course.countLessons}
-                type={course.type}
-                description={course.description}
-                imageSrc={course.imageSrc}
-              />
-            </StyledPopularCousreContainer>
-          </SwiperSlide>
-        </StyledPopularHorizontalContainer>
-      ))}
-    </Swiper>
+      <Swiper
+        slidesPerView={'auto'}
+        slidesPerGroup={2}
+        spaceBetween={16}
+        loop={true}
+        pagination={{
+          dynamicBullets: true,
+          dynamicMainBullets: 1,
+        }}
+        modules={[Pagination, Navigation, A11y]}
+        className='popularMin'
+        style={{}}
+      >
+        {coursesArrayMocks.map((course, index) => (
+          <StyledPopularHorizontalContainer key={index}>
+            <SwiperSlide key={index}>
+              <StyledPopularCousreContainer key={index} $design={course.type === 'Design' ? true : false} $machine={course.type === 'Data Science' ? true : false}>
+                <PopularCard
+                  header={course.header}
+                  countLessons={course.countLessons}
+                  type={course.type}
+                  description={course.description}
+                  imageSrc={course.imageSrc}
+                />
+              </StyledPopularCousreContainer>
+            </SwiperSlide>
+          </StyledPopularHorizontalContainer>
+        ))}
+      </Swiper>
     </>
   );
 };

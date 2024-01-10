@@ -10,9 +10,9 @@ import PopularCard from '../PopularCoursesContainer/PopularCard/PopularCard';
 const PopularMobileSlider = () => {
   return (
     <Swiper
-    centeredSlides={true}  
-      slidesPerView={'auto'}    
-      spaceBetween={16}        
+      centeredSlides={true}
+      slidesPerView={'auto'}
+      spaceBetween={16}
       loop={true}
       pagination={{
         clickable: true,
@@ -23,8 +23,8 @@ const PopularMobileSlider = () => {
     >
       {coursesArrayMocks.map((course, index) => (
         <StyledPopularHorizontalContainer key={index}>
-          <SwiperSlide  key={index}>
-            <StyledPopularCousreContainer  key={index} $design={course.type === 'Design' ? true : false} $machine={course.type === 'Data Science' ? true: false}>
+          <SwiperSlide key={index}>
+            <StyledPopularCousreContainer key={index} $design={course.type === 'Design' ? true : false} $machine={course.type === 'Data Science' ? true : false}>
               <PopularCard
                 header={course.header}
                 countLessons={course.countLessons}

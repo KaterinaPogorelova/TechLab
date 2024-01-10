@@ -6,7 +6,7 @@ export const SliderContainer = styled.div`
 
   position: relative;
   width: 100%;
-  @media (max-width: 1024px) {
+  @media (max-width: 1023.5px) {
     display: none;
   }
 `;
@@ -25,6 +25,9 @@ export const StyledSliderLink = styled(NavLink)`
   right: 0;
   bottom: 15px;
   z-index: 3;
+  display:flex;
+  align-items:center;
+  gap:10px;
   padding: 10px 31px;
   font-size: 20px;
   font-style: normal;
@@ -32,9 +35,6 @@ export const StyledSliderLink = styled(NavLink)`
   line-height: 28px;
   letter-spacing: 0.6px;
   transition: all 0.3s ease-in-out;
-  & svg {
-    transform: translate(7px, 18px);
-  }
 
   &:hover {
     color: ${hoverBtnColor.yellow};
@@ -45,26 +45,33 @@ export const StyledSliderLink = styled(NavLink)`
       }
     }
   }
-  @media (max-width: 1024px) {
+  @media (max-width: 1439.5px) {
     font-size: 16px;
+    & svg:last-child{
+      width:36px;
+      height:36px;
+    }
+  }
+
+  @media (max-width: 1023.5px) {
     bottom: -16px;
+    & svg:last-child {
+      width:20px;
+      height:20px;
+      display: inline;
+      position: relative;
+    }
+  }
+   @media (max-width: 767.5px) {
+    font-size: 16px;
+    bottom: -8px;
     & svg:last-child {
       display: inline;
       position: relative;
-      top: -11px;
+      top: 0px;
     }
   }
-   @media (max-width: 768px) {
-    font-size: 16px;
-    bottom: -16px;
-    & svg:last-child {
-      display: inline;
-      position: relative;
-      top: -11px;
-    }
-  }
-  @media (max-width: 480px) {
-    font-size: 16px;
-    bottom: -30px;
+  @media (max-width: 479.5px) {
+    
   }
 `;
