@@ -13,8 +13,9 @@ type SemiPanel = {
 
 export const SemiLinksPanel = ({ links, title, resetLinks, resetCategory }: SemiPanel) => {
     const clickedTab = useAppSelector((state) => state.nav.clickedTab)
+    const isRunlineClosed = useAppSelector((state) => state.runline.isClosed)
 
-    return (<StyledSemiLinksListPanel $isMenuOpened={clickedTab === 'MenuPanel'} $hasLinks={links.length !== 0}>
+    return (<StyledSemiLinksListPanel $isMenuOpened={clickedTab === 'MenuPanel'} $hasLinks={links.length !== 0} $isRunlineClosed={isRunlineClosed}>
         <StyledBtnBack onClick={() => {
             resetCategory()
             resetLinks()

@@ -4,7 +4,6 @@ import { StyledContainer } from "../../styledConstants";
 
 import { Link } from "react-router-dom";
 import { backgroundColor, defaultBtnColor, hoverBtnColor } from "../../styledConstantsColors";
-import { Desktop1440, Desktop1920 } from "../../styledConstantsFonts";
 
 export const StyledHeaderWrap = styled.header<{ $isRunlineClosed: boolean }>`
 position:fixed;
@@ -14,25 +13,16 @@ width:100%;
 background: ${backgroundColor.black};
 z-index:4;
 @media(max-width:1439.5px){
-    top:${props => props.$isRunlineClosed ? '0' : '42px'};
-}
-@media(max-width:767.5px){
     top:${props => props.$isRunlineClosed ? '0' : '34px'};
 }
 `
 
 export const StyledContainerHeader = styled(StyledContainer)`
+position:static;
 margin: 0 auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
- 
-@media(max-width:1023.5px){
-    padding:0 32px;
-  }
-  @media(max-width:767.5px){
-    padding:0 20px;
-  }
 `
 export const StyledHeadIconsWrap = styled.div`
 display:flex;
@@ -66,15 +56,21 @@ gap:8px;
 }
 @media(max-width:1023.5px){
     & svg{
-        width: 32px;
-        height: 32px;
+        width: 30px;
+        height: 30px;
     }
 }
 
 @media(max-width:767.5px){
     & svg{
-        width: 24px;
-        height: 24px;
+        width: 23px;
+        height: 23px;
+    }
+}
+@media(max-width:479.5px){
+    & svg{
+        width: 31px;
+        height: 31px;
     }
 }
 `
@@ -95,22 +91,22 @@ margin:20px 16px 20px 0px;
 @media(max-width:767.5px){
     width:33px;
 height:24px;
-    margin:12px 43px 12px 0px;
+    margin:16px 26px 16px 0px;
 }
 @media(max-width:479.5px){
-    margin: 15px 50px 15px 0px;
+    margin: 16px 50px 16px 0px;
 }
 `
 
 export const StyledName = styled.h3`
 margin:0;
 font-size:20px;
-font-weight:${Desktop1920.headings.h6.weight};
+font-weight:600;
 color:${defaultBtnColor.green};
 
 @media(max-width:1439.5px){
 font-size:16px;
-font-weight:${Desktop1440.headings.h6.weight};
+font-weight:600;
 }
 
 @media(max-width:1023.5px){

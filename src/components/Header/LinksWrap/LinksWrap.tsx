@@ -1,6 +1,6 @@
 import { useAppSelector } from "../../../store/store"
 
-import { Container, Wrapper, LinkSection, SectionTitle, StyledLink, StyledDirLinksWrap, StyledDirWrapper, StyledSecLink } from "./StyledLinkesWrap"
+import { StyledLinksWrapContainer, StyledWrapper, StyledLinkSection, StyledSectionTitle, StyledLink, StyledDirLinksWrap, StyledDirWrapper, StyledSecLink } from "./StyledLinkesWrap"
 import { ReactComponent as Arrow } from '../../../assets/icons/RightLinkArrow.svg'
 type LinksWrapType = {
     isClicked?: boolean,
@@ -10,15 +10,15 @@ export const LinksWrap = ({ isClicked }: LinksWrapType) => {
 
     const clickedTab = useAppSelector((state) => state.nav.clickedTab)
     const tab = useAppSelector((state) => state.nav.tabs.find((tab) => tab.title === clickedTab))
-    return (<Wrapper $isClicked={isClicked}>
-        <Container>
+    return (<StyledWrapper $isClicked={isClicked}>
+        <StyledLinksWrapContainer>
             {tab && tab.linkSections && tab.linkSections.map((section) => section.path &&
                 <div key={section.title}>
-                    <LinkSection to={section.path}>{section.title}</LinkSection>
+                    <StyledLinkSection to={section.path}>{section.title}</StyledLinkSection>
                     <div style={{ position: 'relative', paddingLeft: '36px' }}>{section.linkSections && section.linkSections.map((link) => link.path &&
                         <StyledDirWrapper>
                             <StyledLink to={link.path}>
-                                <SectionTitle>{link.title}</SectionTitle>
+                                <StyledSectionTitle>{link.title}</StyledSectionTitle>
                                 <Arrow />
                             </StyledLink>
                             <StyledDirLinksWrap id="linkWrap">
@@ -28,6 +28,6 @@ export const LinksWrap = ({ isClicked }: LinksWrapType) => {
                     </div>
                 </div>)
             }
-        </Container>
-    </Wrapper>)
+        </StyledLinksWrapContainer>
+    </StyledWrapper>)
 }

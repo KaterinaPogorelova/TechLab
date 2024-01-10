@@ -6,7 +6,7 @@ import { Desktop1920, Desktop1440 } from "../../../styledConstantsFonts";
 
 import { Link } from "react-router-dom";
 
-export const Wrapper = styled.div<{ $isClicked?: boolean }>`
+export const StyledWrapper = styled.div<{ $isClicked?: boolean }>`
 position:absolute;
 left:0;
 top:0;
@@ -23,8 +23,9 @@ transition: all 0.5s;
 }
 `
 
-export const Container = styled(StyledContainer)`
+export const StyledLinksWrapContainer = styled(StyledContainer)`
 margin: 0 auto;
+width:100%;
 padding-top: 38px;
 display:flex;
 gap:200px;
@@ -34,7 +35,7 @@ display:flex;
 gap:40px;
 `
 
-export const LinkSection = styled(Link)`
+export const StyledLinkSection = styled(Link)`
 display:block;
 color:${colors.neutral.white};
 font-size: 24px;
@@ -45,24 +46,14 @@ transition: all 0.5s;
 &:hover{
     color:${hoverBtnColor.darkGray}
 }
-
-@media(max-width:1439.5px){
-    font-size:${Desktop1440.headings.h5.size};
-    font-weight:${Desktop1440.headings.h5.weight};
-}
 `
 
-export const SectionTitle = styled.h5`
+export const StyledSectionTitle = styled.h5`
 display:block;
 color:${colors.neutral.white};
 font-size: 16px;
 font-weight: 500;
 transition: all 0.5s;
-
-@media(max-width:1439.5px){
-    font-size:${Desktop1440.links.bodyLink.size};
-    font-weight:${Desktop1440.links.bodyLink.weight};
-}
 `
 export const StyledDirWrapper = styled.div`
 &:hover #linkWrap{
@@ -109,11 +100,6 @@ margin-bottom:18px;
 
 &:last-of-type{
     margin-bottom:0px;
-}
-
-@media(max-width:1439.5px){
-    font-size:${Desktop1440.links.bodyLink.size};
-    font-weight:${Desktop1440.links.bodyLink.weight};
 }
 &:hover{
     color:${hoverBtnColor.darkGray}

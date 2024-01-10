@@ -16,10 +16,10 @@ import SoonStartLayout from "../components/SoonStartLayout/SoonStartLayout"
 
 export const Main = () => {
         return (<>
-                {/*         <RunLine></RunLine>
-        <Header></Header>
-        <MainInfo></MainInfo>
-        {/* <PopularLayout /> */}
+                <RunLine></RunLine>
+                <Header></Header>
+                <MainInfo></MainInfo>
+                <PopularLayout />
                 <Directions></Directions>
                 <AboutUs></AboutUs>
                 {/* <ExpectationLayout></ExpectationLayout>*/}

@@ -25,21 +25,12 @@ const initialState: NavState = {
             }, { title: 'Programming', path: '/' }, { title: 'Data Science', path: '/' }]
         },
         {
-            title: 'All mentors', path: '/',
-            linkSections: [{ title: 'Design', path: '/' }, { title: 'Programming', path: '/' }, { title: 'Data Science', path: '/' }]
-        }]
-    },
-    {
-        title: 'Free Courses', linkSections: [{
             title: 'All lessons', path: '/',
             linkSections: [{ title: 'Design', path: '/' }, { title: 'Programming', path: '/' }, { title: 'Data Science', path: '/' }]
         },
-        {
-            title: 'All mentors', path: '/',
-            linkSections: [{ title: 'Design', path: '/' }, { title: 'Programming', path: '/' }, { title: 'Data Science', path: '/' }]
-        }]
+        { title: 'All mentors', path: '/' }]
     },
-
+    { title: 'Free Courses', path: '/' },
     { title: 'About school', path: '/' }]
 }
 

@@ -87,8 +87,8 @@ export const StyledContainer = styled.div`
   max-width: 1224px;
   margin: 0 auto;
 
-  @media (max-width: 1270px) {
-    max-width: 1000px;
+  @media (max-width: 1439.5px) {
+    max-width: 980px;
     padding: 0 20px;
   }
 `;

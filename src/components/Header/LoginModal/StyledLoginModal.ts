@@ -19,14 +19,14 @@ border-radius:0 0 20px 20px;
 @media(max-width:1439.5px){
     width:300px;
     padding:30px;
-    transform:${props => props.$isOpened ? 'translateY(49px)' : 'translateY(0px)'};
+    transform:${props => props.$isOpened ? 'translateY(50px)' : 'translateY(0px)'};
 }
 
 @media(max-width:1023.5px){
-    transform:${props => props.$isOpened ? 'translateY(52px)' : 'translateY(0px)'};
+    transform:${props => props.$isOpened ? 'translateY(51px)' : 'translateY(0px)'};
 }
 @media(max-width:767.5px){
-    transform:${props => props.$isOpened ? 'translateY(36px)' : 'translateY(0px)'};
+    transform:${props => props.$isOpened ? 'translateY(39px)' : 'translateY(0px)'};
 }
 `
 
@@ -38,18 +38,18 @@ background:${defaultBtnColor.green};
 color:${typographyColor.lightBG.black};
 padding:8px 24px;
 border-radius: 100px;
-font-size:${Desktop1920.buttons.buttonSm.size};
-font-weight:${Desktop1920.buttons.buttonSm.weight};
-lineHeight:${Desktop1920.buttons.buttonSm.lineHeight};
-letter-spacing:${Desktop1920.buttons.buttonSm.letterSpacing};
+font-size: 18px;
+font-weight: 500;
+line-height: 26px;
+letter-spacing: 0.54px;
 transition:all 0.5s;
-margin-bottom:30px;
+margin:10px 0 30px;
 &:hover{
     color:${typographyColor.darkBG.white};
     background:${hoverBtnColor.green};
 }
 @media(max-width:1439.5px){
-    font-size:${Desktop1440.buttons.buttonSm.size};
+font-size:${Desktop1440.buttons.buttonSm.size};
 font-weight:${Desktop1440.buttons.buttonSm.weight};
 lineHeight:${Desktop1440.buttons.buttonSm.lineHeight};
 letter-spacing:${Desktop1440.buttons.buttonSm.letterSpacing};
@@ -57,10 +57,9 @@ letter-spacing:${Desktop1440.buttons.buttonSm.letterSpacing};
 `
 
 export const StyledSignText = styled.p`
-font-size:${Desktop1920.links.submenu.size};
-font-weight:${Desktop1920.links.submenu.weight};
-letter-spacing:${Desktop1920.links.submenu.letterSpacing};
-line-height:${Desktop1920.links.submenu.lineHeight};
+font-size: 16px;
+font-weight: 500;
+letter-spacing: 0.32px;
 color:${colors.neutral.white};
 text-align:center;
 
@@ -75,5 +74,19 @@ text-align:center;
 @media(max-width:1439.5px){
     font-size: 14px;
     letter-spacing: 0.28px;
+}
+`
+
+export const StyledAuthLink = styled(Link)`
+display:block;
+text-align:center;
+font-size: 20px;
+font-weight: 600;
+line-height: 28px;
+letter-spacing: 0.6px;
+margin-bottom:24px;
+color:${colors.neutral.mediumGray};
+&:last-of-type{
+    margin-bottom:0px;
 }
 `

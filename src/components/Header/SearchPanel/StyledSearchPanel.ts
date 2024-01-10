@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 import { StyledContainer } from "../../../styledConstants";
 import { backgroundColor, colors } from "../../../styledConstantsColors";
-import { Desktop1440, Desktop1920 } from "../../../styledConstantsFonts";
 
 export const StyledSearchPanelWrap = styled.div<{ $activeTab: string }>`
 position:absolute;
@@ -15,32 +14,23 @@ transform:${props => props.$activeTab === 'SearchPanel' ? 'translateY(77px)' : '
 opacity:${props => props.$activeTab === 'SearchPanel' ? '1' : '0'};
 transition: all 0.5s;
 z-index:3;
+padding: 30px 0 70px;
 
 @media(max-width:1439.5px){
     transform:${props => props.$activeTab === 'SearchPanel' ? 'translateY(73px)' : 'translateY(0px)'};
 }
 
 @media(max-width:1023.5px){
-    transform:${props => props.$activeTab === 'SearchPanel' ? 'translateY(72px)' : 'translateY(0px)'};
+    transform:${props => props.$activeTab === 'SearchPanel' ? 'translateY(71px)' : 'translateY(0px)'};
 }
 @media(max-width:767.5px){
-    transform:${props => props.$activeTab === 'SearchPanel' ? 'translateY(48px)' : 'translateY(0px)'};
-}
-@media(max-width:479.5px){
-    transform:${props => props.$activeTab === 'SearchPanel' ? 'translateY(53px)' : 'translateY(0px)'};
+    height:100vh;
+    transform:${props => props.$activeTab === 'SearchPanel' ? 'translateY(55px)' : 'translateY(0px)'};
 }
 `
 
 export const StyledContainerSearch = styled(StyledContainer)`
 margin: 0 auto;
-padding: 30px 0 40px;
-
-@media(max-width:1439.5px){
-    padding: 20px 0px 30px;
-}
-@media(max-width:1023.5px){
-    padding: 20px 32px 30px;
-}
 `
 
 export const StyledSearchInputWrap = styled.div`
@@ -57,13 +47,14 @@ gap:32px;
 
 export const StyledSearchInput = styled.input`
 border:none;
-font-size:${Desktop1920.subtitles.subtitle2.size};
-font-weight:${Desktop1920.subtitles.subtitle2.weight};
+font-size: 32px;
+font-weight: 400;
+line-height: 40px;
 color:${colors.neutral.white};
 flex-grow:1;
+
 @media(max-width:1439.5px){
-    font-size:${Desktop1440.subtitles.subtitle2.size};
-font-weight:${Desktop1440.subtitles.subtitle2.weight};
+    font-size:20px;
 }
 `
 
@@ -93,5 +84,50 @@ height:40px;
     top:8px;
     width:24px;
     height:24px;
+}
+`
+
+export const StyledSearchSuggestions = styled.div`
+margin-top:22px;
+`
+export const StyledSuggestionsTitle = styled.h5`
+font-size: 16px;
+font-weight: 400;
+line-height: 22px;
+letter-spacing: 0.32px;
+color:${colors.neutral.darkGray};
+@media(max-width:1439.5px){
+    font-size: 14px;
+}
+@media(max-width:767.5px){
+    font-size: 16px;
+}
+`
+
+export const StyledSuggestionContainer = styled.div`
+margin-top:22px;
+display:flex;
+align-items:center;
+gap:27px;
+& svg{
+    width:24px;
+    height:24px;
+    fill:${colors.neutral.darkGray};
+}
+@media(max-width:767.5px){
+    gap:10px;
+}
+`
+
+export const StyledSuggestion = styled.p`
+font-size: 16px;
+font-weight: 400;
+letter-spacing: 0.32px;
+color:${colors.neutral.darkGray};
+@media(max-width:1439.5px){
+    font-size: 14px;
+}
+@media(max-width:767.5px){
+    font-size: 16px;
 }
 `

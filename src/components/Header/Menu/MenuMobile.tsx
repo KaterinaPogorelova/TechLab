@@ -30,7 +30,7 @@ export const MenuMobile = () => {
         <StyledQuestion>Is this your first visit?</StyledQuestion>
         <StyledSignUpLink to='/'>Sign Up</StyledSignUpLink>
     </StyledMobMenuWrap >
-        <StyledLinksListPanel $isMenuOpened={clickedTab === 'MenuPanel'} $hasLinks={links.length !== 0}>
+        <StyledLinksListPanel $isMenuOpened={clickedTab === 'MenuPanel'} $hasLinks={links.length !== 0} $isRunlineClosed={isRunlineClosed}>
             <StyledBtnBack onClick={() => {
                 setCategoryClicked('')
                 setLinks([])
