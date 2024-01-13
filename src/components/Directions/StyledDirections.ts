@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { backgroundColor, colors, gradient, typographyColor } from "../../styledConstantsColors";
-import { Desktop1440, Desktop1920 } from "../../styledConstantsFonts";
 
 import lineLeft from '../../assets/img/lineLeftDir.svg'
 import lineRight from '../../assets/img/lineRightDir.svg'
@@ -77,16 +76,16 @@ border-radius:0 0 80px 80px;
 `
 
 export const StyledDirectionsSubtitle = styled.p`
-font-size:${Desktop1920.subtitles.subtitle2.size};
-font-weight:${Desktop1920.subtitles.subtitle2.weight};
+font-size:32px;
+font-weight:400;
 color: ${typographyColor.darkBG.white};
 margin-bottom:45px;
 position:relative;
 z-index:1;
 
 @media(max-width:1440px){
-    font-size:${Desktop1440.subtitles.subtitle2.size};
-    font-weight:${Desktop1440.subtitles.subtitle2.weight};
+    font-size:20px;
+    font-weight:400;
 }
 @media(max-width:1023.5px){
     margin-bottom:24px;
@@ -182,13 +181,12 @@ z-index: 1;
 
 export const StyledDirectionTitle = styled.h4`
 color:${colors.neutral.white};
-font-size:${Desktop1920.headings.h4.size};
-font-weight:${Desktop1920.headings.h4.weight};
+font-size:40px;
+font-weight:700;
 margin-bottom:20px;
 
 @media(max-width:1440px){
-    font-size:${Desktop1440.headings.h4.size};
-    font-weight:${Desktop1440.headings.h4.weight};
+    font-size:26px};
 }
 @media(max-width:1023.5px){
     font-size:20px;
@@ -229,14 +227,12 @@ margin-bottom:10px;
 
 export const StyledDirectionsCoursesItem = styled.li`
 color:${colors.neutral.white};
-font-size:${Desktop1920.lists.listCard.size};
-font-weight:${Desktop1920.lists.listCard.weight};
-letter-spacing:${Desktop1920.lists.listCard.letterSpacing};
+font-size:18px;
+font-weight:400;
+letter-spacing:0.54px;
 
 @media(max-width:1440px){
-    font-size:${Desktop1440.lists.listCard.size};
-    font-weight:${Desktop1440.lists.listCard.weight};
-    letter-spacing:${Desktop1440.lists.listCard.letterSpacing};
+    font-size:14px;
 }
 @media(max-width:1023.5px){
     font-weight: 300;

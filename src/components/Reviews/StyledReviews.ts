@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { colors, typographyColor } from "../../styledConstantsColors";
-import { Desktop1440, Desktop1920 } from "../../styledConstantsFonts";
 
 export const StyledReviewsWrap = styled.div`
 padding:100px 0 120px;
@@ -116,16 +115,14 @@ flex-direction:column;
 `
 
 export const StyledVideoQuote = styled.p`
-font-size:${Desktop1920.bodyText.body2.size};
-font-weight:${Desktop1920.bodyText.body2.weight};
-letter-spacing:${Desktop1920.bodyText.body2.letterSpacing};
-line-height:${Desktop1920.bodyText.body2.lineHeight};
+font-size:20px;
+font-weight:500;
+letter-spacing:0.4px;
+line-height:30px;
 
 @media(max-width:1439.5px){
-font-size:${Desktop1440.bodyText.body2.size};
-font-weight:${Desktop1440.bodyText.body2.weight};
-letter-spacing:${Desktop1440.bodyText.body2.letterSpacing};
-line-height:${Desktop1440.bodyText.body2.lineHeight};
+font-size:16px;
+line-height:24px;
 }
 @media(max-width:1023.5px){
     font-size: 14px;

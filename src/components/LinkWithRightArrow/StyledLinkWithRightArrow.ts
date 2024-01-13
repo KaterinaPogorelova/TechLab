@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 
 import styled from "styled-components";
 import { colors, hoverBtnColor } from "../../styledConstantsColors";
-import { Desktop1440, Desktop1920 } from "../../styledConstantsFonts";
 
 export const StyledArrowWrap = styled(Link) <{ $isBlack?: boolean, $isRightSided?: boolean, $mobileNotChanged?: boolean }>`
 display:flex;
@@ -60,14 +59,12 @@ z-index:1;
 `
 
 export const StyledArrowText = styled.p`
-font-size:${Desktop1920.links.bodyLink.size};
-font-weight:${Desktop1920.links.bodyLink.weight};
-letter-spacing:${Desktop1920.links.bodyLink.letterSpacing};
+font-size:20px;
+font-weight:600;
+letter-spacing:0.6px;
 
 @media(max-width:1439.5px){
-font-size:${Desktop1440.links.bodyLink.size};
-font-weight:${Desktop1440.links.bodyLink.weight};
-letter-spacing:${Desktop1440.links.bodyLink.letterSpacing};
+font-size:16px;
 }
 @media(max-width:1023.5px){
     font-weight:500;

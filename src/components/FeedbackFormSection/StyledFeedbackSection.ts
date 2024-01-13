@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { backgroundColor, defaultBtnColor, hoverBtnColor, notificationColor, typographyColor } from "../../styledConstantsColors";
 import { StyledContainer, StyledFrameText } from "../../styledConstants";
-import { Desktop1440, Desktop1920 } from "../../styledConstantsFonts";
 import { Link } from "react-router-dom";
 
 export const StyledFeedbackSection = styled.div`
@@ -273,13 +272,12 @@ margin-bottom:10px;
 
 export const StyledLabel = styled.label`
 color:${typographyColor.darkBG.white};
-font-size:${Desktop1920.labels.formLabel.size};
-font-weight:${Desktop1920.labels.formLabel.weight};
-line-height:${Desktop1920.labels.formLabel.lineHeight};
+font-size:20px;
+font-weight:400;
+line-height:30px;
 @media(max-width:1439.5px){
-    font-size:${Desktop1440.labels.formLabel.size};
-font-weight:${Desktop1440.labels.formLabel.weight};
-line-height:${Desktop1440.labels.formLabel.lineHeight};
+    font-size:16px;
+    line-height:24px;
 }
 @media(max-width:1023.5px){
 font-size: 20px;
@@ -368,17 +366,16 @@ margin:8px 0 4px;
 
 export const StyledErrorMessage = styled.p`
 opacity:0;
-font-size: ${Desktop1920.bodyText.body3.size};
-font-weight: ${Desktop1920.bodyText.body3.weight};
-line-height: ${Desktop1920.bodyText.body3.lineHeight};
-letter-spacing: ${Desktop1920.bodyText.body3.letterSpacing};
+font-size: 16px;
+font-weight: 400;
+line-height: 22px;
+letter-spacing: 0.32px;
 color:${notificationColor.red};
 @media(max-width:1439.5px){
-    font-size: ${Desktop1440.bodyText.body3.size};
-font-weight: ${Desktop1440.bodyText.body3.weight};
-line-height: ${Desktop1440.bodyText.body3.lineHeight};
-letter-spacing: ${Desktop1440.bodyText.body3.letterSpacing};
-margin-bottom:10px;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.32px;
+    margin-bottom:10px;
 }
 @media(max-width:767.5px){
     margin-bottom:0px;
@@ -394,9 +391,9 @@ margin-bottom:10px;
 export const StyledSubmitBtn = styled.button`
 background:${defaultBtnColor.green};
 padding:14px 40px;
-font-size:${Desktop1920.buttons.buttonMd.size};
-font-weight:${Desktop1920.buttons.buttonMd.weight};
-line-height:${Desktop1920.buttons.buttonMd.lineHeight};
+font-size:24px;
+font-weight:500;
+line-height:30px;
 color:${typographyColor.lightBG.black};
 border-radius: 100px;
 transition:all 0.5s;
@@ -404,9 +401,9 @@ transition:all 0.5s;
     background:${hoverBtnColor.green};
 }
 @media(max-width:1439.5px){
-    font-size:${Desktop1440.buttons.buttonMd.size};
-font-weight:${Desktop1440.buttons.buttonMd.weight};
-line-height:${Desktop1440.buttons.buttonMd.lineHeight};
+    font-size:20px;
+    font-weight:500;
+    line-height:26px;
 }
 @media(max-width:1023.5px){
     padding:10px 24px;

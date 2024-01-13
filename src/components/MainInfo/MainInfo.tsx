@@ -6,7 +6,7 @@ import {
     StyledInfoWrap, StyledMainContainer, StyledMainInfoWrap,
     StyledText, StyledTitle, StyledSvgWrap, StyledTextWrap, StyledCoursesList, StyledCoursesItem,
     StyledCoursesItemWrap, StyledExpertsWrap, StyledExpertsText, StyledExpertsList,
-    StyledExpertsItem, StyledImgWrap, StyledSmTestWrap, StyledLinkText
+    StyledExpertsItem, StyledImgWrap, StyledSmTestWrap, StyledLinkText, StyledCoursesGradientText
 } from "./StyledMainInfo"
 
 import { ReactComponent as Arrow } from "../../assets/MainArrow.svg"
@@ -53,7 +53,10 @@ export const MainInfo = () => {
                 <StyledCoursesList>
                     {coursesList.map((item) =>
                         <StyledCoursesItemWrap $color={item.color} key={item.title}>
-                            <StyledCoursesItem to='/' $color={item.color}>{item.title}</StyledCoursesItem>
+                            <StyledCoursesItem to='/' $color={item.color}>
+                                {item.color === 'gradient' ? '' : item.title}
+                            </StyledCoursesItem>
+                            {item.color === 'gradient' && <StyledCoursesGradientText>View All</StyledCoursesGradientText>}
                         </StyledCoursesItemWrap>
                     )}
                 </StyledCoursesList>

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { backgroundColor, colors, defaultBtnColor, hoverBtnColor, typographyColor } from "../../../styledConstantsColors";
 import { Link } from "react-router-dom";
-import { Desktop1440, Desktop1920 } from "../../../styledConstantsFonts";
 
 export const StyledUserModalWrap = styled.div<{ $isOpened: boolean }>`
 position:absolute;
@@ -49,10 +48,10 @@ margin:10px 0 30px;
     background:${hoverBtnColor.green};
 }
 @media(max-width:1439.5px){
-font-size:${Desktop1440.buttons.buttonSm.size};
-font-weight:${Desktop1440.buttons.buttonSm.weight};
-lineHeight:${Desktop1440.buttons.buttonSm.lineHeight};
-letter-spacing:${Desktop1440.buttons.buttonSm.letterSpacing};
+    font-size:16px;
+    font-weight:500;
+    lineHeight:20px;
+    letter-spacing:0.6px;
 }
 `
 

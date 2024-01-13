@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { StyledContainer } from "../../styledConstants";
-import { Desktop1440, Desktop1920 } from "../../styledConstantsFonts";
 import { backgroundColor, colors } from "../../styledConstantsColors";
 
 export const StyledAboutUsWrap = styled.div`
@@ -115,11 +114,12 @@ padding-top:60px;
 `
 
 export const StyledInfo = styled.p`
-font-size:${Desktop1920.bodyText.body2.size};
-font-weight:${Desktop1920.bodyText.body2.weight};
-letter-spacing:${Desktop1920.bodyText.body2.letterSpacing};
-line-height:${Desktop1920.bodyText.body2.lineHeight};
+font-size:20px;
+font-weight:500;
+letter-spacing:0.4px;
+line-height:30px;
 margin-bottom:20px;
+
 & span{
     font-weight:700;
 }

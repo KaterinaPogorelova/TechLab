@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { colors, defaultBtnColor, gradient, typographyColor, typographyGradient } from "../../styledConstantsColors";
 import { StyledContainer } from "../../styledConstants";
 import { Link } from "react-router-dom";
-import { Desktop1440, Desktop1920 } from "../../styledConstantsFonts";
 import leftline from '../../assets/img/testleftline.svg'
 import rightline from '../../assets/img/testrightline.svg'
 
@@ -193,9 +192,9 @@ margin-bottom:20px;
 export const StyledYellowBtn = styled(Link)`
 padding:16px 44px;
 border-radius: 100px;
-font-size:${Desktop1920.buttons.buttonLg.size};
-font-weight:${Desktop1920.buttons.buttonLg.weight};
-line-height:${Desktop1920.buttons.buttonLg.lineHeight};
+font-size:32px;
+font-weight:500;
+line-height:40px;
 background-color: ${defaultBtnColor.yellow};
 transition: all .3s;
 
@@ -206,9 +205,8 @@ transition: all .3s;
 }
 
 @media(max-width:1439.5px){
-    font-size:${Desktop1440.buttons.buttonLg.size};
-    font-weight:${Desktop1440.buttons.buttonLg.weight};
-    line-height:${Desktop1440.buttons.buttonLg.lineHeight};
+    font-size:24px;
+    line-height:32px;
     padding:14px 32px;
 }
 @media(max-width:1023.5px){

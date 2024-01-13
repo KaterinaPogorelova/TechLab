@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { backgroundColor, colors, typographyColor } from "../../styledConstantsColors";
 import { StyledContainer } from "../../styledConstants";
 import { Link } from "react-router-dom";
-import { Desktop1440, Desktop1920 } from "../../styledConstantsFonts";
 
 export const StyledAdWrap = styled.div`
 background:${backgroundColor.yellow};
@@ -98,8 +97,8 @@ border-radius: 100px;
 padding:16px 44px;
 border: 1px solid ${colors.neutral.darkBlack};
 color:${typographyColor.lightBG.black};
-font-size:${Desktop1920.buttons.buttonLg.size};
-font-weight:${Desktop1920.buttons.buttonLg.weight};
+font-size:32px;
+font-weight:500;
 transition: 0.5s background-color;
 position: relative;
 overflow: hidden;
@@ -138,7 +137,7 @@ color:${typographyColor.darkBG.white};
 
 @media(max-width:1439.5px){
     padding:14px 32px;
-    font-size:${Desktop1440.buttons.buttonLg.size};
+    font-size:24px;
 }
 @media(max-width:1023.5px){
     padding:10px 24px;

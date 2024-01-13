@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { colors, gradient, hoverBtnColor, typographyColor, typographyGradient } from "../../styledConstantsColors";
 import { StyledContainer } from "../../styledConstants";
-import { Desktop1440, Desktop1920 } from "../../styledConstantsFonts";
 import { Link } from "react-router-dom";
 import lineLeft from '../../assets/img/lineLeft.png'
 import lineRight from '../../assets/img/lineRight.png'
@@ -25,6 +24,7 @@ overflow:hidden;
 
 @media(max-width:1439.5px){
     width:43%;
+    left:-60px;
 }
 @media(max-width:1023.5px){
     display:none;
@@ -47,7 +47,15 @@ overflow:hidden;
 }
 @media(max-width:767.5px){
     width:100%;
+    top: 160px;
+    right: 125px;
 }
+@media(max-width:479.5px){
+    display:none;
+}
+}
+@media(max-width:1439.5px){
+    padding:${props => props.$isClosedRunline ? '128px 0 75px' : '163px 0 75px'};
 }
 @media(max-width:1024px){
     padding:${props => props.$isClosedRunline ? '132px 0 89px' : '174px 0 89px'};
@@ -96,9 +104,11 @@ text-fill-color:transparent;
 @media(max-width:1439.5px){
     font-size:56px;
     width:337px;
+    margin-bottom:8px;
 }
 @media(max-width:1023.5px){
     width:344px;
+    margin-bottom:16px;
 }
 @media(max-width:767.5px){
     font-size: 42px;
@@ -109,6 +119,7 @@ text-fill-color:transparent;
     margin-bottom:208px;
 }
 @media(max-width:479.5px){
+    width: 225px;
     font-size: 32px;
     line-height: 34px;
     padding:0;
@@ -131,11 +142,11 @@ width:410px;
 
 export const StyledText = styled.p`
 color:${typographyColor.darkBG.white};
-font-size: ${Desktop1920.bodyText.body1.size};
-font-weight: ${Desktop1920.bodyText.body1.weight};
+font-size: 28px;
+font-weight: 500;
 
 @media(max-width:1439.5px){
-    font-size: ${Desktop1440.bodyText.body1.size};
+    font-size: 18px;
 }
 @media(max-width:1023.5px){
     font-size: 24px;
@@ -161,18 +172,10 @@ overflow: hidden;
     height:70px;
 }
 @media(max-width:1023.5px){
-    top:13px;
-    right:-65px;
+    top:16px;
+    right:-48px;
     width:75px;
     height:50px;
-
-    & svg{
-        position:relative;
-        width:44px;
-        height:114px;
-        bottom:33px;
-        right:0px;
-    }
 }
 `
 
@@ -181,8 +184,10 @@ display:flex;
 flex-wrap:wrap;
 gap:12px;
 margin-bottom:43px;
+@media(max-width:1439.5px){
+    gap:10px 8px;
+}
 @media(max-width:1023.5px){
-    gap:20px 8px;
     margin-bottom:32px;
 }
 @media(max-width:767.5px){
@@ -198,7 +203,9 @@ margin-bottom:43px;
 export const StyledCoursesItemWrap = styled.li <{ $color: string }>`
 border-radius:40px;
 margin-bottom:12px;
-@media(max-width:1023.5px){
+position:${props => props.$color === 'gradient' ? 'relative' : 'static'};
+
+@media(max-width:1439.5px){
     margin-bottom:0px;
 }
 @media(max-width:767.5px){
@@ -228,16 +235,16 @@ border:${props => {
         if (props.$color === 'gradient') return ('1px solid' + colors.brand.green)
     }};
 display:block;
-
-background:${props => props.$color === 'gradient' ? gradient.gradient20 : 'none'};
+background:${props => props.$color === 'gradient' ? gradient.gradient50 : 'none'};
+opacity:${props => props.$color === 'gradient' ? '0.4' : '1'};
 border-radius:40px;
-width:100%;
-height:100%;
+width:${props => props.$color === 'gradient' ? '158px' : '100%'};
+height:${props => props.$color === 'gradient' ? '48px' : '100%'};
 padding:6px 20px;
 border-radius:40px;
 color:${colors.neutral.white};
-font-size:${Desktop1920.badges.info.size};
-font-weight:${Desktop1920.badges.info.weight};
+font-size:30px;
+font-weight:400;
 transition:all 0.5s;
 
 &:hover{
@@ -246,27 +253,69 @@ transition:all 0.5s;
         if (props.$color === 'green') return hoverBtnColor.green20
         if (props.$color === 'orange') return hoverBtnColor.orange20
         if (props.$color === 'gradient') return gradient.gradient50
-    }}
+    }};
+    opacity:1;
 }
+
 @media(max-width:1439.5px){
-    font-size:${Desktop1440.badges.info.size};
+    font-size:20px;
+    line-height: 30px;
+    width:${props => props.$color === 'gradient' ? '117px' : '100%'};
+    height:${props => props.$color === 'gradient' ? '42px' : '100%'};
 }
 @media(max-width:1023.5px){
     padding:7px 10px;
     font-size: 16px;
+    line-height: 18px;
+    width:${props => props.$color === 'gradient' ? '79px' : '100%'};
+    height:${props => props.$color === 'gradient' ? '34px' : '100%'};
 }
 @media(max-width:767.5px){
     padding:8px 12px;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 0.54px;
+    height:${props => props.$color === 'gradient' ? '40px' : '100%'};
 }
 @media(max-width:479.5px){
     padding:6px 10px;
     font-size: 14px;
-font-weight: 400;
-line-height: 20px;
-letter-spacing: 0.42px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.42px;
+    width:${props => props.$color === 'gradient' ? '74px' : '100%'};
+    height:${props => props.$color === 'gradient' ? '32px' : '100%'};
+}
+`
+export const StyledCoursesGradientText = styled.p`
+position:absolute;
+top:50%;
+left:0;
+width:100%;
+transform:translate(0%,-50%);
+text-align:center;
+z-index:-1;
+opacity:1.4;
+color:${colors.neutral.white};
+font-size:30px;
+font-weight:400;
+@media(max-width:1439.5px){
+    font-size:20px;
+}
+@media(max-width:1023.5px){
+    font-size: 16px;
+}
+@media(max-width:767.5px){
+    width:95px;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.54px;
+}
+@media(max-width:479.5px){
+    font-size: 14px;
+    width:76px;
+    line-height: 20px;
+    letter-spacing: 0.42px;
 }
 `
 
@@ -294,8 +343,12 @@ color:${typographyColor.darkBG.white};
     margin-right:20px;
 }
 @media(max-width:767.5px){
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 700;
     margin-right:7px;
+}
+@media(max-width:767.5px){
+    font-size: 14px;
 }
 `
 
@@ -308,13 +361,25 @@ display:flex;
 }
 
 &:hover li{
-margin:0 5px;
+    margin:0 5px;
 }
-@media(max-width:767.5px){
+
+@media(max-width:1023.5px){
     margin:0 -4px;
     &:hover li{
         margin:0;
-        }
+    }
+}
+
+@media(max-width:767.5px){
+    &:hover li{
+        margin:0 3px;
+    }
+}
+@media(max-width:767.5px){
+    &:hover li{
+        margin:0px;
+    }
 }
 `
 
@@ -333,9 +398,21 @@ overflow:hidden;
     width:100%;
     height:100%;
 }
-@media(max-width:1023.5px){
+@media(max-width:1439.5px){
     width:40px;
     height:40px;
+}
+@media(max-width:1023.5px){
+    width:55px;
+    height:55px;
+}
+@media(max-width:767.5px){
+    width:50px;
+    height:50px;
+}
+@media(max-width:479.5px){
+    width:39px;
+    height:39px;
 }
 `
 
@@ -351,15 +428,17 @@ max-width:559px;
 @media(max-width:1023.5px){
     max-width:45%;
 }
+
 @media(max-width:767.5px){
-position:absolute;
-z-index:1;
-top:95px;
-right:0;
-max-width:432px;
+    position:absolute;
+    z-index:1;
+    top:-50px;
+    right:0;
+    max-width:432px;
 }
+
 @media(max-width:479.5px){
-    top:160px;
+    top:0px;
     max-width:200px;
 }
 `
