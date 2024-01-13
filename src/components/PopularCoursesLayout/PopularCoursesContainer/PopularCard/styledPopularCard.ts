@@ -8,7 +8,7 @@ export const StyledPopularCardHeader = styled.p`
   font-style: normal;
   font-weight: 700;
   line-height: 50px;
-  @media(max-width: 1270px){
+  @media(max-width: 1439.5px){
     font-size: 26px;
   }
   @media(max-width: 1023.5px){
@@ -58,7 +58,7 @@ export const StyledPopularTags = styled.div<{
     if (props.$type === "Programming") return typographyColor.lightBG.green;
   }};
   }
-  @media(max-width: 1270px){
+  @media(max-width: 1439.5px){
     font-size: 12px;
     width: 130px;
     & span {
@@ -103,7 +103,7 @@ export const StyledPopularCardDescription = styled.p<{ $vertical?: boolean }>`
   letter-spacing: 0.32px;
   margin-top: ${(props) => (props.$vertical ? "136px" : "0px")};
   margin-bottom: 0px;
-  @media(max-width: 1270px){
+  @media(max-width: 1439.5px){
     margin-top: ${(props) => (props.$vertical ? "32px" : "14px")};
     font-size: 14px;
     line-height: 18px;
@@ -133,7 +133,7 @@ export const StyledPopularCardImage = styled.img<{ $vertical?: boolean }>`
   position: relative;
   top: ${(props) => (props.$vertical ? "76px" : "0")};
   right: 0;
-  @media(max-width: 1270px){
+  @media(max-width: 1439.5px){
     position: absolute;
     top: 65px;
     max-width: 115px;
@@ -193,7 +193,7 @@ export const StyledYellowButton = styled.button`
       width: 100%;
     }
   }
-  @media(max-width: 1270px){
+  @media(max-width: 1439.5px){
     padding: 6px 16px;
     font-size: 14px;
     line-height: 20px;
@@ -237,7 +237,7 @@ export const StyledLinkMore = styled(NavLink)`
       }
     }
   }
-  @media(max-width: 1270px){
+  @media(max-width: 1439.5px){
     padding: 6px 8px;
     font-size: 14px;
     svg {

@@ -10,7 +10,7 @@ export const StyledPopularContainer = styled(StyledFlex)`
 export const StyledPopularHorizontalContainer = styled(StyledFlex)`
   flex-direction: column;
   gap: 20px;
-  @media(max-width: 1270px) {
+  @media(max-width: 1439.5px) {
     flex-direction: row;
   }
 `
@@ -48,7 +48,7 @@ export const StyledPopularCousreContainer = styled.div<{
     box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
     transform: translate(4px,-4px);
   }
-  @media(max-width:1270px){
+  @media(max-width:1439.5px){
     display: flex;
     flex-direction: column;
     justify-content: space-between;
