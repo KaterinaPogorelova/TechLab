@@ -6,7 +6,7 @@ import { ReactComponent as Instagram } from '../../assets/icons/instagram.svg'
 
 const footerSections = [
     { name: 'Company', links: [{ name: 'Our experts', path: '/' }, { name: 'About school', path: '/' }, { name: 'Contacts', path: '/' }] },
-    { name: 'Catalog', links: [{ name: 'Courses', path: '/' }, { name: 'Free courses', path: '/' }, { name: 'Lessons', path: '/' }] },
+    { name: 'Catalog', links: [{ name: 'Courses', path: '/' }, { name: 'Lessons', path: '/' }, { name: 'Free lessons', path: '/' }] },
     { name: 'Career building', links: [{ name: 'Career test', path: '/' }, { name: 'Mentoring', path: '/' }] }]
 
 export const Footer = () => {

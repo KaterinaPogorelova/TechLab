@@ -150,6 +150,15 @@ z-index: 1;
     z-index: -1;
     transition: opacity 0.5s linear;
     opacity: 0;
+    @media(max-width:1023.5px){
+        border-radius: 20px;
+    }
+    @media(max-width:767.5px){
+        border-radius: 24px;
+    }
+    @media(max-width:479.5px){
+        border-radius: 40px;
+    }
 }
 
 &:hover::before{

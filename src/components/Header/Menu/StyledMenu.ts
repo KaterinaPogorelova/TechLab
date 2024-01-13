@@ -120,7 +120,7 @@ transition: all 0.5s;
 
 @media(max-width:767.5px){
     padding:20px 20px 20px 80px;
-    top:${props => props.$isRunlineClosed ? '48px' : '82px'};
+    top:${props => props.$isRunlineClosed ? '56px' : '90px'};
     width:100%;
     height:${props => props.$isRunlineClosed ? 'calc(100vh - 48px)' : 'calc(100vh - 82px)'};
     ${props => props.$isClicked ? '' : 'translateX(0px)'};
@@ -294,11 +294,11 @@ z-index:5;
 transition:all 0.5s;
 
 @media(max-width:767.5px){
-    top:48px;
+    top:56px;
     left:-100%;
     width:100%;
     padding:20px 20px 20px 80px;
-    height:${props => props.$isRunlineClosed ? 'calc(100vh - 48px)' : 'calc(100vh - 82px)'};
+    height:${props => props.$isRunlineClosed ? 'calc(100vh - 56px)' : 'calc(100vh - 90px)'};
     ${props => (props.$isMenuOpened && props.$hasLinks) && 'transform: translateX(100%)'};
 }
 @media(max-width:479.5px){

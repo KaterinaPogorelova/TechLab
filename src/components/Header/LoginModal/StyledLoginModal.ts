@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const StyledUserModalWrap = styled.div<{ $isOpened: boolean }>`
 position:absolute;
 width:408px;
-top:0;
+top:22px;
 visibility:${props => props.$isOpened ? 'visible' : 'hidden'};
 right:0;
 background:${backgroundColor.lightBlack};
@@ -16,16 +16,27 @@ padding:40px;
 border-radius:0 0 20px 20px;
 
 @media(max-width:1439.5px){
+    top:25px;
     width:300px;
     padding:30px;
     transform:${props => props.$isOpened ? 'translateY(50px)' : 'translateY(0px)'};
 }
 
 @media(max-width:1023.5px){
+    top:21px;
     transform:${props => props.$isOpened ? 'translateY(51px)' : 'translateY(0px)'};
 }
 @media(max-width:767.5px){
+    top:15px;
     transform:${props => props.$isOpened ? 'translateY(39px)' : 'translateY(0px)'};
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    height:${props => props.$isOpened ? 'calc(100vh - 51px)' : '100vh'};
+}
+@media(max-width:479.5px){
+    display:none;
 }
 `
 
