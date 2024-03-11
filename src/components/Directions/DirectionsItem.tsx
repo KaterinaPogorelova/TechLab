@@ -14,6 +14,6 @@ export const DirectionsItem = ({ title, color, links, count }: DirectionsItemTyp
         <StyledDirectionCoursesList>
             {links.map((item) => <StyledDirectionsCoursesItem key={item}>{item}</StyledDirectionsCoursesItem>)}
         </StyledDirectionCoursesList>
-        <RightSideLink path={'/'} text={count + ' courses'} isBlack></RightSideLink>
+        <RightSideLink path={'/'} text={count + ' courses'} isBlack mobileNotChanged></RightSideLink>
     </StyledDirectionsItem>)
 }

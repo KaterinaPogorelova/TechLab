@@ -65,7 +65,8 @@ export const backgroundColor = {
     violet20: '#8657DD33',
     violet40: '#8657DD66',
     violet5: '#8657DD0D',
-    green10: '#65dc6a1a'
+    green10: '#65dc6a1a',
+    green50: '#65dc6a4d'
 }
 
 export const defaultBtnColor = {// в библиотеке он просто именуется как дефолт, но ts не принимает такое название

@@ -21,15 +21,25 @@ margin-bottom: 16px;
 & span{ // фиолетовое выделенное слово в заголовке
   padding: 8px 20px;
   border-radius: 100px;
-background: ${typographyColor.lightBG.violet};
-color: ${typographyColor.darkBG.white};
+  background: ${typographyColor.lightBG.violet};
+  color: ${typographyColor.darkBG.white};
 }
 
-@media(max-width:1440px){
+@media(max-width:1439.5px){
 font-size: 36px;
 font-weight: 700;
 line-height: 45px;
 letter-spacing: 1.08px;
+}
+@media(max-width:767.5px){
+font-size: 30px;
+font-weight: 700;
+line-height: 32px;
+letter-spacing: 1.08px;
+margin-bottom: 11px;
+& span{ 
+  padding: 2px 7px;
+}
 }
 `
 
@@ -56,19 +66,29 @@ export const StyledFrameText = styled.p<{ $black: boolean }>`
   & span{
     font-weight: 700;
   }
-@media(max-width:1440px){
+@media(max-width:1439.5px){
   font-size: 20px;
-  // font-weight: 400;
   line-height: 26px;
+  margin-bottom: 40px;
+}
+@media(max-width:1023.5px){
+  margin-bottom: 14px;
+}
+@media(max-width:767.5px){
+  margin-bottom: 10px;
+}
+@media(max-width:479.5px){
+  margin-bottom: 20px;
   }
 `;
 
 export const StyledContainer = styled.div`
+  position: relative;
   max-width: 1224px;
   margin: 0 auto;
 
-  @media (max-width: 1270px) {
-    max-width: 1000px;
+  @media (max-width: 1439.5px) {
+    max-width: 980px;
     padding: 0 20px;
   }
 `;

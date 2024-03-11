@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { colors } from "../../styledConstantsColors";
 
-import { Desktop1920, Desktop1440 } from "../../styledConstantsFonts";
 export const RunLineBlockWrap = styled.div`
 position:fixed;
 top:0;
@@ -12,9 +11,23 @@ align-items:center;
 gap:50px;
 background:${colors.brand.violet};
 z-index:3;
+width:100%;
 
-@media(max-width:1440px){
-    padding:5px 32px 5px 0px;
+@media(max-width:1439.5px){
+    padding:1.5px 42px 1.5px 0px;
+}
+
+@media(max-width:1023.5px){
+    padding:1.5px 20px 1.5px 0px;
+}
+
+@media(max-width:767.5px){
+    gap:30px;
+    padding:5px 22px 5px 0px;
+}
+@media(max-width:479.5px){
+    gap:15px;
+    padding:5px 18px 5px 0px;
 }
 `
 export const RunLineWrap = styled.div`
@@ -36,21 +49,43 @@ animation: scroll 20s linear infinite;
 
 export const RunLineItem = styled.li`
 transition: all 0.1s ease-in-out;
-font-size:${Desktop1920.headings.h6.size};
-font-weight:${Desktop1920.headings.h6.weight};
+font-size: 18px;
+font-weight: 600;
+line-height: 28px;
 color:${colors.neutral.champagne};
 
-@media(max-width:1440px){
-    font-size:${Desktop1440.headings.h6.size};
-    font-weight:${Desktop1440.headings.h6.weight};
+@media(max-width:1439.5px){
+    font-weight: 400;
+    font-size:14px;
+    line-height: 18px;
+    letter-spacing: 0.28px;
 }
 `
 
 export const SvgWrap = styled.button`
-width:40px;
-height:40px;
 
 & svg{
+    width:40px;
+    height:40px;
     fill:${colors.neutral.champagne};
 }
+
+@media(max-width:1439.5px){
+    width:32px;
+    height:32px;
+    & svg{
+        width:32px;
+        height:32px;
+    }
+}
+
+@media(max-width:767.5px){
+    width:24px;
+    height:24px;
+    & svg{
+        width:24px;
+        height:24px;
+    }
+}
+
 `

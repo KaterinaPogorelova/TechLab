@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { backgroundColor, colors, gradient, typographyColor } from "../../styledConstantsColors";
-import { Desktop1440, Desktop1920 } from "../../styledConstantsFonts";
 
 import lineLeft from '../../assets/img/lineLeftDir.svg'
 import lineRight from '../../assets/img/lineRightDir.svg'
@@ -18,6 +17,21 @@ border-radius:0 0 80px 80px;
     position:relative;
     color: ${typographyColor.darkBG.white};
     z-index:1;
+    @media(max-width:1023.5px){
+        font-size:40px;
+    }
+    @media(max-width:767.5px){
+        font-size:30px;
+        margin-bottom:10px;
+        line-height: 32px;
+        & span{
+            padding:4px 10px;
+        }
+    }
+    @media(max-width:479.5px){
+        font-size:28px;
+        line-height: 38px;
+    }
 }
 
 &::before{
@@ -30,6 +44,13 @@ border-radius:0 0 80px 80px;
     background:url(${lineLeft});
     background-repeat:no-repeat;
     border-radius:0 0 80px 80px;
+    @media(max-width:1023.5px){
+        left: -230px;
+        top:-65px;
+    }
+    @media(max-width:767.5px){
+        display:none;
+    }
 }
 &::after{
     position: absolute;
@@ -41,20 +62,41 @@ border-radius:0 0 80px 80px;
     background:url(${lineRight});
     background-repeat:no-repeat;
     border-radius:0 0 80px 80px;
+    @media(max-width:767.5px){
+        display:none;
+    }
+}
+@media(max-width:1023.5px){
+    border-radius:0px;
+    padding:60px 0px 84px;
+}
+@media(max-width:767.5px){
+    padding:50px 0px 70px;
 }
 `
 
 export const StyledDirectionsSubtitle = styled.p`
-font-size:${Desktop1920.subtitles.subtitle2.size};
-font-weight:${Desktop1920.subtitles.subtitle2.weight};
+font-size:32px;
+font-weight:400;
 color: ${typographyColor.darkBG.white};
 margin-bottom:45px;
 position:relative;
 z-index:1;
 
 @media(max-width:1440px){
-    font-size:${Desktop1440.subtitles.subtitle2.size};
-    font-weight:${Desktop1440.subtitles.subtitle2.weight};
+    font-size:20px;
+    font-weight:400;
+}
+@media(max-width:1023.5px){
+    margin-bottom:24px;
+}
+@media(max-width:767.5px){
+    font-size: 20px;
+    margin-bottom:20px;
+    font-weight: 300;
+}
+@media(max-width:479.5px){
+    font-size: 18px;
 }
 `
 
@@ -63,6 +105,16 @@ display:flex;
 justify-content:center;
 gap:24px;
 margin-bottom:20px;
+@media(max-width:1023.5px){
+    gap:40px;
+    justify-content:space-between;
+}
+@media(max-width:767.5px){
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-bottom:40px;
+}
 `
 
 export const StyledDirectionsItem = styled.li<{ $color: string }>`
@@ -98,6 +150,15 @@ z-index: 1;
     z-index: -1;
     transition: opacity 0.5s linear;
     opacity: 0;
+    @media(max-width:1023.5px){
+        border-radius: 20px;
+    }
+    @media(max-width:767.5px){
+        border-radius: 24px;
+    }
+    @media(max-width:479.5px){
+        border-radius: 40px;
+    }
 }
 
 &:hover::before{
@@ -108,17 +169,50 @@ z-index: 1;
     width:300px;
     padding:20px 30px 24px;
 }
+@media(max-width:1023.5px){
+    padding:20px 28px;
+    border-radius: 20px;
+}
+@media(max-width:767.5px){
+    display:flex;
+    flex-direction:column;
+    padding:20px 20px 14px;
+    width:calc(50% - 10px);
+    border-radius: 24px;
+}
+@media(max-width:479.5px){
+    width:100%;
+    border-radius: 40px;
+    padding:23px 38px;
+}
+}
 `
 
 export const StyledDirectionTitle = styled.h4`
 color:${colors.neutral.white};
-font-size:${Desktop1920.headings.h4.size};
-font-weight:${Desktop1920.headings.h4.weight};
+font-size:40px;
+font-weight:700;
 margin-bottom:20px;
 
 @media(max-width:1440px){
-    font-size:${Desktop1440.headings.h4.size};
-    font-weight:${Desktop1440.headings.h4.weight};
+    font-size:26px};
+}
+@media(max-width:1023.5px){
+    font-size:20px;
+    margin-bottom:12px;
+    font-weight: 600;
+    line-height: 24px;
+}
+@media(max-width:767.5px){
+    font-size: 26px;
+font-weight: 700;
+line-height: 28px;
+margin-bottom:6px;
+}
+@media(max-width:479.5px){
+    font-size: 32px;
+font-weight: 800;
+margin-bottom: 20px;
 }
 `
 
@@ -127,17 +221,36 @@ display:flex;
 flex-direction:column;
 gap:15px;
 margin-bottom:10px;
+@media(max-width:1023.5px){
+    gap:5px;
+    margin-bottom:12px;
+}
+@media(max-width:767.5px){
+    margin-bottom:0px;
+    gap:10px;
+}
+@media(max-width:479.5px){
+    margin-bottom:10px;
+}
 `
 
 export const StyledDirectionsCoursesItem = styled.li`
 color:${colors.neutral.white};
-font-size:${Desktop1920.lists.listCard.size};
-font-weight:${Desktop1920.lists.listCard.weight};
-letter-spacing:${Desktop1920.lists.listCard.letterSpacing};
+font-size:18px;
+font-weight:400;
+letter-spacing:0.54px;
 
 @media(max-width:1440px){
-    font-size:${Desktop1440.lists.listCard.size};
-    font-weight:${Desktop1440.lists.listCard.weight};
-    letter-spacing:${Desktop1440.lists.listCard.letterSpacing};
+    font-size:14px;
+}
+@media(max-width:1023.5px){
+    font-weight: 300;
+}
+@media(max-width:767.5px){
+font-size: 18px;
+font-weight: 400;
+}
+@media(max-width:479.5px){
+    font-size: 16px;
 }
 `

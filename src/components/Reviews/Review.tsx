@@ -1,7 +1,5 @@
 import { useState } from "react"
 import { StyledPreview, StyledVideoText, StyledVideoQuote, StyledVideoWrap, StyledImgWrap, StyledVideo } from "./StyledReviews"
-import { backgroundColor } from "../../styledConstantsColors"
-import studentOrange from '../../assets/img/StudentOrange.png'
 import { ReactComponent as Play } from '../../assets/icons/play.svg'
 
 type ReviewProps = {
