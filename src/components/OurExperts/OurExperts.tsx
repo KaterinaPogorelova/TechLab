@@ -23,75 +23,78 @@ import { RightSideLink } from "../LinkWithRightArrow/LinkWithRightArrow";
 
 
 const experts = [
-    { name: 'Juri Ratas', color: colors.brand.orange, desc: 'Co-founder of the programming academy', src: yuri },
-    { name: 'Alice Berg', color: colors.brand.turquoise, desc: 'Co-founder of the programming academy', src: alice },
-    { name: 'Tom Watson', color: colors.brand.green, desc: 'Co-founder of the programming academy', src: tom },
-    { name: 'Andrus Kask', color: colors.brand.turquoise, desc: 'Co-founder of the programming academy', src: andrus },
-    { name: 'Juri Ratas', color: colors.brand.orange, desc: 'Co-founder of the programming academy', src: yuri },
-    { name: 'Alice Berg', color: colors.brand.turquoise, desc: 'Co-founder of the programming academy', src: alice },
-    { name: 'Juri Ratas', color: colors.brand.orange, desc: 'Co-founder of the programming academy', src: yuri },
-    { name: 'Alice Berg', color: colors.brand.turquoise, desc: 'Co-founder of the programming academy', src: alice },
-    { name: 'Tom Watson', color: colors.brand.green, desc: 'Co-founder of the programming academy', src: tom },
-    { name: 'Andrus Kask', color: colors.brand.turquoise, desc: 'Co-founder of the programming academy', src: andrus },
-    { name: 'Juri Ratas', color: colors.brand.orange, desc: 'Co-founder of the programming academy', src: yuri },
-    { name: 'Alice Berg', color: colors.brand.turquoise, desc: 'Co-founder of the programming academy', src: alice }
+  {name: 'Juri Ratas', color: colors.brand.orange, desc: 'Co-founder of the programming academy', src: yuri},
+  {name: 'Alice Berg', color: colors.brand.turquoise, desc: 'Co-founder of the programming academy', src: alice},
+  {name: 'Tom Watson', color: colors.brand.green, desc: 'Co-founder of the programming academy', src: tom},
+  {name: 'Andrus Kask', color: colors.brand.turquoise, desc: 'Co-founder of the programming academy', src: andrus},
+  {name: 'Juri Ratas', color: colors.brand.orange, desc: 'Co-founder of the programming academy', src: yuri},
+  {name: 'Alice Berg', color: colors.brand.turquoise, desc: 'Co-founder of the programming academy', src: alice},
+  {name: 'Juri Ratas', color: colors.brand.orange, desc: 'Co-founder of the programming academy', src: yuri},
+  {name: 'Alice Berg', color: colors.brand.turquoise, desc: 'Co-founder of the programming academy', src: alice},
+  {name: 'Tom Watson', color: colors.brand.green, desc: 'Co-founder of the programming academy', src: tom},
+  {name: 'Andrus Kask', color: colors.brand.turquoise, desc: 'Co-founder of the programming academy', src: andrus},
+  {name: 'Juri Ratas', color: colors.brand.orange, desc: 'Co-founder of the programming academy', src: yuri},
+  {name: 'Alice Berg', color: colors.brand.turquoise, desc: 'Co-founder of the programming academy', src: alice}
 ]
 
 export const OurExperts = () => {
-    const { width = 0 } = useWindowSize()
+  const {width = 0} = useWindowSize()
 
-    return (<StyledExpertSectionWrap>
-        <StyledContainer>
-            <StyledFrameHeader>Our <span>experts</span></StyledFrameHeader>
-            <StyledFrameText $black><span>TechLab</span> classes are taught by industry leaders excited to share their tools, techniques with you.</StyledFrameText>
-        </StyledContainer>
-        {width > 1023 && <Swiper
-            slidesPerView={'auto'}
-            spaceBetween={16}
-            loop={true}
-            pagination={{
-                type: 'fraction',
-            }
-            }
-            navigation
-            modules={[Pagination, Navigation, A11y]}
-            className="expertsSwiper">
-            {experts.map((expert, index) =>
-                <SwiperSlide key={index}>
-                    <ExpertCard name={expert.name} src={expert.src} desc={expert.desc} color={expert.color} />
-                </SwiperSlide>
-            )}
-        </Swiper>}
-        {width < 1024 && width > 767 && <Swiper
-            slidesPerView={'auto'}
-            spaceBetween={16}
-            loop={true}
-            pagination={{
-                dynamicBullets: true,
-                dynamicMainBullets: 1,
-            }
-            }
-            modules={[Pagination, Navigation, A11y]}
-            className="expertsSwiper">
-            {experts.map((expert, index) =>
-                <SwiperSlide key={index}>
-                    <ExpertCard name={expert.name} src={expert.src} desc={expert.desc} color={expert.color} />
-                </SwiperSlide>
-            )}
-        </Swiper>}
-        {width < 768 && <Swiper
-            slidesPerView={'auto'}
-            spaceBetween={width < 480 ? 0 : 16}
-            loop={true}
-            pagination={true}
-            modules={[Pagination, Navigation, A11y]}
-            className="expertsSwiper">
-            {experts.map((expert, index) =>
-                <SwiperSlide key={index}>
-                    <ExpertCard name={expert.name} src={expert.src} desc={expert.desc} color={expert.color} />
-                </SwiperSlide>
-            )}
-        </Swiper>}
-        <RightSideLink text={'All TechLab teachers'} path={'/'} isBlack isRightSided />
-    </StyledExpertSectionWrap >)
+  return (<StyledExpertSectionWrap>
+    <StyledContainer>
+      <StyledFrameHeader>Our <span>experts</span></StyledFrameHeader>
+      <StyledFrameText $black><span>TechLab</span> classes are taught by industry leaders excited to share their tools,
+        techniques with you.</StyledFrameText>
+    </StyledContainer>
+    {width > 1023 && <Swiper
+      slidesPerView={'auto'}
+      slidesPerGroup={3}
+      spaceBetween={16}
+      loop={true}
+      pagination={{
+        type: 'fraction',
+      }}
+      navigation
+      modules={[Pagination, Navigation, A11y]}
+      className="expertsSwiper">
+      {experts.map((expert, index) =>
+        <SwiperSlide key={index}>
+          <ExpertCard name={expert.name} src={expert.src} desc={expert.desc} color={expert.color}/>
+        </SwiperSlide>
+      )}
+    </Swiper>}
+    {width < 1024 && width > 767 && <Swiper
+      slidesPerView={'auto'}
+      slidesPerGroup={3}
+      spaceBetween={16}
+      loop={true}
+      pagination={{
+        dynamicBullets: true,
+        dynamicMainBullets: 1,
+      }
+      }
+      modules={[Pagination, Navigation, A11y]}
+      className="expertsSwiper">
+      {experts.map((expert, index) =>
+        <SwiperSlide key={index}>
+          <ExpertCard name={expert.name} src={expert.src} desc={expert.desc} color={expert.color}/>
+        </SwiperSlide>
+      )}
+    </Swiper>}
+    {width < 768 && <Swiper
+      slidesPerView={'auto'}
+      slidesPerGroup={3}
+      spaceBetween={width < 480 ? 0 : 16}
+      loop={true}
+      pagination={true}
+      modules={[Pagination, Navigation, A11y]}
+      className="expertsSwiper">
+      {experts.map((expert, index) =>
+        <SwiperSlide key={index}>
+          <ExpertCard name={expert.name} src={expert.src} desc={expert.desc} color={expert.color}/>
+        </SwiperSlide>
+      )}
+    </Swiper>}
+    <RightSideLink text={'All TechLab teachers'} path={'/'} isBlack isRightSided/>
+  </StyledExpertSectionWrap>)
 }

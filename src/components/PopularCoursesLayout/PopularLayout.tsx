@@ -14,16 +14,19 @@ const PopularLayout = () => {
   return (
     <StyledPopular>
       <StyledContainer>
-      <StyledFrameHeader>
-            Our <span>most popular</span> courses.
-          </StyledFrameHeader>
-          <StyledFrameText $black>
+        <StyledFrameHeader>
+          Our <span>most popular</span> courses.
+        </StyledFrameHeader>
+        <StyledFrameText $black>
           See the courses most commonly chosen by students
-          </StyledFrameText>
-          <Slider content={<PopularCourses/>} nameLink='All popular courses'/>
-          <PopularMinSlider/>
-          <PopularMobileSlider/>
-          <StyledSliderLink to="#">All popular courses{screenWidth > 1024 ? <LongArrowRight /> : <ArrowRight />}</StyledSliderLink>
+        </StyledFrameText>
+      </StyledContainer>
+      <Slider content={<PopularCourses/>} nameLink='All popular courses'/>
+      <PopularMinSlider/>
+      <PopularMobileSlider/>
+      <StyledContainer>
+        <StyledSliderLink to="#">All popular courses{screenWidth > 1024 ? <LongArrowRight/> :
+          <ArrowRight/>}</StyledSliderLink>
       </StyledContainer>
     </StyledPopular>
   )

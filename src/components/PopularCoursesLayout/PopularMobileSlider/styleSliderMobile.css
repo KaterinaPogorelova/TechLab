@@ -3,16 +3,14 @@
   padding: 10px;
   padding-bottom: 50px;
   margin: 0 auto;
-  max-width: 650px;
-  /* width: 0; */
 }
 
-.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+.swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
 .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .popularMobile {
   bottom: 0px;
 }
 
-.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
+.swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet .popularMobile {
   background-color: black;
   width: 18px;
@@ -27,14 +25,14 @@
 
   .swiper-pagination-fraction,
   .swiper-pagination-custom,
-  .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-horizontal > .swiper-pagination-bullets,
   .swiper-pagination-bullets.swiper-pagination-horizontal .popularMobile {
     bottom: 0;
   }
 
   .swiper-pagination-fraction,
   .swiper-pagination-custom,
-  .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-horizontal > .swiper-pagination-bullets,
   .swiper-pagination-bullets.swiper-pagination-horizontal .popularMobile {
     bottom: 55px;
     width: 100%;
@@ -47,7 +45,7 @@
   }
 
   .popularMobile .swiper-pagination-bullet {
-    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
+    /*margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);*/
     background: white;
     border: 1px solid black;
     width: 12px;

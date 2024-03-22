@@ -32,7 +32,7 @@ const PopularMinSlider = () => {
       >
         {coursesArrayMocks.map((course, index) => (
           <StyledPopularHorizontalContainer key={index}>
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index} className='swiper-popular'>
               <StyledPopularCousreContainer key={index} $design={course.type === 'Design' ? true : false} $machine={course.type === 'Data Science' ? true : false}>
                 <PopularCard
                   header={course.header}

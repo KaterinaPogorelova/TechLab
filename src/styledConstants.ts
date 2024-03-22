@@ -59,26 +59,30 @@ export const StyledFrameText = styled.p<{ $black: boolean }>`
   & a {
     // ссылка в тексте
     color: ${typographyColor.lightBG.violet};
+
     &:hover {
       color: ${hoverBtnColor.violet};
     }
   }
-  & span{
+
+  & span {
     font-weight: 700;
   }
-@media(max-width:1439.5px){
-  font-size: 20px;
-  line-height: 26px;
-  margin-bottom: 40px;
-}
-@media(max-width:1023.5px){
-  margin-bottom: 14px;
-}
-@media(max-width:767.5px){
-  margin-bottom: 10px;
-}
-@media(max-width:479.5px){
-  margin-bottom: 20px;
+
+  @media (max-width: 1439.5px) {
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 40px;
+  }
+  @media (max-width: 1023.5px) {
+    margin-bottom: 14px;
+  }
+  @media (max-width: 767.5px) {
+    margin-bottom: 10px;
+  }
+  @media (max-width: 479.5px) {
+    font-size: 18px;
+    margin-bottom: 20px;
   }
 `;
 

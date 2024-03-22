@@ -10,6 +10,7 @@ import PopularCard from '../PopularCoursesContainer/PopularCard/PopularCard';
 const PopularMobileSlider = () => {
   return (
     <Swiper
+      initialSlide={0}
       centeredSlides={true}
       slidesPerView={'auto'}
       spaceBetween={16}
@@ -19,7 +20,7 @@ const PopularMobileSlider = () => {
       }}
       modules={[Pagination, Navigation, A11y]}
       className='popularMobile'
-      style={{}}
+      // style={{}}
     >
       {coursesArrayMocks.map((course, index) => (
         <StyledPopularHorizontalContainer key={index}>
