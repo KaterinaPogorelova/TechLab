@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyledDurationCourse, StyledPrice, StyledSoonCard, StyledSoonHeader, StyledStartDate } from './styledSoonCard'
 
-interface ISoonCourse {
+export interface ISoonCourse {
   name: string,
   duration: string,
   startDate: string,
@@ -10,7 +10,7 @@ interface ISoonCourse {
 }
 
 const SoonCourseCard = ({name, duration, startDate, price, type}: ISoonCourse) => {
-  console.log(type)
+  // console.log(type)
   return (
     <StyledSoonCard $type={type}>
       <StyledSoonHeader $type={type}>{name}</StyledSoonHeader>
