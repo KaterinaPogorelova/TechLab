@@ -9,7 +9,6 @@ import {
   StyledCourseSelectionContainer,
   StyledCourseSelectionArea,
 } from "./StyledCourseSelection";
-import CourseSelectionList from "./CourseSelectionList";
 
 const CourseSelect = ["Group", "Self-paced", "Customize the course"];
 
@@ -194,7 +193,6 @@ export const CourseSelection = () => {
             goToIndex={goToIndex}
             activeIndex={currentIndex}
           />
-          <CourseSelectionList items={SelectList} />
         </StyledCourseSelectionArea>
       </StyledContainer>
     </StyledCourseSelectionContainer>
