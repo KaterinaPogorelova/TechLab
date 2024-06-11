@@ -4,6 +4,7 @@ import { Main } from "./Main";
 import { AboutSchool } from "./AboutSchool";
 import { Course } from "./Course";
 import { Mentors } from "./Mentors";
+import { Catalogue } from "./Catalogue";
 
 export const Router = () => {
   return (
@@ -12,6 +13,7 @@ export const Router = () => {
       <Route path="/aboutschool" element={<AboutSchool />}></Route>
       <Route path="/course" element={<Course />}></Route>
       <Route path="/mentors/:mentor" element={<Mentors />}></Route>
+      <Route path="/catalogue/:catalogue" element={<Catalogue />}></Route>
     </Routes>
   );
 };

@@ -6,6 +6,9 @@ const ScrollToTop = () => {
   const htmlEl = document.querySelector('html');
 
   useEffect(() => {
+    if (pathname.includes('catalogue') && pathname !== '/catalogue/all') {
+      return;
+    }
     if (htmlEl) {
       htmlEl.style.scrollBehavior = 'auto';
     }
@@ -16,7 +19,12 @@ const ScrollToTop = () => {
   }, [pathname]);
 
   useEffect(() => {
-    window.scrollTo({top: 0, behavior: 'auto'})
+    if (pathname.includes('catalogue') && pathname.includes('filters')) {
+      return;
+    }
+    setTimeout(() => {
+      window.scrollTo({top: 0, behavior: 'auto'});
+    }, 0);
   }, [key]);
 
   return null;

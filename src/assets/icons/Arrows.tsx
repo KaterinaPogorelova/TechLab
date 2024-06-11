@@ -1,6 +1,6 @@
 import { StyledSvgWrap } from "../../components/Header/Menu/StyledMenu";
 
-type ArrowProps = {
+interface ArrowProps {
   isClicked?: boolean;
 }
 
@@ -16,7 +16,7 @@ export const DownArrow = ({isClicked}: ArrowProps) => {
 export const UpArrow = ({isClicked}: ArrowProps) => {
   return (<StyledSvgWrap $isClicked={isClicked}>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-      <path fill-rule="evenodd" clip-rule="evenodd"
+      <path fillRule="evenodd" clipRule="evenodd"
             d="M16 12.179L25.0494 22.303C25.4868 22.7924 26.1942 22.7892 26.6281 22.2959L27.6764 21.1041C28.1103 20.6107 28.1075 19.8129 27.6701 19.3235L16.798 7.14824C16.7282 7.0689 16.4321 6.66772 16.0032 6.66797C15.6092 6.66822 15.3403 6.97877 15.1966 7.14218L4.32994 19.3235C3.89253 19.8129 3.88965 20.6107 4.32358 21.1041L5.37187 22.2959C5.8058 22.7892 6.51321 22.7924 6.95062 22.303L16 12.179Z" />
     </svg>
   </StyledSvgWrap>)

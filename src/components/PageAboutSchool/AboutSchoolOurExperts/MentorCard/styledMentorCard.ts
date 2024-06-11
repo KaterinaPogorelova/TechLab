@@ -1,10 +1,10 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 import { colors } from "../../../../styledConstantsColors";
 import {
   StyledLinkMore,
   StyledYellowButton
 } from "../../../PopularCoursesLayout/PopularCoursesContainer/PopularCard/styledPopularCard";
-import { NavLink } from "react-router-dom";
 
 export const StyledMentorCard = styled(NavLink)<{ $cardColor: string }>`
   display: flex;
@@ -18,8 +18,8 @@ export const StyledMentorCard = styled(NavLink)<{ $cardColor: string }>`
   border-radius: 30px;
   border: 2px solid ${props => props.$cardColor};
   background: #FFF;
-  transition: all 0.3s ease-out;
   cursor: pointer;
+  transition: all 0.3s ease-out;
 
   @media (hover: hover) {
     &:hover {

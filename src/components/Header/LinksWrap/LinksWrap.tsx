@@ -29,21 +29,22 @@ export const LinksWrap = ({isClicked}: LinksWrapType) => {
   return (
     <StyledWrapper $isClicked={isClicked}>
       <StyledLinksWrapContainer>
-        {tab && tab.linkSections && tab.linkSections.map((section) => section.path &&
-          <div key={section.title}>
+        {tab && tab.linkSections && tab.linkSections.map((section, index) => section.path &&
+          <div key={'tab' + index}>
             <StyledLinkSection to={section.path} onClick={closeLinksWrap}>{section.title}</StyledLinkSection>
             <div style={{
               position: 'relative',
               paddingLeft: '36px'
-            }}>{section.linkSections && section.linkSections.map((link) => link.path &&
-              <StyledDirWrapper>
+            }}>{section.linkSections && section.linkSections.map((link, i) => link.path &&
+              <StyledDirWrapper key={'section' + i}>
                 <StyledLink to={link.path} onClick={closeLinksWrap}>
                   <StyledSectionTitle>{link.title}</StyledSectionTitle>
-                  <Arrow />
+                  {/*<Arrow />*/}
                 </StyledLink>
                 <StyledDirLinksWrap id="linkWrap">
-                  {link.linkSections && link.linkSections.map((secLink) => secLink.path &&
-                    <StyledSecLink to={secLink.path} onClick={closeLinksWrap}>{secLink.title}</StyledSecLink>)}
+                  {link.linkSections && link.linkSections.map((secLink, j) => secLink.path &&
+                    <StyledSecLink key={'sec' + j} to={secLink.path}
+                                   onClick={closeLinksWrap}>{secLink.title}</StyledSecLink>)}
                 </StyledDirLinksWrap>
               </StyledDirWrapper>)}
             </div>
