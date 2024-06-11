@@ -1,0 +1,125 @@
+.feedbackSwiper {
+  /* height: 271px; */
+  height: 360px;
+  background: none;
+}
+
+.feedbackSwiper .swiper-slide {
+  height: 392px;
+  width: 240px;
+}
+
+.feedbackSwiper .swiper-button-prev,
+.feedbackSwiper .swiper-button-next {
+  bottom: 0px;
+  color: white;
+}
+
+.feedbackSwiper .swiper-button-prev:after,
+.feedbackSwiper .swiper-rtl .swiper-button-next:after {
+  background-color: black;
+}
+
+.feedbackSwiper .swiper-button-next:after,
+.feedbackSwiper .swiper-rtl .swiper-button-prev:after {
+  background-color: black;
+}
+
+.feedbackSwiper .swiper-button-next:hover:after,
+.feedbackSwiper .swiper-rtl .swiper-button-prev:hover:after {
+  background-color: black;
+}
+
+.feedbackSwiper .swiper-button-prev:hover:after,
+.feedbackSwiper .swiper-rtl .swiper-button-next:hover:after {
+  background-color: black;
+}
+
+.feedbackSwiper .swiper-pagination-fraction,
+.feedbackSwiper .swiper-pagination-custom,
+.feedbackSwiper .swiper-horizontal > .swiper-pagination-bullets,
+.feedbackSwiper .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 10px;
+}
+
+.feedbackSwiper .swiper-pagination-fraction {
+  color: black;
+  width: fit-content;
+}
+
+.swiper-button-lock {
+  display: none;
+}
+
+@media (max-width: 1439.5px) {
+  .feedbackSwiper {
+    height: 280px;
+  }
+
+  .feedbackSwiper .swiper-slide {
+    width: 380px;
+  }
+
+  .feedbackSwiper .swiper-pagination-fraction,
+  .feedbackSwiper .swiper-pagination-custom,
+  .feedbackSwiper .swiper-horizontal > .swiper-pagination-bullets,
+  .feedbackSwiper .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 5px;
+  }
+}
+
+@media (max-width: 1023.5px) {
+  .feedbackSwiper {
+    height: 215px;
+  }
+
+  .feedbackSwiper .swiper-slide {
+    width: 344px;
+    margin: 0 5px 0 20px;
+  }
+
+  .feedbackSwiper .swiper-pagination-bullets {
+    width: 132px;
+  }
+
+  .feedbackSwiper .swiper-pagination-bullet {
+    background-color: #999999;
+    opacity: 1;
+    width: 14px;
+    height: 14px;
+  }
+
+  .feedbackSwiper .swiper-pagination-bullet-active {
+    background-color: #8657dd;
+  }
+}
+
+@media (max-width: 768.5px) {
+  .feedbackSwiper {
+    height: 205px;
+    margin: 0px;
+  }
+
+  .feedbackSwiper .swiper-slide {
+    width: 320px;
+    margin: 0 0px 0 20px;
+  }
+
+  .feedbackSwiper .swiper-pagination-bullet {
+    background-color: unset;
+    border: 1px solid #8657dd;
+    opacity: 1;
+    width: 12px;
+    height: 12px;
+  }
+
+  .feedbackSwiper .swiper-pagination-bullet-active {
+    background-color: #8657dd;
+  }
+}
+
+@media (max-width: 359.5px) {
+  .feedbackSwiper .swiper-slide {
+    width: 100%;
+  }
+}

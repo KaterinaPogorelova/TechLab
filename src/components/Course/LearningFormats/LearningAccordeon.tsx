@@ -4,7 +4,7 @@ import {
   StyledAccordeonLerningTitle,
 } from "./StyledLearningFormat";
 import down from "../../../assets/icons/Chevron_Down.svg";
-import { backgroundColor } from "../../../styledConstantsColors";
+// import { backgroundColor } from "../../../styledConstantsColors";
 
 interface AccordionItem {
   title: string;

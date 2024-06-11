@@ -20,6 +20,7 @@ const PopularCourses = () => {
             type="Design"
             description="Even the best application is bound to fail if you don’t pay attention to its UX and UI design."
             imageSrc={card_pic_design}
+            // path="/course"
           />
         </StyledPopularCousreContainer>
         <StyledPopularCousreContainer $horisontal $machine>
@@ -29,6 +30,7 @@ const PopularCourses = () => {
             type="Data Science"
             description="Learn different model selection and feature selections techniques in machine learning."
             imageSrc={card_pic_machine}
+            // path="/"
           />
         </StyledPopularCousreContainer>
       </StyledPopularHorizontalContainer>
@@ -41,6 +43,7 @@ const PopularCourses = () => {
           description="Most desired by employers and most widespread among developers. Java is at the heart of the tech industry, from large enterprise solutions to cutting-edge Internet of Things applications. 
         Take this course to build a strong foundation for starting a new career as a Java developer."
           imageSrc={card_pic_language}
+          // path="/"
         />
       </StyledPopularCousreContainer>
     </StyledPopularContainer>

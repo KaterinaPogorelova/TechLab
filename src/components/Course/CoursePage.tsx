@@ -1,6 +1,10 @@
-// import { useWindowSize } from "../../hooks/useWindowSize";
+import { useWindowSize } from "../../hooks/useWindowSize";
 import { useAppSelector } from "../../store/store";
-import { StyledContainer, StyledFlex } from "../../styledConstants";
+import {
+  StyledContainer,
+  StyledFlex,
+  StyledSectionSeparator,
+} from "../../styledConstants";
 import {
   StyledMainInfoWrap,
   StyledMainWrap,
@@ -13,21 +17,21 @@ import {
   StyledInfoCourseTitle,
   StyledInfoCourseText,
   StyledInfoContainerDuration,
-  StyledInfoCourseDuration,
   StyledFlexCourse,
   StyledTodayButton,
   StyledViewButton,
   StyledImgWrap,
 } from "./StyledCourse";
 import image from "../../assets/img/womanWithNoute.png";
+import { colors } from "../../styledConstantsColors";
 // import imageMobile from "../../assets/img/womanWithNoute1.png";
 
 export const CoursePage = () => {
-  // const { width = 0 } = useWindowSize();
-  const isClosedRunLine = useAppSelector((state) => state.runline.isClosed);
+  const { width = 0 } = useWindowSize();
+  const isRunlineClosed = useAppSelector((state) => state.runline.isClosed);
   return (
     <>
-      <StyledMainInfoWrap $isClosedRunline={isClosedRunLine}>
+      <StyledMainInfoWrap $isRunlineClosed={isRunlineClosed}>
         <StyledContainer>
           <StyledMainWrap>
             <StyledInfoWrap>
@@ -37,23 +41,23 @@ export const CoursePage = () => {
               </StyledFlex>
               <StyledInfoContainer>
                 <StyledInfoCourseFormat>
-                  <StyledInfoCourseTitle>Format: online</StyledInfoCourseTitle>
+                  <StyledInfoCourseTitle>
+                    Format: <span>online</span>
+                  </StyledInfoCourseTitle>
                   <StyledInfoCourseText>
                     video lessons and workshops
                   </StyledInfoCourseText>
                 </StyledInfoCourseFormat>
                 <StyledInfoContainerDuration>
                   <StyledInfoCourseTitle>
-                    Duration:
-                    <StyledInfoCourseDuration>
-                      {" "}
-                      12 months
-                    </StyledInfoCourseDuration>
+                    Duration:<span>12 months</span>
                   </StyledInfoCourseTitle>
                   <StyledInfoCourseText>20 hours per week</StyledInfoCourseText>
                 </StyledInfoContainerDuration>
                 <StyledInfoCourse>
-                  <StyledInfoCourseTitle>Date: 20.12</StyledInfoCourseTitle>
+                  <StyledInfoCourseTitle>
+                    Date: <span>20.12</span>
+                  </StyledInfoCourseTitle>
                   <StyledInfoCourseText>
                     Or any convenient time during self-study
                   </StyledInfoCourseText>
@@ -74,6 +78,11 @@ export const CoursePage = () => {
           </StyledMainWrap>
         </StyledContainer>
       </StyledMainInfoWrap>
+      {width > 1023 && (
+        <StyledSectionSeparator
+          $background={colors.shades.violet6}
+        ></StyledSectionSeparator>
+      )}
     </>
   );
 };

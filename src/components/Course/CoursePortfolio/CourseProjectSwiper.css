@@ -1,0 +1,123 @@
+.portfolioSwiper {
+  height: 386px;
+  background: none;
+}
+
+.portfolioSwiper .swiper-slide {
+  width: 392px;
+}
+
+.portfolioSwiper .swiper-button-prev,
+.portfolioSwiper .swiper-button-next {
+  bottom: 0px;
+  color: black;
+}
+
+.portfolioSwiper .swiper-button-prev:after,
+.portfolioSwiper .swiper-rtl .swiper-button-next:after {
+  background-color: #8657dd;
+}
+
+.portfolioSwiper .swiper-button-next:after,
+.portfolioSwiper .swiper-rtl .swiper-button-prev:after {
+  background-color: #8657dd;
+}
+
+.portfolioSwiper .swiper-button-next:hover:after,
+.portfolioSwiper .swiper-rtl .swiper-button-prev:hover:after {
+  background-color: #a075f0;
+}
+
+.portfolioSwiper .swiper-button-prev:hover:after,
+.portfolioSwiper .swiper-rtl .swiper-button-next:hover:after {
+  background-color: #a075f0;
+}
+
+.portfolioSwiper .swiper-pagination-fraction,
+.portfolioSwiper .swiper-pagination-custom,
+.portfolioSwiper .swiper-horizontal > .swiper-pagination-bullets,
+.portfolioSwiper .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 10px;
+}
+
+.portfolioSwiper .swiper-pagination-fraction {
+  color: #8657dd;
+  width: fit-content;
+}
+
+.swiper-button-lock {
+  display: none;
+}
+
+@media (max-width: 1439.5px) {
+  .portfolioSwiper {
+    height: 280px;
+  }
+
+  .portfolioSwiper .swiper-slide {
+    width: 380px;
+  }
+
+  .portfolioSwiper .swiper-pagination-fraction,
+  .portfolioSwiper .swiper-pagination-custom,
+  .portfolioSwiper .swiper-horizontal > .swiper-pagination-bullets,
+  .portfolioSwiper .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 5px;
+  }
+}
+
+@media (max-width: 1023.5px) {
+  .portfolioSwiper {
+    height: 215px;
+  }
+
+  .portfolioSwiper .swiper-slide {
+    width: 344px;
+    margin: 0 5px 0 20px;
+  }
+
+  .portfolioSwiper .swiper-pagination-bullets {
+    width: 132px;
+  }
+
+  .portfolioSwiper .swiper-pagination-bullet {
+    background-color: #999999;
+    opacity: 1;
+    width: 14px;
+    height: 14px;
+  }
+
+  .portfolioSwiper .swiper-pagination-bullet-active {
+    background-color: #8657dd;
+  }
+}
+
+@media (max-width: 768.5px) {
+  .portfolioSwiper {
+    height: 205px;
+    margin: 0px;
+  }
+
+  .portfolioSwiper .swiper-slide {
+    width: 320px;
+    margin: 0 0px 0 20px;
+  }
+
+  .portfolioSwiper .swiper-pagination-bullet {
+    background-color: unset;
+    border: 1px solid #8657dd;
+    opacity: 1;
+    width: 12px;
+    height: 12px;
+  }
+
+  .portfolioSwiper .swiper-pagination-bullet-active {
+    background-color: #8657dd;
+  }
+}
+
+@media (max-width: 359.5px) {
+  .portfolioSwiper .swiper-slide {
+    width: 100%;
+  }
+}

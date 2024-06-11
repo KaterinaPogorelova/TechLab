@@ -19,6 +19,7 @@ export interface IPopular {
   description: string;
   imageSrc: string;
   isVertical?: boolean;
+  // path: string;
 }
 const PopularCard = ({
   header,
@@ -27,7 +28,8 @@ const PopularCard = ({
   description,
   imageSrc,
   isVertical,
-}: IPopular) => {
+}: // path,
+IPopular) => {
   return (
     <>
       <StyledFlex>

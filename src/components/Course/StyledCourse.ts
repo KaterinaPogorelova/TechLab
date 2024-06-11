@@ -15,14 +15,15 @@ export const StyledMainWrap = styled.div`
   justify-content: space-between;
 `;
 
-export const StyledMainInfoWrap = styled.main<{ $isClosedRunline: boolean }>`
+export const StyledMainInfoWrap = styled.main<{ $isRunlineClosed: boolean }>`
   position: relative;
   // height: 580px;
   // width: 100%;
-  height: 680px;
+  height: 688px;
+  // height: ${(props) => (props.$isRunlineClosed ? "588px" : "638px")}
   display: flex;
   padding: ${(props) =>
-    props.$isClosedRunline ? "89px 0 100px" : "139px 0 100px"};
+    props.$isRunlineClosed ? "89px 0 100px" : "139px 0 100px"};
   background: ${gradient.violetDark};
   border-radius: 0px 0px 80px 80px;
   overflow: hidden;
@@ -79,20 +80,20 @@ export const StyledMainInfoWrap = styled.main<{ $isClosedRunline: boolean }>`
   }
   @media (max-width: 1439.5px) {
     padding: ${(props) =>
-      props.$isClosedRunline ? "128px 0 75px" : "163px 0 75px"};
+      props.$isRunlineClosed ? "128px 0 75px" : "163px 0 75px"};
   }
   @media (max-width: 1024px) {
     padding: ${(props) =>
-      props.$isClosedRunline ? "132px 0 89px" : "174px 0 89px"};
+      props.$isRunlineClosed ? "132px 0 89px" : "174px 0 89px"};
     border-radius: 0px 0px 0px 0px;
   }
   @media (max-width: 767.5px) {
     padding: ${(props) =>
-      props.$isClosedRunline ? "104px 0 52px" : "146px 0 52px"};
+      props.$isRunlineClosed ? "104px 0 52px" : "146px 0 52px"};
   }
   @media (max-width: 479.5px) {
     padding: ${(props) =>
-      props.$isClosedRunline ? "124px 0 67px" : "158px 0 67px"};
+      props.$isRunlineClosed ? "124px 0 67px" : "158px 0 67px"};
   }
 `;
 
@@ -106,6 +107,17 @@ export const StyledInfoWrap = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media (max-width: 1439.5px) {
+    width: 540px;
+    height: 330px;
+    margin: 40px 0 100px 0;
+  }
+  @media (max-width: 1023.5px) {
+  }
+  @media (max-width: 767.5px) {
+  }
+  @media (max-width: 479.5px) {
+  }
 `;
 
 export const StyledTitle = styled.h2`
@@ -114,6 +126,16 @@ export const StyledTitle = styled.h2`
   font-weight: 800;
   line-height: 80px;
   color: ${colors.brand.violet};
+  @media (max-width: 1439.5px) {
+    font-size: 56px;
+    line-height: 60px;
+  }
+  @media (max-width: 1023.5px) {
+  }
+  @media (max-width: 767.5px) {
+  }
+  @media (max-width: 479.5px) {
+  }
 `;
 
 export const StyledTitleText = styled.div`
@@ -123,6 +145,17 @@ export const StyledTitleText = styled.div`
   font-weight: 600;
   line-height: 36px;
   color: ${colors.neutral.white};
+  @media (max-width: 1439.5px) {
+    max-width: 140px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  @media (max-width: 1023.5px) {
+  }
+  @media (max-width: 767.5px) {
+  }
+  @media (max-width: 479.5px) {
+  }
 `;
 // export const StyledTitleContainer = styled.div`
 //   max-width: 131px;
@@ -133,25 +166,82 @@ export const StyledInfoContainer = styled.div`
   height: 58px;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 1439.5px) {
+    max-width: 460px;
+    height: 50px;
+  }
+  @media (max-width: 1023.5px) {
+  }
+  @media (max-width: 767.5px) {
+  }
+  @media (max-width: 479.5px) {
+  }
 `;
 
 export const StyledInfoCourseFormat = styled.div`
   max-width: 131px;
+
+  @media (max-width: 1439.5px) {
+    max-width: 140px;
+  }
+  @media (max-width: 1023.5px) {
+  }
+  @media (max-width: 767.5px) {
+  }
+  @media (max-width: 479.5px) {
+  }
 `;
 export const StyledInfoContainerDuration = styled.div`
   max-width: 155px;
+  @media (max-width: 1439.5px) {
+    max-width: 140px;
+  }
+  @media (max-width: 1023.5px) {
+  }
+  @media (max-width: 767.5px) {
+  }
+  @media (max-width: 479.5px) {
+  }
 `;
 export const StyledInfoCourse = styled.div`
   max-width: 188px;
+
+  @media (max-width: 1439.5px) {
+    max-width: 140px;
+  }
+  @media (max-width: 1023.5px) {
+  }
+  @media (max-width: 767.5px) {
+  }
+  @media (max-width: 479.5px) {
+  }
 `;
 export const StyledInfoCourseTitle = styled.div`
   font-size: 16px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 22px;
-  letter-spacing: 0.32px;
+  letter-spacing: 0.3px;
+  margin-bottom: 4px;
   color: ${colors.neutral.white};
-  margin
+  @media (max-width: 1439.5px) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  @media (max-width: 1023.5px) {
+  }
+  @media (max-width: 767.5px) {
+  }
+  @media (max-width: 479.5px) {
+  }
+  & span {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.32px;
+  }
 `;
 export const StyledInfoCourseText = styled.div`
   font-size: 16px;
@@ -161,18 +251,33 @@ export const StyledInfoCourseText = styled.div`
   letter-spacing: 0.48px;
   color: ${colors.brand.violet};
   opacity: 0.6;
+
+  @media (max-width: 1439.5px) {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  @media (max-width: 1023.5px) {
+  }
+  @media (max-width: 767.5px) {
+  }
+  @media (max-width: 479.5px) {
+  }
 `;
-export const StyledInfoCourseDuration = styled.span`
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0.32px;
-`;
+
 export const StyledFlexCourse = styled.div`
   display: flex;
   justify-content: start;
   gap: 30px;
+
+  @media (max-width: 1439.5px) {
+  }
+  @media (max-width: 1023.5px) {
+  }
+  @media (max-width: 767.5px) {
+  }
+  @media (max-width: 479.5px) {
+  }
+  // border: 1px solid white;
 `;
 export const StyledTodayButton = styled.button`
   height: 72px;
@@ -190,14 +295,25 @@ export const StyledTodayButton = styled.button`
   &:hover {
     background: ${colors.brand.turquoise};
   }
+
+  @media (max-width: 1439.5px) {
+    height: 60px;
+    width: 199px;
+    padding: 14px 32px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  @media (max-width: 1023.5px) {
+  }
+  @media (max-width: 767.5px) {
+  }
+  @media (max-width: 479.5px) {
+  }
 `;
 export const StyledViewButton = styled.button`
   height: 72px;
   width: 332px;
-  // border: 1px solid : linear-gradient(90deg, #8047EB 0%, #67D1D1 52.09%, #65DC6A 106.81%);;
-
   border: 1px solid ${typographyColor.darkBG.violet};
-
   background: ${typographyGradient.G1};
   background-clip: text;
   text-fill-color: transparent;
@@ -217,8 +333,20 @@ export const StyledViewButton = styled.button`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  @media (max-width: 1439.5px) {
+    height: 60px;
+    width: 247px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  @media (max-width: 1023.5px) {
+  }
+  @media (max-width: 767.5px) {
+  }
+  @media (max-width: 479.5px) {
+  }
 `;
-
+//  border: 1px solid white;
 export const StyledImgWrap = styled.div`
   position: relative;
   z-index: 2;
@@ -228,21 +356,37 @@ export const StyledImgWrap = styled.div`
   & img {
     width: 100%;
   }
-
+  @media (max-width: 1439.5px) {
+    width: 477px;
+    height: 473px;
+  }
   @media (max-width: 1023.5px) {
-    max-width: 45%;
+    // max-width: 45%;
   }
 
   @media (max-width: 767.5px) {
-    position: absolute;
-    z-index: 1;
-    top: -50px;
-    right: 0;
-    max-width: 432px;
+    // position: absolute;
+    // z-index: 1;
+    // top: -50px;
+    // right: 0;
+    // max-width: 432px;
   }
 
   @media (max-width: 479.5px) {
-    top: 0px;
-    max-width: 200px;
+    // top: 0px;
+    // max-width: 200px;
   }
 `;
+
+// @media (max-width: 1439.5px) {
+
+// }
+// @media (max-width: 1023.5px) {
+
+// }
+// @media (max-width: 767.5px) {
+
+// }
+// @media (max-width: 479.5px) {
+
+// }
